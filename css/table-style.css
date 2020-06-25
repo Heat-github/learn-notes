@@ -1,0 +1,24 @@
+/*表格的样式表！！！！！！！！！！！*/
+/*表格的样式表！！！！！！！！！！！*/
+#alex 
+    {
+        font-family: 'Times New Roman', Times, serif;
+        border:2px solid #EE872A;
+        border-collapse: collapse;
+        width: 100%;
+    }
+#alex td, #alex th
+    {border:2px solid #EE872A; text-align: center;}
+#alex tr.alt
+    {background-color: beige;}
+
+/*列表的样式表！！！！！！！！！！！*/
+/*列表的样式表！！！！！！！！！！！*/
+ol.upalpha
+    {list-style-type:upper-alpha;}
+ol.uproman
+    {list-style-type:upper-roman;}
+ol.lwalpha
+    {list-style-type:lower-alpha;}
+ol.lwroman
+    {list-style-type:lower-roman;}
