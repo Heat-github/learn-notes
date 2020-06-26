@@ -2,28 +2,174 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>HTML | 首页</title>
-    <meta name="作者" content="Alex Wong">
-    <meta name="关键字" content="HTML,第一个,新手,笔记">
-    <meta name="描述" content="用于笔记记，免费分享">
+    <title>HTML--TEST</title>
     <base href="./" target="_blank">
     <link rel="shortcut icon" href="piture/favicon.ico">
-    
+    <link rel="stylesheet" type="text/css" href="css/test.css">
+    <style type="text/css">
+
+        *{
+ 
+            margin: 0;
+ 
+            padding: 0;
+ 
+            list-style: none;
+ 
+        }
+ 
+        #box-video{
+ 
+            width: 100%;
+ 
+            height: 100%;
+ 
+            position: absolute;
+ 
+            overflow: hidden;
+
+            background: rgb(255, 236, 212);
+ 
+        }
+        
+        
+        #box-video video{
+ 
+            min-width: 100%;
+ 
+            min-height: 100%;
+ 
+            max-height: 100%;
+ 
+            max-width: 100%;
+ 
+            position: absolute;
+ 
+            top:30%;
+ 
+            left:30%;
+ 
+            transform: translate(-50%,-50%);
+ 
+        }
+ 
+        .cd{
+ 
+            width: 422px;
+ 
+            height: 422px;
+ 
+            position: absolute;
+ 
+            top: 15%;
+ 
+            left: 10%;
+ 
+            z-index:2;
+ 
+            border-radius: 50%;
+ 
+            border: 10px solid palevioletred;
+ 
+            box-shadow: 5px 5px 15px #000;
+ 
+            background:
+          url(picture/打上花火.jpg) no-repeat;
+ 
+        }
+ 
+        .center{
+ 
+            width:100px;
+ 
+            height: 100px;
+ 
+            border-radius: 50%;
+ 
+            position: absolute;
+ 
+            top:38%;
+ 
+            left: 38%;
+ 
+            z-index: 3;
+ 
+            border: 5px solid paleturquoise;
+ 
+            background: #000
+           url(picture/打上花火2.jpg) no-repeat;
+ 
+        }
+ 
+        .song{
+ 
+            position: absolute;
+ 
+            top:15%;
+ 
+            left:50%;
+ 
+        }
+
+        .footer{
+            width: 100%;
+            height: 1.5em;
+            position: absolute;
+            bottom: 0%;
+        }
+ 
+        h2{
+ 
+            font-family: 'Times New Roman', Times, serif;
+ 
+            font-size: 90px;
+ 
+            color: cornflowerblue;
+ 
+        }
+ 
+        p{
+ 
+            width: 500px;
+ 
+            height: 300px;
+ 
+            font-family: "微软雅黑";
+ 
+            padding-left: 50px;
+ 
+            line-height: 30px;
+ 
+            color: rgb(255, 255, 255);
+ 
+            background: url(picture/打上花火1.jpg)
+            repeat-x;
+ 
+            opacity: 0.4;
+ 
+            box-sizing: border-box;
+ 
+        }
+ 
+     </style>
 </head>
-<body style="padding:10px;border-radius:0px;background-color: lightslategrey;">
-    <iframe src="html/左侧书签.html" width="180" height="666" style="float: left;"></iframe>
-    <table id="alex" width="1080px" height="675px">
-        <tr>
-            <th>11</th>
-            <th>22</th>
-        </tr>
-        <tr>
-            <td>33</td>
-            <td>44</td>
-        </tr>
-    </table>
-    <div id="footer" style="background-color: rgb(6, 121, 236); text-align: center;float:bottom;">
-        Copyright © Alex-alading.dong @2020
-    </div>
+<body>
+    <div id="box-video">
+        <video src="media/DAOKO-打上花火.flac" loop="loop"></video>
+ 
+        <div class="cd">
+            <div class="center"></div>
+        </div>
+ 
+        <div class="song">
+            <h2>珍姐晚安</h2>
+            <p>あの日見渡した渚を<br/>今も思い出すんだ<br/>砂の上に刻んだ言葉<br/>君の後ろ姿<br/>寄り返す波が<br/>足元をよぎり何かを攫う<br/>夕凪の中<br/>日暮れだけが通り過ぎて行く</p>
+        </div>
+
+        <div class="footer" style="background-color: rgb(6, 121, 236); text-align: center;">
+            Copyright © Alex-alading.dong @ 2020
+        </div>
+     </div>
+
 </body>
 </html>
