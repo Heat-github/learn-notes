@@ -3,14 +3,13 @@
 #alex 
     {
         font-family: 'Times New Roman', Times, serif;
-        border:2px solid #EE872A;
         border-collapse: collapse;
         width: 100%;
     }
 #alex td, #alex th
     {border:2px solid #EE872A; text-align: center;}
-#alex tr.alt
-    {background-color: beige;}
+#alex tr.oringe
+    {background-color: rgb(252, 252, 168);}
 
 /*列表的样式表！！！！！！！！！！！*/
 /*列表的样式表！！！！！！！！！！！*/
