@@ -8,11 +8,12 @@
     <meta name="描述" content="用于笔记记，免费分享">
     <base href="../" target="_blank"> <!--设置所有相对路径的基础URL为当前文件夹，且点击链接时另一窗口打开-->
     <link rel="stylesheet" type="text/css" href="css/table-style.css" />
-    <link rel="shortcut icon" href="../piture/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/笔记页面样式表.css">
+    <link rel="shortcut icon" href="piture/favicon.ico">
 </head>
-<body style="padding:10px;border-radius:0px;border:5px solid #EE872A;">
+<body id="body_tag">
 <code style="font-size: 18px;">
-    <div id="menu" style="background-color:rgb(133, 228, 153);color: rgb(255, 255, 255); overflow: auto;margin: 2px;float: top;font-size: 24px;">
+    <div id="menu" style="background-color:rgb(133, 228, 153);color: rgb(255, 255, 255); overflow: auto;float: top;font-size: 24px;">
                         <a href="index.html" style="text-decoration:none">
             首页 |       </a>
                         <a href="html/HTML学习笔记2020-06.html" style="text-decoration:none">
@@ -30,16 +31,16 @@
                         <a href="html/HTML学习笔记2020-12.html" style="text-decoration:none">
             2020年12月 | </a> 
     </div>
-    <div id="content" style="background-color: rgb(243, 243, 243);">
+    <div id="content_tag">
         <hr/>
-        <h1 style="color:rgb(255, 0, 0);">第一个HTML程序</h1>
+        <h1>第一个HTML程序</h1>
         <hr/>
         <p><b>摘要：</b>2020.06.20开始接触HTML，感觉上手编辑网页原来这么有意思，鬼使神差之下就开始看各种课程。打算用HTML的方式来记录学习过程，
             学习内容来自于<a href="https://www.runoob.com" style="text-decoration:none">RUNOOB菜鸟教程网站</a>。</p>
         <hr/>
         <!--6月20号笔记！！！！！！！！！！！！！-->
         <!--6月20号笔记！！！！！！！！！！！！！-->
-        <h3 style="color: seagreen;"><b>2020.06.20 周六</b></h3>
+        <h3>2020.06.20 周六</h3>
         <p>
             今天主要学习HTML的基础知识，包括元素、属性与标签.<br/>
             ① 元素：元素构成 HTML 文档，是从开始标签（start tag）到结束标签（end tag）的所有代码。<br/>
@@ -47,7 +48,7 @@
             <b>比如：name="value"</b>。<br/>
         </p>
         <!--笔记内容-->
-        <div style="background-color : rgb(255, 255, 255);  color: rgb(1, 136, 30);"><br/>
+        <div id="note_tag">
             今天学到的元素、标签和属性：<br/>
             &lt;p&gt;----------------定义一个段落<br/>
             &lt;html&gt;-------------定义整个HTML文档<br/>
@@ -65,15 +66,15 @@
             style属性----------规定元素的行内样式（inline style）<br/>
             title属性----------描述了元素的额外信息 (作为工具条使用)<br/>
             查看更多标准属性：
-            <a href="https://www.runoob.com/tags/ref-standardattributes.html" style="text-decoration:none;border:1px"> HTML 标准属性说明</a><br/><br/>
-        <hr/></div>
+            <a href="https://www.runoob.com/tags/ref-standardattributes.html" style="text-decoration:none;border:1px"> HTML 标准属性说明</a>
+        </div><hr/>
     
         <!--6月21号笔记！！！！！！！！！！！！！-->
         <!--6月21号笔记！！！！！！！！！！！！！-->  
-        <h3 style="color: seagreen;"><b>2020.06.21 周日</b></h3>
+        <h3>2020.06.21 周日</h3>
         <p>今天主要学习HTML的文本格式化、计算机输出标签以及引文引用标签，计算机输出标签暂时还搞不太明白，只能在后面遇到实际应用的时候再加深理解。</p> 
         <!--笔记内容-->
-        <div style="background-color : rgb(255, 255, 255);  color: rgb(1, 136, 30);"><br/>
+        <div id="note_tag">
             &lt;b&gt;、&lt;strong&gt;--------定义粗体文字，后者着重语气；<br/>
             &lt;i&gt;、&lt;em&gt;------------定义斜体文字，后者着重语气；<br/>
             &lt;sup&gt;、&lt;sub&gt;---------分别定义上下标文字；<br/>
@@ -103,15 +104,15 @@
             &lt;meta&gt;---------------描述HTML文档的描述，关键词，作者，字符集等；<br/>
             &lt;link&gt;---------------定义了文档与外部资源之间的关系，通常用于链接到样式表；<br/>
             &lt;style&gt;--------------定义了HTML文档的样式文件引用地址；<br/>
-            &lt;script&gt;-------------定义了客户端的脚本文件。<br/><br/>
-        <hr/></div>
+            &lt;script&gt;-------------定义了客户端的脚本文件。
+        </div><hr/>
     
         <!--6月22号笔记！！！！！！！！！！！！！-->
         <!--6月22号笔记！！！！！！！！！！！！！-->  
-        <h3 style="color: seagreen;"><b>2020.06.22 周一</b></h3>
+        <h3>2020.06.22 周一</h3>
         <p>今天主要学习HTML的级联样式表CSS</p> 
         <!--笔记内容-->
-        <div style="background-color : rgb(255, 255, 255);  color: rgb(1, 136, 30);"><br/>
+        <div id="note_tag">
             内联样式------------在元素中使用style属性；<br/>
             内联样式表----------在head部分中使用&lt;style&gt;元素来包含CSS；<br/>
             外联样式表----------在head内使用外部CSS文件；<br/>
@@ -139,46 +140,46 @@
                 url-----------------CSS文件的地址，定义被链接文档的位置；<br/>
                 type----------------规定被链接文档的 MIME 类型；<br/>
             </p>
-        <hr/></div> 
+        </div><hr/>
         
         <!--6月23日！！！！！！！！！！-->
         <!--6月23日！！！！！！！！！！-->
-        <h3 style="color: seagreen;">6月23日 周二</h3>
+        <h3>6月23日 周二</h3>
         <P>今天主要学习了图像、表格的插入。</P>
-        <div style="background-color : rgb(255, 255, 255);  color: rgb(1, 136, 30)"><br/>
+        <div id="note_tag">
             图像插入使用img标签，包含地址属性src，加载图像过程中显示的图片信息属性alt，在CSS中使用align属性可定义图像在文本中
             时偏上还是偏下或居中，float属性定义图像浮动在文本的两侧，以及高度宽度属性，usemap定义可用于map标签图像定义；<br>
             map标签定义图像地图，可通过像素点位置索引图像上的指定位置，name属性必须有且与img标签中的usemap属性名称一致；<br>
             area标签在map标签内使用，可创建带有可供点击区域的图像地图，图像的特定区域都是一个超级链接；其内属性与定义如下表所示：
-            <table id="alex">
-                <tr>
+            <table id="alex" style="width: 70%;">
+                <tr class="oringe">
                     <th>属性</th>
                     <th>定义方法</th>
                 </tr>
                 <tr>
                     <td>shape</td>
-                    <td>rect(矩形);circle(圆形);poly(多边形)</td>
+                    <td>rect(矩形); circle(圆形); poly(多边形)</td>
                 </tr>
-                <tr class="alt">
+                <tr class="oringe">
                     <td>coords</td>
-                    <td>矩形(左上角和左下角坐标);circle(圆心坐标和半径);poly(每一个顶角的坐标)</td>
+                    <td>矩形(左上角和左下角坐标); circle(圆心坐标和半径); poly(每一个顶角的坐标)</td>
                 </tr>
                 <tr>
                     <td>alt</td> 
                     <td>要跳转的图像信息</td>
                 </tr>
-                <tr class="alt">
+                <tr class="oringe">
                     <td>href</td> 
                     <td>要跳转的图像地址</td>
                 </tr>
             </table>
-        <hr/></div>
+        </div><hr/>
 
         <!--6月24日！！！！！-->
         <!--6月24日！！！！！-->
-        <h3 style="color: seagreen;">6月24日 周三</h3>
+        <h3>6月24日 周三</h3>
         <p>今天主要学习CSS的创建以及一部分样式与特点。</p>
-        <div style="background-color : rgb(255, 255, 255);  color: rgb(1, 136, 30);"><br/>
+        <div id="note_tag">
             CSS创建规则：
             <ol>
                 <li>CSS规则由两个主要的部分构成：选择器，以及一条或多条声明;</li>
@@ -216,12 +217,12 @@
                 <li>文本阴影效果text-shadow：2px 2px rgb，定义xy方向偏移效果和颜色</li>
                 <li>文本的对齐方式属性text-align：left左对齐、right右对齐、center居中、justify两端对齐</li>
                 <li>文本修饰属性text-decoration：</li>
-                    <ul type="square">
+                    <ol class="lwalpha">
                         <li>none----------删除文本修饰属性，主要用于删除链接下划线</li>
                         <li>overline------文本上方划线</li>
                         <li>line-through--文本中间划线，删除线</li>
                         <li>underline-----文本下方划线</li>
-                    </ul>
+                    </ol>
                 <li>文本转换属性text-transform：uppercase大写、lowercase小写、capitalize首字母大写</li>
                 <li>文本首行缩进属性text-indent：10px</li>
             </ol>
@@ -235,7 +236,7 @@
                 <li>字体转变font-variant：small-caps小型大写字母、normal正常</li>
                 <li>font声明简写顺序：样式 粗细 大小/行间距 类型 字型</li>
             </ol>
-        </div>
+        </div><hr/>
     </div><!--content结束标签-->
     
     <div id="footer" style="margin: 2px; background-color:rgb(172, 221, 221); color: rgb(255, 255, 255);text-align: center;">
