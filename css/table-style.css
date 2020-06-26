@@ -5,6 +5,7 @@
         font-family: 'Times New Roman', Times, serif;
         border-collapse: collapse;
         width: 100%;
+        border:2px solid #EE872A; text-align: center;
     }
 #alex td, #alex th
     {border:2px solid #EE872A; text-align: center;}
