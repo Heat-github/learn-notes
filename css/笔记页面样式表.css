@@ -1,0 +1,32 @@
+#body_tag
+    {
+        background-color: rgb(128, 128, 128);
+        border:5px solid coral;
+        border-radius: 0px;
+        padding: 5px;
+    }
+
+#content_tag
+    {
+        background-color: rgb(187, 187, 187);
+        margin: 10px 0px;
+        padding: 0px 8px;
+    }
+
+#note_tag
+    {
+        background-color: rgb(255, 255, 255);
+        color:rgb(1, 136, 30);
+        margin: 10px 0px;
+        padding: 1em 0.5em;
+    }
+
+h1
+    { 
+        color:rgb(255, 0, 0);
+    }
+h3
+    {
+        color: seagreen;
+        font-weight: 600;
+    }
