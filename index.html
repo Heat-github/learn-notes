@@ -35,35 +35,35 @@
         
         #box-video video{
  
-            min-width: 100%;
+            width: 70%;
  
-            min-height: 100%;
- 
-            max-height: 100%;
- 
-            max-width: 100%;
+            height: 2em;
  
             position: absolute;
  
-            top:30%;
+            top:90%;
  
-            left:30%;
- 
+            left:38%;
+
+            z-index: 4;
+
+            border-radius: 10%;
+
             transform: translate(-50%,-50%);
  
         }
  
         .cd{
  
-            width: 422px;
+            width: 322px;
  
-            height: 422px;
+            height: 322px;
  
             position: absolute;
  
-            top: 15%;
+            top: 30%;
  
-            left: 10%;
+            left: 5%;
  
             z-index:2;
  
@@ -77,20 +77,20 @@
           url(picture/打上花火.jpg) no-repeat;
  
         }
- 
+
         .center{
  
-            width:100px;
+            width:60px;
  
-            height: 100px;
+            height:60px;
  
             border-radius: 50%;
  
-            position: absolute;
+            position: relative;
  
-            top:38%;
+            top:40%;
  
-            left: 38%;
+            left:40%;
  
             z-index: 3;
  
@@ -98,16 +98,41 @@
  
             background: #000
            url(picture/打上花火2.jpg) no-repeat;
- 
         }
- 
+
+        .menu{
+
+            width: 16%;
+
+            height: 95%;
+
+            position: absolute;
+
+            right: 3%;
+
+            top: 0%;
+        }
+        
+        .content{
+            
+            width: 80%;
+
+            height: 20%;
+
+            position: absolute;
+
+            left: 5%;
+
+            top: 3%;
+        }
+
         .song{
  
             position: absolute;
  
-            top:15%;
+            top:25%;
  
-            left:50%;
+            right:30%;
  
         }
 
@@ -120,7 +145,7 @@
  
         h2{
  
-            font-family: 'Times New Roman', Times, serif;
+            font-family: "MD";
  
             font-size: 90px;
  
@@ -130,13 +155,15 @@
  
         p{
  
-            width: 500px;
+            width: 400px;
  
-            height: 300px;
+            height: 250px;
  
             font-family: "微软雅黑";
  
-            padding-left: 50px;
+            padding-left: 10px;
+
+            padding-top: 5px;
  
             line-height: 30px;
  
@@ -155,15 +182,29 @@
 </head>
 <body>
     <div id="box-video">
-        <video src="media/DAOKO-打上花火.flac" loop="loop"></video>
- 
+        <video src="media/DAOKO-打上花火.flac" controls="controls" loop="loop"></video>
+        
+        <div class="content">
+            <h2>天大地大，东哥最大</h2>
+        </div>
+
+        <div class="menu" >
+            <iframe src="./html/左侧书签.html" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+
         <div class="cd">
             <div class="center"></div>
         </div>
  
         <div class="song">
-            <h2>珍姐晚安</h2>
-            <p>あの日見渡した渚を<br/>今も思い出すんだ<br/>砂の上に刻んだ言葉<br/>君の後ろ姿<br/>寄り返す波が<br/>足元をよぎり何かを攫う<br/>夕凪の中<br/>日暮れだけが通り過ぎて行く</p>
+            <h2><small>打上花火</small></h2>
+            <p>あの日見渡した渚を<br/>
+                今も思い出すんだ<br/>
+                砂の上に刻んだ言葉<br/>
+                君の後ろ姿 寄り返す波が<br/>
+                足元をよぎり何かを攫う<br/>
+                夕凪の中<br/>
+                日暮れだけが通り過ぎて行く</p>
         </div>
 
         <div class="footer" style="background-color: rgb(6, 121, 236); text-align: center;">
