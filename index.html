@@ -2,216 +2,66 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>HTML | 首页</title>
+    <title>Alex & Jenny‘s web</title>
     <base href="./" target="_blank">
-    <link rel="shortcut icon" href="picture/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/test.css">
-    <style type="text/css">
-
-        *{
- 
-            margin: 0;
- 
-            padding: 0;
- 
-            list-style: none;
- 
-        }
- 
-        #box-video{
- 
-            width: 100%;
- 
-            height: 100%;
- 
-            position: absolute;
- 
-            overflow: hidden;
-
-            background:
-          url(picture/古风.jpg) no-repeat;
-
-          background-size: cover;
- 
-        }
-        
-        
-        #box-video video{
- 
-            width: 70%;
- 
-            height: 2em;
- 
-            position: absolute;
- 
-            top:90%;
- 
-            left:38%;
-
-            z-index: 4;
-
-            border-radius: 10%;
-
-            transform: translate(-50%,-50%);
- 
-        }
-
- 
-        .cd{
- 
-            width: 322px;
- 
-            height: 322px;
- 
-            position: absolute;
- 
-            top: 30%;
- 
-            left: 5%;
- 
-            z-index:2;
- 
-            border-radius: 50%;
- 
-            border: 10px solid palevioletred;
- 
-            box-shadow: 5px 5px 15px #000;
- 
-            background:
-          url(picture/打上花火.jpg) no-repeat;
-
-          background-size: cover;
- 
-        }
-
-        .center{
- 
-            width:60px;
- 
-            height:60px;
- 
-            border-radius: 50%;
- 
-            position: relative;
- 
-            top:40%;
- 
-            left:40%;
- 
-            z-index: 3;
- 
-            border: 5px solid paleturquoise;
- 
-            background: #000
-           url(picture/打上花火2.jpg) no-repeat;
-
-           background-size: cover;
-        }
-
-        .menu{
-
-            position: absolute;
-
-            left: 81%;right: 2%;
-
-            top:2%;bottom:5%;
-        }
-        
-        .content{
-
-            position: absolute;
-
-            left: 5%;right: 15%;
-
-            top: 3%;bottom: 77%;
-        }
-
-        .song{
- 
-            position: absolute;
- 
-            top:25%;
- 
-            right:30%;
- 
-        }
-
-        .footer{
-            width: 100%;
-            height: 1.5em;
-            position: absolute;
-            bottom: 0%;
-        }
- 
-        h2{
- 
-            font-family: "华文彩云";
- 
-            font-size: 90px;
- 
-            color: cornflowerblue;
- 
-        }
- 
-        p{
- 
-            width: 400px;
- 
-            height: 250px;
- 
-            font-family: "微软雅黑";
- 
-            padding-left: 10px;
-
-            padding-top: 5px;
- 
-            line-height: 30px;
- 
-            color: rgb(255, 255, 255);
- 
-            background: url(picture/打上花火1.jpg)
-            repeat-x;
-
-            background-size: cover;
- 
-            opacity: 0.3;
- 
-            box-sizing: border-box;
- 
-        }
- 
-     </style>
+    <link rel="shortcut icon" href="piture/favicon.ico">
+    <!--CSS文件为index.css-->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-    <div id="box-video">
-        <video src="media/DAOKO-打上花火.flac" controls="controls" loop="loop"></video>
+    <ul class="topmenu">
+        <li><a href="index.html" class="active">主页</a></li>
+        <li><a href="html/alex-index.html">Alex的程序语言学习</a></li>
+        <li><a href="Alex&Jenny/aj-index.hml">我们的历程</a></li>
+        <li><a href="others/QR-code.html">祝福我们</a></li>
+    </ul>
+      
+    <div class="clearfix">
+        <div class="column content">
+            <div class="header">
+              <h1>Alex & Jenny's website</h1>
+            </div>
+                <h1>《思政大课》观后感</h1>
+                <p>在突如其来的疫情面前，全国大学生都在家里为“抗疫“默默做出自己的贡献，
+                    但是在这种被动的“抗疫“现状中，许多大学生不免有一些负面的、忐忑的情绪，
+                    而《思政大课》及时给大学生们带来了一场思想的洗礼，
+                    恢复了许多大学生对”抗疫“战的信心，增强了全国大学生“抗疫“必胜的信念。</p>
+                <p>《思政大课》中秦宣教授提到的制度优势转化为治理效能的说法让我比较印象深刻。
+                    中国社会主义制度的制度优势有两点，其一是共产党的领导，其二是人民当家作主，
+                    这都是在生活中切切实实地体会到的。</p>
+                <p>共产党从领导解放战争到实现中华民族伟大复兴斗争，
+                    都站在了乘风破浪的船头，不管前方是否浪涛滚滚绝不将人民往前推，
+                    既是在领导人民向美好生活前进，既是发号施令也是为人民服务。
+                    共产党代表的只有人民，
+                    因此代表其他群体或利益的党派是无法在人民作中面前取得更大的信任的，
+                    也正是共产党的这一根本利益，
+                    让共产党领导下的中国在各种大小灾难面前表现得无比团结。</p>
+        </div>
+        <div class="column sidemenu">
+            <table>
+                <tr style="opacity: 50%;">
+                    <ul>
+                         <li><a class="active">今日份狗粮</a></li>
+                        <li><a href="#city">The City</a></li>
+                        <li><a href="#island">The Island</a></li>
+                        <li><a href="#food">The Food</a></li>
+                        <li><a href="#people">The People</a></li>
+                        <li><a href="#history">The History</a></li>
+                    </ul>
+                <tr>
+                    <img src="picture/IMG_Alex&Jenny.jpg" alt="Alex&Jenny" style="width: 100%;">
+                </td>
+                </tr>    
+                </tr>
+            </table>
+            
+        </div>
+
         
-        <div class="content">
-            <h2>天大地大，东哥最大</h2>
-        </div>
-
-        <div class="menu" >
-            <iframe src="./html/左侧书签.html" frameborder="0" width="100%" height="100%"></iframe>
-        </div>
-
-        <div class="cd">
-            <div class="center"></div>
-        </div>
- 
-        <div class="song">
-            <h2><small>打上花火</small></h2>
-            <p>あの日見渡した渚を<br/>
-                今も思い出すんだ<br/>
-                砂の上に刻んだ言葉<br/>
-                君の後ろ姿 寄り返す波が<br/>
-                足元をよぎり何かを攫う<br/>
-                夕凪の中 日暮れだけが通り過ぎて行く</p>
-        </div>
-
-        <div class="footer" style="background-color: rgb(6, 121, 236); text-align: center;">
-            Copyright © Alex-alading.dong @ 2020
-        </div>
-     </div>
-
+    </div>
+      
+    <div class="footer">
+        <p>Copyright © Alex-alading.dong @ 2020</p>
+    </div>  
 </body>
 </html>
