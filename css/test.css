@@ -1,8 +1,0 @@
-table.test1
-    {
-        width: 95%;
-        border: 1 rgb(6, 121, 236);
-        padding: 2px;
-        border-spacing: 1px;
-        table-layout: fixed;
-    }
