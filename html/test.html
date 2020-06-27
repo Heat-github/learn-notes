@@ -2,174 +2,54 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>HTML--TEST</title>
+    <title>Alex & Jenny‘s web</title>
     <base href="../" target="_blank">
     <link rel="shortcut icon" href="piture/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/test.css">
-    <style type="text/css">
-
-        *{
- 
-            margin: 0;
- 
-            padding: 0;
- 
-            list-style: none;
- 
-        }
- 
-        #box-video{
- 
-            width: 100%;
- 
-            height: 100%;
- 
-            position: absolute;
- 
-            overflow: hidden;
-
-            background: rgb(255, 236, 212);
- 
-        }
-        
-        
-        #box-video video{
- 
-            min-width: 100%;
- 
-            min-height: 100%;
- 
-            max-height: 100%;
- 
-            max-width: 100%;
- 
-            position: absolute;
- 
-            top:30%;
- 
-            left:30%;
- 
-            transform: translate(-50%,-50%);
- 
-        }
- 
-        .cd{
- 
-            width: 422px;
- 
-            height: 422px;
- 
-            position: absolute;
- 
-            top: 15%;
- 
-            left: 10%;
- 
-            z-index:2;
- 
-            border-radius: 50%;
- 
-            border: 10px solid palevioletred;
- 
-            box-shadow: 5px 5px 15px #000;
- 
-            background:
-          url(picture/打上花火.jpg) no-repeat;
- 
-        }
- 
-        .center{
- 
-            width:100px;
- 
-            height: 100px;
- 
-            border-radius: 50%;
- 
-            position: absolute;
- 
-            top:38%;
- 
-            left: 38%;
- 
-            z-index: 3;
- 
-            border: 5px solid paleturquoise;
- 
-            background: #000
-           url(picture/打上花火2.jpg) no-repeat;
- 
-        }
- 
-        .song{
- 
-            position: absolute;
- 
-            top:15%;
- 
-            left:50%;
- 
-        }
-
-        .footer{
-            width: 100%;
-            height: 1.5em;
-            position: absolute;
-            bottom: 0%;
-        }
- 
-        h2{
- 
-            font-family: 'Times New Roman', Times, serif;
- 
-            font-size: 90px;
- 
-            color: cornflowerblue;
- 
-        }
- 
-        p{
- 
-            width: 500px;
- 
-            height: 300px;
- 
-            font-family: "微软雅黑";
- 
-            padding-left: 50px;
- 
-            line-height: 30px;
- 
-            color: palevioletred;
- 
-            background: url(picture/打上花火3.jpg)
-            repeat-x;
- 
-            opacity: 0.4;
- 
-            box-sizing: border-box;
- 
-        }
- 
-     </style>
+    <!--CSS文件为index.css-->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-    <div id="box-video">
-        <video src="media/DAOKO-打上花火.flac" autoplay="autoplay" loop="loop"></video>
- 
-        <div class="cd">
-            <div class="center"></div>
-        </div>
- 
-        <div class="song">
-            <h2>打上花火</h2>
-            <p>あの日見渡した渚を<br/>今も思い出すんだ<br/>砂の上に刻んだ言葉<br/>君の後ろ姿<br/>寄り返す波が<br/>足元をよぎり何かを攫う<br/>夕凪の中<br/>日暮れだけが通り過ぎて行く</p>
-        </div>
+    <ul class="topmenu">
+        <li><a href="index.html" class="active">主页</a></li>
+        <li><a href="html/alex-index.html">Alex的程序语言学习</a></li>
+        <li><a href="Alex&Jenny/aj-index.hml">我们的历程</a></li>
+        <li><a href="others/QR-code.html">祝福我们</a></li>
+    </ul>
+      
+    <div class="clearfix">
+        <div class="column sidemenu">
+          <ul>
+            <li><a href="#flight" class="active">The Flight</a></li>
+            <li><a href="#city">The City</a></li>
+            <li><a href="#island">The Island</a></li>
+            <li><a href="#food">The Food</a></li>
+            <li><a href="#people">The People</a></li>
+            <li><a href="#history">The History</a></li>
+            <li><a href="#oceans">The Oceans</a></li>
+            <li>
+                <div class="">
 
-        <div class="footer" style="background-color: rgb(6, 121, 236); text-align: center;">
-            Copyright © Alex-alading.dong @ 2020
+                </div>
+            </li>
+          </ul>
         </div>
-     </div>
-
+      
+        <div class="column content">
+          <div class="header">
+            <h1>Alex & Jenny's website</h1>
+          </div>
+              <h1>Chania</h1>
+              <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+              <p>You will learn more about responsive web pages in a later chapter.</p>
+              <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+              <p>You will learn more about responsive web pages in a later chapter.</p>
+              <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+              <p>You will learn more about responsive web pages in a later chapter.</p>
+          </div>
+    </div>
+      
+    <div class="footer">
+        <p>Copyright © Alex-alading.dong @ 2020</p>
+    </div>  
 </body>
 </html>
