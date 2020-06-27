@@ -1,26 +1,40 @@
-#body_tag
-    {
+#body_tag{
         background-color: rgb(128, 128, 128);
         border:5px solid coral;
         border-radius: 0px;
         padding: 5px;
-    }
+        magin:10px;    }
 
-#content_tag
-    {
+#content_tag{
         background-color: rgb(187, 187, 187);
         margin: 10px 0px;
         padding: 0px 8px;
     }
 
-#note_tag
-    {
+#note_tag{
         background-color: rgb(255, 255, 255);
         color:rgb(1, 136, 30);
         margin: 10px 0px;
         padding: 1em 0.5em;
     }
 
+#menu{
+        width: 100%;
+        background-color: rgb(133, 228, 153);
+        border:2px solid rgb(208, 255, 147);
+        color: rgb(0, 0, 0);
+        position: fixed;
+        left:0%;
+        top:0%;
+        font-size: 24px;
+        text-align: center;
+    }
+menu a:hover{
+        background-color: rgb(247, 148, 0);
+    }
+menu a:active{
+    background-color: rgb(219, 0, 135);
+    }
 h1
     { 
         color:rgb(255, 0, 0);
