@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML | 学习笔记2020-06</title>
+    <meta name="作者" content="Alex Wong">
+    <meta name="关键字" content="HTML,第一个,新手,笔记">
+    <meta name="描述" content="用于笔记记，免费分享">
+    <base target="_blank"> <!--设置所有链接点击时另一窗口打开-->
+    <link rel="stylesheet" type="text/css" href="table-style.css" />
+    <link rel="stylesheet" type="text/css" href="笔记页面样式表.css">
+    <link rel="shortcut icon" href="../picture/favicon.ico">
+</head>
+<body id="body_tag">
+<code style="font-size: 18px;">
+    <div id="menu">
+                        <a href="../index.html" style="text-decoration:none" target="_self">
+            首页       </a>
+                        <a href="HTML学习笔记2020-06.html" style="text-decoration:none" target="_self">
+            2020年6月 </a>
+                        <a href="HTML学习笔记2020-07.html" style="text-decoration:none">
+            2020年7月 </a> 
+                        <a href="HTML学习笔记2020-08.html" style="text-decoration:none">
+            2020年8月 </a> 
+                        <a href="HTML学习笔记2020-09.html" style="text-decoration:none">
+            2020年9月 </a> 
+                        <a href="HTML学习笔记2020-10.html" style="text-decoration:none">
+            2020年10月 </a> 
+                        <a href="HTML学习笔记2020-11.html" style="text-decoration:none">
+            2020年11月 </a> 
+                        <a href="HTML学习笔记2020-12.html" style="text-decoration:none">
+            2020年12月 </a>
+            ------ 
+                        <a href="HTML学习笔记2021-01.html" style="text-decoration:none">
+             2021年     </a> 
+    </div>
+    <div id="content_tag">
+        <hr/>
+        <h1>第一个HTML程序</h1>
+        <hr/>
+        <p><b>摘要：</b>2020.06.20开始接触HTML，感觉上手编辑网页原来这么有意思，鬼使神差之下就开始看各种课程。打算用HTML的方式来记录学习过程，
+            学习内容来自于<a href="https://www.runoob.com" style="text-decoration:none">RUNOOB菜鸟教程网站</a>。</p>
+        <hr/>
+        <!--6月20号笔记！！！！！！！！！！！！！-->
+        <!--6月20号笔记！！！！！！！！！！！！！-->
+        <h3>2020.06.20 周六</h3>
+        <p>
+            今天主要学习HTML的基础知识，包括元素、属性与标签.<br/>
+            ① 元素：元素构成 HTML 文档，是从开始标签（start tag）到结束标签（end tag）的所有代码。<br/>
+            ② 属性：属性是 HTML 元素提供的附加信息，一般描述于开始标签，总是以名称/值对的形式出现，
+            <b>比如：name="value"</b>。<br/>
+        </p>
+        <!--笔记内容-->
+        <div id="note_tag">
+            今天学到的元素、标签和属性：<br/>
+            &lt;p&gt;----------------定义一个段落<br/>
+            &lt;html&gt;-------------定义整个HTML文档<br/>
+            &lt;body&gt;-------------定义HTML文档的主体，只有在body内的内容才能在浏览器上可见<br/>
+            &lt;br&gt;---------------空元素，定义换行<br/>
+            &lt;hr&gt;---------------空元素，定义水平线<br/>
+            &lt;a&gt;----------------定义一个链接，格式为【&lt;a href="url"&gt;链接文本、图片等元素&lt;a/&gt;】；
+            还可以设置target为"_blank", 让链接将在新窗口打开；<br/>
+            &lt;img&gt;--------------插入图片并定义大小，【&lt;img border="边框大小" src="图片地址" alt="图像替代文本" 
+            width="宽" height="高"/&gt;】；<br/>
+            &lt;!--...--&gt;---------定义注释内容，在浏览器中不会显示出来<br/>
+            &lt;h1&gt;-&lt;h6&gt;----------定义一级到六级标题<br/>
+            class属性----------为html元素定义一个或多个类名（classname）(类名从样式文件引入)<br/>
+            id属性-------------定义元素的唯一id<br/>
+            style属性----------规定元素的行内样式（inline style）<br/>
+            title属性----------描述了元素的额外信息 (作为工具条使用)<br/>
+            查看更多标准属性：
+            <a href="https://www.runoob.com/tags/ref-standardattributes.html" style="text-decoration:none;border:1px"> HTML 标准属性说明</a>
+        </div><hr/>
+    
+        <!--6月21号笔记！！！！！！！！！！！！！-->
+        <!--6月21号笔记！！！！！！！！！！！！！-->  
+        <h3>2020.06.21 周日</h3>
+        <p>今天主要学习HTML的文本格式化、计算机输出标签以及引文引用标签，计算机输出标签暂时还搞不太明白，只能在后面遇到实际应用的时候再加深理解。</p> 
+        <!--笔记内容-->
+        <div id="note_tag">
+            &lt;b&gt;、&lt;strong&gt;--------定义粗体文字，后者着重语气；<br/>
+            &lt;i&gt;、&lt;em&gt;------------定义斜体文字，后者着重语气；<br/>
+            &lt;sup&gt;、&lt;sub&gt;---------分别定义上下标文字；<br/>
+            &lt;big&gt;、&lt;small&gt;-------分别定义大一号和小一号的字体，嵌套使用可以更大（小）；<br/>
+            &lt;del&gt;、&lt;ins&gt;---------分别定义删除、插入文字，在原文上划删除号和后面添加；<br/>
+            &lt;pre&gt;----------------定义预格式文本，在pre标签内的本本格式会正常显示出来，空格
+            和换行都不会自动消除，一般用于显示计算机的源代码；<br/>
+            &lt;abbr&gt;---------------定义缩写，格式为【&lt;abbr title="缩写原文"&gt;缩写格式&lt;abbr/&gt;】,
+            鼠标停在缩写内容上时会显示缩写原文；<br/>
+            &lt;bdo&gt;----------------定义文字方向，格式为【&lt;bdo title="rtl"&gt;文字内容&lt;bdo/&gt;】,
+            表示文字内容从右到左，用ltr属性即为正常的从左到右显示；<br/>
+            &lt;q&gt;------------------定义短引用，引用内容会被双引号括起来并有斜体效果，通常用于一句话引用；<br/>
+            &lt;blockqute&gt;----------定义长引用，内容自动缩进与斜体效果，通常用于大段引用；<br/>
+            &lt;cite&gt;---------------定义引用、引证，定义作品的标题，有斜体效果<br/>
+            &lt;address&gt;------------定义地址，定义文档作者的联系信息，有斜体效果<br/>
+            以下这些标签尚不知道在应用中如何使用或者其意义何在：<br/>
+            &lt;code&gt;---------------定义计算机代码<br/>
+            &lt;kbd&gt;----------------定义键盘码<br/>
+            &lt;samp&gt;---------------定义计算机代码样本<br/>
+            &lt;var&gt;----------------定义变量<br/>
+            &lt;dfn&gt;----------------定义一个定义项目<br/>
+            图片链接的方法：<br/>
+            &nbsp;&nbsp;<img alt="图片链接方法" style="text-align: center;border:2px solid #EE872A;" src="../picture/图片链接的方法.jpg" width="600"/><br/>
+            HTML head部分的元素：<br/>
+            &lt;title&gt;--------------定义了HTML文档的标题；<br/>
+            &lt;base&gt;---------------定义页面中所有链接默认的链接目标地址；<br/>
+            &lt;meta&gt;---------------描述HTML文档的描述，关键词，作者，字符集等；<br/>
+            &lt;link&gt;---------------定义了文档与外部资源之间的关系，通常用于链接到样式表；<br/>
+            &lt;style&gt;--------------定义了HTML文档的样式文件引用地址；<br/>
+            &lt;script&gt;-------------定义了客户端的脚本文件。
+        </div><hr/>
+    
+        <!--6月22号笔记！！！！！！！！！！！！！-->
+        <!--6月22号笔记！！！！！！！！！！！！！-->  
+        <h3>2020.06.22 周一</h3>
+        <p>今天主要学习HTML的级联样式表CSS</p> 
+        <!--笔记内容-->
+        <div id="note_tag">
+            内联样式------------在元素中使用style属性；<br/>
+            内联样式表----------在head部分中使用&lt;style&gt;元素来包含CSS；<br/>
+            外联样式表----------在head内使用外部CSS文件；<br/>
+            常见的内联样式：
+            <p style="margin-left:20px;">
+                书写格式：style="样式1:样式1定义;样式2:样式2定义;..."<br/>
+                backgroud-color---段落背景颜色<br/>
+                margin-left-------标签内元素与左侧的距离<br/>
+                color-------------字体颜色<br/>
+                font-family-------字体样式<br/>
+                text-align--------对齐方式<br/>
+            </p>
+            内联样式表：
+            <p style="margin-left:20px;">
+                &lt;style type="text/css"&gt;<br/>
+                元素1 {属性：属性样式}<br/>
+                元素2 {属性：属性样式}<br/>
+                .......<br/>
+                &lt;/style&gt;
+            </p>
+            外联样式表：
+            <p style="margin-left:20px;">
+                &lt;link rel="stylesheet" type="text/css" href="url"&gt;<br/>
+                rel-----------------必需输入的属性，定义当前文档与被链接文档之间的关系；<br/>
+                url-----------------CSS文件的地址，定义被链接文档的位置；<br/>
+                type----------------规定被链接文档的 MIME 类型；<br/>
+            </p>
+        </div><hr/>
+        
+        <!--6月23日！！！！！！！！！！-->
+        <!--6月23日！！！！！！！！！！-->
+        <h3>6月23日 周二</h3>
+        <P>今天主要学习了图像、表格的插入。</P>
+        <div id="note_tag">
+            图像插入使用img标签，包含地址属性src，加载图像过程中显示的图片信息属性alt，在CSS中使用align属性可定义图像在文本中
+            时偏上还是偏下或居中，float属性定义图像浮动在文本的两侧，以及高度宽度属性，usemap定义可用于map标签图像定义；<br>
+            map标签定义图像地图，可通过像素点位置索引图像上的指定位置，name属性必须有且与img标签中的usemap属性名称一致；<br>
+            area标签在map标签内使用，可创建带有可供点击区域的图像地图，图像的特定区域都是一个超级链接；其内属性与定义如下表所示：
+            <table id="alex" style="width: 70%;">
+                <tr class="oringe">
+                    <th>属性</th>
+                    <th>定义方法</th>
+                </tr>
+                <tr>
+                    <td>shape</td>
+                    <td>rect(矩形); circle(圆形); poly(多边形)</td>
+                </tr>
+                <tr class="oringe">
+                    <td>coords</td>
+                    <td>矩形(左上角和左下角坐标); circle(圆心坐标和半径); poly(每一个顶角的坐标)</td>
+                </tr>
+                <tr>
+                    <td>alt</td> 
+                    <td>要跳转的图像信息</td>
+                </tr>
+                <tr class="oringe">
+                    <td>href</td> 
+                    <td>要跳转的图像地址</td>
+                </tr>
+            </table>
+        </div><hr/>
+
+        <!--6月24日！！！！！-->
+        <!--6月24日！！！！！-->
+        <h3>6月24日 周三</h3>
+        <p>今天主要学习CSS的创建以及一部分样式与特点。</p>
+        <div id="note_tag">
+            CSS创建规则：
+            <ol>
+                <li>CSS规则由两个主要的部分构成：选择器，以及一条或多条声明;</li>
+                <li>CSS声明总是以分号(;)结束，声明总以大括号({})括起来;</li>
+                <li>CSS注释以 "/*" 开始, 以 "*/" 结束;</li>
+            </ol> 
+            定义id属性和class属性需要注意的点：
+            <ol>
+                <li>CSS 中 id 选择器以 "#" 来定义;以下的样式规则应用于元素属性 id="para1":<br/>
+                    #para1 {text-align:center;color:red;}</li>
+                <li>lass 选择器在HTML中以class属性表示, 在 CSS 中，类选择器以一个点"."号定义：<br/>
+                    p.ctrred {text-align:center;color:red;}----只有在对应的p标签中才能引用类属性ctrred</li>
+                <li><b>注意：</b>ID属性和class属性不要以数字开头，数字开头的ID和class在 Mozilla/Firefox 浏览器中不起作用。</li>
+            </ol>
+            插入样式表的方法：
+            <ol>
+                <li>外联样式表（CSS文件）：&lt;link rel="当前文档与被链接文档之间的关系" type="文档的MIME类型" href="css文件名.css"&gt;</li>
+                <li>内部样式表：通过style标签在文档头部定义内部样式表</li>
+                <li>内联样式：在相关的标签内使用样式（style）属性</li>
+                <li>多重样式优先级： 内联样式 > 内联样式表 > 外联样式表 > 浏览器默认样式</li>
+            </ol>
+            背景设置（body选择器中设置，以下顺序为简写时的顺序）：
+            <ol>
+                <li>background-color-------背景颜色</li>
+                <li>background-image-------背景图片</li>
+                <li>background-repeat------背景图片是否复制排列以及复制排列方向</li>
+                <li>background-attachment--背景是否随鼠标滚动</li>
+                <li>background-position----背景图片摆放的起始位置（左上角）</li>
+            </ol>
+            文本设置（在对应选择器中设置，p、h1-h6选择器）：
+            <ol>
+                <li>字体间距属性letter-spacing：1px，px是像素单位，数值可正可负</li>
+                <li>行间距属性line-height：100%，用百分数表示</li>
+                <li>单词间距属性word-spacing：30px，可以看作是空格的宽度</li>
+                <li>文本阴影效果text-shadow：2px 2px rgb，定义xy方向偏移效果和颜色</li>
+                <li>文本的对齐方式属性text-align：left左对齐、right右对齐、center居中、justify两端对齐</li>
+                <li>文本修饰属性text-decoration：</li>
+                    <ol class="lwalpha">
+                        <li>none----------删除文本修饰属性，主要用于删除链接下划线</li>
+                        <li>overline------文本上方划线</li>
+                        <li>line-through--文本中间划线，删除线</li>
+                        <li>underline-----文本下方划线</li>
+                    </ol>
+                <li>文本转换属性text-transform：uppercase大写、lowercase小写、capitalize首字母大写</li>
+                <li>文本首行缩进属性text-indent：10px</li>
+            </ol>
+            字体设置：
+            <ol>
+                <li>字体<b>样式</b>font-style：正常normal、斜体italic、倾斜的字体oblique</li>
+                <li>字体<b>粗细</b>font-weight：500(nomal)，&lt;500(lighter)、&gt;500(bold)</li>
+                <li>字体<b>大小</b>font-size：px是像素大小，em是当前浏览器默认的字体大小，1em = 16px，可用百分比或小数与em组合</li>
+                <li>字体<b>类型</b>font-family："Time New Rome"、"宋体"等等</li>
+                <li>字体<b>字型</b>：同在font-family中设置，跟在类型之后；Serif字符末端有修饰，San-serif无修饰，Monospace等宽字符</li>
+                <li>字体转变font-variant：small-caps小型大写字母、normal正常</li>
+                <li>font声明简写顺序：样式 粗细 大小/行间距 类型 字型</li>
+            </ol>
+        </div><hr/>
+        <!--6月27日！！！！！！！！-->
+        <!--6月27日！！！！！！！！-->
+        <h3>6月27日 周六</h3>
+        <p>前几天在努力搭建网站，学了很多杂七杂八的东西，整理起来太混乱，以后会找个时间专门做这个专题
+            的网页(Flag fly forever)，截至今天为止，终于用已知的知识搭建了一个首页！！欢呼！！！继续学习！</p>
+        <div id="note_tag">
+            <ol>
+                <li><details>
+                        <summary>details标签</summary>
+                        <p>规定了用户可见的或者隐藏的需求的补充细节<br/>summary标签配合使用定义标题，标题可见，点击标题时显示细节</p>
+                </details></li>
+                <li>float, clear标签：</li>
+                <ol class="lwalpha">
+                        <li>float：一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止，
+                            浮动元素之后的元素将围绕它，浮动元素之前的元素将不会受到影响。</li>
+                        <li>clear：元素浮动之后，周围的元素会重新排列，为了避免这种情况，使用 clear 属性；
+                            clear 属性指定元素两侧不能出现浮动元素。</li>
+                </ol>
+            </ol>
+
+        </div>
+    </div><!--content结束标签-->
+    
+    <div id="footer" style="margin: 2px; background-color:rgb(172, 221, 221); color: rgb(255, 255, 255);text-align: center;">
+    Copyright © 2020 Alex-alading.dong
+    </div> 
+</code>
+</body>
+</html>
