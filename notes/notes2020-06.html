@@ -6,11 +6,10 @@
     <meta name="作者" content="Alex Wong">
     <meta name="关键字" content="HTML,第一个,新手,笔记">
     <meta name="描述" content="用于笔记记，免费分享">
-    <link rel="stylesheet" type="text/css" href="table-style.css" />
     <link rel="stylesheet" type="text/css" href="notes.css">
     <link rel="shortcut icon" href="../picture/favicon.ico">
 </head>
-<body id="body_tag">
+<body>
 <code style="font-size: 18px;">
     <div class="topmenu">
         <a href="alex-index.html"  target="_self">首页</a>
@@ -22,9 +21,18 @@
         <a href="notes2020-11.html">11月</a>
         <a href="notes2020-12.html">12月</a>
         <a href="notes2021-01.html">2021年</a> 
-    </div>
-    <div id="content_tag">
-        <hr/>
+    </div><hr>
+    <div class="body_tag catalog">
+        <ul>
+            <li><a href="#C20">20号笔记</a></li>
+            <li><a href="#C21">21号笔记</a></li>
+            <li><a href="#C22">22号笔记</a></li>
+            <li><a href="#C23">23号笔记</a></li>
+            <li><a href="#C24">24号笔记</a></li>
+            <li><a href="#C27">27号笔记</a></li>
+        </ul>
+    </div><!--catalog结束标签-->
+    <div class="body_tag content">
         <h1>第一个HTML程序</h1>
         <hr/>
         <p><b>摘要：</b>2020.06.20开始接触HTML，感觉上手编辑网页原来这么有意思，鬼使神差之下就开始看各种课程。打算用HTML的方式来记录学习过程，
@@ -32,7 +40,7 @@
         <hr/>
         <!--6月20号笔记！！！！！！！！！！！！！-->
         <!--6月20号笔记！！！！！！！！！！！！！-->
-        <h3>2020.06.20 周六</h3>
+        <h3><a id="C20">2020.06.20 周六</a></h3>
         <p>
             今天主要学习HTML的基础知识，包括元素、属性与标签.<br/>
             ① 元素：元素构成 HTML 文档，是从开始标签（start tag）到结束标签（end tag）的所有代码。<br/>
@@ -40,7 +48,7 @@
             <b>比如：name="value"</b>。<br/>
         </p>
         <!--笔记内容-->
-        <div id="note_tag">
+        <div class="note_tag">
             今天学到的元素、标签和属性：<br/>
             &lt;p&gt;----------------定义一个段落<br/>
             &lt;html&gt;-------------定义整个HTML文档<br/>
@@ -63,10 +71,10 @@
     
         <!--6月21号笔记！！！！！！！！！！！！！-->
         <!--6月21号笔记！！！！！！！！！！！！！-->  
-        <h3>2020.06.21 周日</h3>
+        <h3><a id="C21">2020.06.21 周日</a></h3>
         <p>今天主要学习HTML的文本格式化、计算机输出标签以及引文引用标签，计算机输出标签暂时还搞不太明白，只能在后面遇到实际应用的时候再加深理解。</p> 
         <!--笔记内容-->
-        <div id="note_tag">
+        <div class="note_tag">
             &lt;b&gt;、&lt;strong&gt;--------定义粗体文字，后者着重语气；<br/>
             &lt;i&gt;、&lt;em&gt;------------定义斜体文字，后者着重语气；<br/>
             &lt;sup&gt;、&lt;sub&gt;---------分别定义上下标文字；<br/>
@@ -89,7 +97,7 @@
             &lt;var&gt;----------------定义变量<br/>
             &lt;dfn&gt;----------------定义一个定义项目<br/>
             图片链接的方法：<br/>
-            <img alt="图片链接方法" style="text-align: center;border:2px solid #EE872A;" src="../picture/图片链接的方法.jpg" width="600"/><br/>
+            <img alt="图片链接方法" style="text-align: center;border:2px solclass #EE872A;" src="../picture/图片链接的方法.jpg" width="600"/><br/>
             HTML head部分的元素：<br/>
             &lt;title&gt;--------------定义了HTML文档的标题；<br/>
             &lt;base&gt;---------------定义页面中所有链接默认的链接目标地址；<br/>
@@ -101,10 +109,10 @@
     
         <!--6月22号笔记！！！！！！！！！！！！！-->
         <!--6月22号笔记！！！！！！！！！！！！！-->  
-        <h3>2020.06.22 周一</h3>
+        <h3><a id="C22">2020.06.22 周一</a></h3>
         <p>今天主要学习HTML的级联样式表CSS</p> 
         <!--笔记内容-->
-        <div id="note_tag">
+        <div class="note_tag">
             内联样式------------在元素中使用style属性；<br/>
             内联样式表----------在head部分中使用&lt;style&gt;元素来包含CSS；<br/>
             外联样式表----------在head内使用外部CSS文件；<br/>
@@ -136,13 +144,13 @@
         
         <!--6月23日！！！！！！！！！！-->
         <!--6月23日！！！！！！！！！！-->
-        <h3>6月23日 周二</h3>
+        <h3><a id="C23">2020.06.23 周二</a></h3>
         <P>今天主要学习了图像、表格的插入。</P>
         <div id="note_tag">
             图像插入使用img标签，包含地址属性src，加载图像过程中显示的图片信息属性alt，在CSS中使用align属性可定义图像在文本中时偏上还是偏下或居中，float属性定义图像浮动在文本的两侧，以及高度宽度属性，usemap定义可用于map标签图像定义；<br>
             map标签定义图像地图，可通过像素点位置索引图像上的指定位置，name属性必须有且与img标签中的usemap属性名称一致；<br>
             area标签在map标签内使用，可创建带有可供点击区域的图像地图，图像的特定区域都是一个超级链接；其内属性与定义如下表所示：
-            <table id="alex" style="width: 70%;">
+            <table class="alex" style="width: 70%;">
                 <tr class="oringe">
                     <th>属性</th>
                     <th>定义方法</th>
@@ -168,9 +176,9 @@
 
         <!--6月24日！！！！！-->
         <!--6月24日！！！！！-->
-        <h3>6月24日 周三</h3>
+        <h3><a id="C24">2020.06.24 周三</a></h3>
         <p>今天主要学习CSS的创建以及一部分样式与特点。</p>
-        <div id="note_tag">
+        <div class="note_tag">
             CSS创建规则：
             <ol>
                 <li>CSS规则由两个主要的部分构成：选择器，以及一条或多条声明;</li>
@@ -230,9 +238,9 @@
         </div><hr/>
         <!--6月27日！！！！！！！！-->
         <!--6月27日！！！！！！！！-->
-        <h3>6月27日 周六</h3>
+        <h3><a id="C27">2020.06.27 周六</a></h3>
         <p>前几天在努力搭建网站，学了很多杂七杂八的东西，整理起来太混乱，以后会找个时间专门做这个专题的网页(Flag fly forever)，截至今天为止，终于用已知的知识搭建了一个首页！！欢呼！！！继续学习！</p>
-        <div id="note_tag">
+        <div class="note_tag">
             <ol>
                 <li><details>
                         <summary>details标签</summary>
@@ -245,25 +253,23 @@
                 </details></li>
                 <li><details>
                     <summary>HTML链接</summary>
-                    <p>download：指定下载链接；<br/>
-                    href：指定链接目标的URL(统一资源定位器)；<br>
-                    target：规定打开目标URL的方式：_self（相同框架，默认）,_blank（新窗口）,_parent（父框架）,_top（本窗口）,framename（指定框架）<br>
-                    hreflang：规定目标 URL 的基准语言。仅在 href 属性存在时使用<br>
-                    media：规定目标 URL 的媒介类型。默认值：all。仅在 href 属性存在时使用<br>
+                    <p>download属性：指定下载链接；<br/>
+                    href属性：指定链接目标的URL(统一资源定位器)；<br>
+                    target属性：规定打开目标URL的方式：_self（相同框架，默认）,_blank（新窗口）,_parent（父框架）,_top（本窗口）,framename（指定框架）<br>
+                    hreflang属性：规定目标 URL 的基准语言。仅在 href 属性存在时使用<br>
+                    media属性：规定目标 URL 的媒介类型。默认值：all。仅在 href 属性存在时使用<br>
                     </p>
                 </details></li>
                 <li><details>
                     <summary>box-shadow属性</summary>
-                    <p></p>
+                    <p>h-shadow值：必需，水平阴影位置；v-shadow值：必需，垂直阴影的位置；<br>
+                    blur值：模糊距离；spread值：阴影大小；
+                    color值：阴影颜色；inset：阴影向内延伸；
+                    </p>
                 </details></li>
+                <li>页面内连接到指定位置：在指定位置用a标签标记id属性即可在使用a标签链接；</li>
                 <li><details>
                     <summary></summary>
-                    <p></p>
-                    <p></p>
-                </details></li>
-                <li><details>
-                    <summary></summary>
-                    <p></p>
                     <p></p>
                 </details></li>
             </ol>
@@ -271,7 +277,7 @@
         </div>
     </div><!--content结束标签-->
     
-    <div id="footer" style="margin: 2px; background-color:rgb(172, 221, 221); color: rgb(255, 255, 255);text-align: center;">
+    <div class="footer" style="clear: both; padding: 2px; background-color:rgb(172, 221, 221); color: rgb(255, 255, 255);text-align: center;">
     Copyright © 2020 Alex-alading.dong
     </div> 
 </code>
