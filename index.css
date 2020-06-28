@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+#index-body {
+    margin: 0;
+    background: url(../picture/古风.jpg);
+    background-size: cover;
+}
+.header {
+    background-color: #2196F3;
+    color: white;
+    text-align: center;
+    opacity: 70%;
+    padding: 2px;
+    font-size: 2em;
+}
+.header1 {
+    background-color: #fdff9e;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    opacity: 70%;
+    padding: 2px;
+    font-size: 2em;
+}
+/*---顶部书签样式---
+  ---顶部书签样式---
+  ---顶部书签样式---*/
+.topmenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #777;
+    opacity: 50%;
+}
+.topmenu li {
+    float: left;
+}
+.topmenu li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+.topmenu li a:hover {
+    background-color: #222;
+}
+.topmenu li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+/*---清除浮动格式---*/
+.clearfix{
+    content: "";
+    clear: both;
+    display: table;
+}
+/*---box样式---
+  ---box样式---
+  ---box样式---*/
+.column {
+    float: left;
+    padding: 15px;
+}
+.content {
+        width: 75%;
+}
+.sidemenu {
+    width: 25%;
+}
+.sidemenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.sidemenu li a {
+    margin-bottom: 4px;
+    display: block;
+    padding: 8px;
+    background-color: #eee;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #666;
+}
+.sidemenu li a:hover {
+    background-color: #555;
+    color: white;
+}
+.sidemenu li a.active {
+    background-color: #008CBA;
+    color: white;
+}
+
+.sidemenu1 {
+    width: 25%;
+}
+.sidemenu1 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.sidemenu1 li a {
+    margin-bottom: 4px;
+    display: block;
+    padding: 8px;
+    background-color: #eee;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #666;
+}
+.sidemenu1 li a:hover {
+    background-color: rgb(39, 189, 169);
+    color: white;
+}
+.sidemenu1 li a.active {
+    background-color: #fdd13e;
+    color: white;
+}
+
+.footer {
+    background-color: #444;
+    color: white;
+    padding: 2px;
+    font-size: 1em;
+    text-align: center;
+    opacity: 70%;
+    position: relative;
+    left: 0;right: 0;
+    bottom:0;
+}
+p{
+    text-indent:2em;
+    font-size: 1.2em;
+}
