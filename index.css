@@ -3,7 +3,7 @@
 }
 #index-body {
     margin: 0;
-    background: url(../picture/古风.jpg);
+    background: url(picture/古风.jpg);
     background-size: cover;
 }
 .header {
@@ -82,6 +82,7 @@
     text-decoration: none;
     font-size: 1.3em;
     color: #666;
+    text-align: center;
 }
 .sidemenu li a:hover {
     background-color: #555;
@@ -124,7 +125,7 @@
     padding: 2px;
     font-size: 1em;
     text-align: center;
-    opacity: 70%;
+    opacity: 0.6;
     position: relative;
     left: 0;right: 0;
     bottom:0;
@@ -132,4 +133,5 @@
 p{
     text-indent:2em;
     font-size: 1.2em;
+    opacity: 0.8;
 }
