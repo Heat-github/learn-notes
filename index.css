@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-#index-body {
+.index-body {
     margin: 0;
     background: url(picture/古风.jpg);
     background-size: cover;
