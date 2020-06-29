@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <title>HTML | 学习笔记2020-06</title>
     <meta name="作者" content="Alex Wong">
     <meta name="关键字" content="HTML,第一个,新手,笔记">
     <meta name="描述" content="用于笔记记，免费分享">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="notes.css">
     <link rel="shortcut icon" href="../picture/favicon.ico">
 </head>
@@ -30,6 +31,7 @@
             <li><a href="#C23">23号笔记</a></li>
             <li><a href="#C24">24号笔记</a></li>
             <li><a href="#C27">27号笔记</a></li>
+            <li><a href="#C29">29号笔记</a></li>
         </ul>
     </div><!--catalog结束标签-->
     <div class="body_tag content">
@@ -37,6 +39,12 @@
         <hr/>
         <p><b>摘要：</b>2020.06.20开始接触HTML，感觉上手编辑网页原来这么有意思，鬼使神差之下就开始看各种课程。打算用HTML的方式来记录学习过程，
             学习内容来自于<a href="https://www.runoob.com" style="text-decoration:none">RUNOOB菜鸟教程网站</a>。</p>
+        <p>HTML = Hyper Text Makeup Language，超文本标记语言<br />
+        Web标准 = 结构(Structure组织分类) + 表现(Presentation修饰渲染) + 行为(Behaviour智能交互)<br />
+        &lt;!DOCTYPE&gt;文档声明标签，不属于HTML标签；<br />
+        lang属性：语言属性，en英语，zh-CN中文，fr法语；<br />
+        charset属性：规定HTML文档所使用的字符编码，UFT-8是万国码，基本包含全世界所有国家需要使用到的字符，CG2312是简体中文，BG5是繁体中文，GBK包含简体和繁体中文；
+        </p>
         <hr/>
         <!--6月20号笔记！！！！！！！！！！！！！-->
         <!--6月20号笔记！！！！！！！！！！！！！-->
@@ -280,13 +288,30 @@
                     跨行、跨列属性：&lt;colspan(rowspan)="数值"&gt;——数值表示跨过的行和列数；</p>
                 </details></li>
             </ol>
-
+        </div><hr>
+        <!--6月29日！！！！！！！！-->
+        <!--6月29日！！！！！！！！-->
+        <h3><a id="C29">2020.06.29 周一</a></h3>
+        <p></p>
+        <div class="note_tag">
+            <details>
+                <summary>表单：form标签(只有此标签内的内容能收集到指定的文件中)，子标签：input、select、textarea、</summary>
+                <ol>
+                    <li>input标签，定义单行文本输入，其主要属性为type，name，value：<br>
+                        type属性：定义输入类型；text定义文本域，password定义密码字段，radio定义单选框，checkbox定义多选框，button创建按钮，submit定义提交按钮。<br>
+                        name属性：定义输入框所收集的数据类型；values属性：定义收集的数据值，只有按钮和选框时使用。
+                    </li>
+                    <li>select标签：定义下拉列表；name属性定义数据类型；<br>
+                        其内使用option子标签定义下拉列表的内容，option标签的属性有value属性定义可选内容，selected属性定义预选内容，一个option标签只能有一个值，一个select标签内只能有一个option可以使用预选属性selected。
+                    </li>
+                </ol>
+            </details>
         </div>
     </div><!--content结束标签-->
     
     <div class="footer" style="clear: both; padding: 2px; background-color:rgb(172, 221, 221); color: rgb(255, 255, 255);text-align: center;">
-    Copyright © 2020 Alex-alading.dong
-    </div> colspan
+    Copyright © Alex-alading.dong @ 2020
+    </div>
 </code>
 </body>
 </html>
