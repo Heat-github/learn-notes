@@ -98,13 +98,15 @@
             &lt;dfn&gt;----------------定义一个定义项目<br/>
             图片链接的方法：<br/>
             <img alt="图片链接方法" style="text-align: center;border:2px solclass #EE872A;" src="../picture/图片链接的方法.jpg" width="600"/><br/>
-            HTML head部分的元素：<br/>
-            &lt;title&gt;--------------定义了HTML文档的标题；<br/>
-            &lt;base&gt;---------------定义页面中所有链接默认的链接目标地址；<br/>
-            &lt;meta&gt;---------------描述HTML文档的描述，关键词，作者，字符集等；<br/>
-            &lt;link&gt;---------------定义了文档与外部资源之间的关系，通常用于链接到样式表；<br/>
-            &lt;style&gt;--------------定义了HTML文档的样式文件引用地址；<br/>
-            &lt;script&gt;-------------定义了客户端的脚本文件。
+            <details><summary>HTML head部分的元素：</summary>
+                &lt;title&gt;----------定义了HTML文档的标题；<br/>
+                &lt;base&gt;-----------定义页面中所有链接默认的链接目标地址；<br/>
+                &lt;meta&gt;-----------描述HTML文档的描述，关键词，作者，字符集等；<br/>
+                &lt;link&gt;-----------定义了文档与外部资源之间的关系，通常用于链接到样式表；<br/>
+                &lt;style&gt;----------定义了HTML文档的样式文件引用地址；<br/>
+                &lt;script&gt;---------定义了客户端的脚本文件。
+                每30秒刷新页面：&lt;meta http-equiv="refresh" content="30">&gt;
+            </details>
         </div><hr/>
     
         <!--6月22号笔记！！！！！！！！！！！！！-->
@@ -116,7 +118,7 @@
             内联样式------------在元素中使用style属性；<br/>
             内联样式表----------在head部分中使用&lt;style&gt;元素来包含CSS；<br/>
             外联样式表----------在head内使用外部CSS文件；<br/>
-            常见的内联样式：
+            <details><summary>常见的内联样式：</summary>
             <p style="margin-left:20px;">
                 书写格式：style="样式1:样式1定义;样式2:样式2定义;..."<br/>
                 backgroud-color---段落背景颜色<br/>
@@ -124,22 +126,21 @@
                 color-------------字体颜色<br/>
                 font-family-------字体样式<br/>
                 text-align--------对齐方式<br/>
-            </p>
-            内联样式表：
+            </p></details>
+            <details><summary>内联样式表：</summary>
             <p style="margin-left:20px;">
                 &lt;style type="text/css"&gt;<br/>
-                元素1 {属性：属性样式}<br/>
-                元素2 {属性：属性样式}<br/>
-                .......<br/>
+                元素1 {属性：值}<br/>
+                元素2 {属性：值}<br/>
                 &lt;/style&gt;
-            </p>
-            外联样式表：
+            </p></details>
+            <details><summary>外联样式表：</summary>
             <p style="margin-left:20px;">
                 &lt;link rel="stylesheet" type="text/css" href="url"&gt;<br/>
                 rel-----------------必需输入的属性，定义当前文档与被链接文档之间的关系；<br/>
                 url-----------------CSS文件的地址，定义被链接文档的位置；<br/>
                 type----------------规定被链接文档的 MIME 类型；<br/>
-            </p>
+            </p></details>
         </div><hr/>
         
         <!--6月23日！！！！！！！！！！-->
@@ -179,36 +180,36 @@
         <h3><a id="C24">2020.06.24 周三</a></h3>
         <p>今天主要学习CSS的创建以及一部分样式与特点。</p>
         <div class="note_tag">
-            CSS创建规则：
+            <details><summary>CSS创建规则：</summary>
             <ol>
                 <li>CSS规则由两个主要的部分构成：选择器，以及一条或多条声明;</li>
                 <li>CSS声明总是以分号(;)结束，声明总以大括号({})括起来;</li>
                 <li>CSS注释以 "/*" 开始, 以 "*/" 结束;</li>
-            </ol> 
-            定义id属性和class属性需要注意的点：
+            </ol></details>
+            <details>定义id属性和class属性需要注意的点：
             <ol>
                 <li>CSS 中 id 选择器以 "#" 来定义;以下的样式规则应用于元素属性 id="para1":<br/>
                     #para1 {text-align:center;color:red;}</li>
                 <li>lass 选择器在HTML中以class属性表示, 在 CSS 中，类选择器以一个点"."号定义：<br/>
                     p.ctrred {text-align:center;color:red;}----只有在对应的p标签中才能引用类属性ctrred</li>
                 <li><b>注意：</b>ID属性和class属性不要以数字开头，数字开头的ID和class在 Mozilla/Firefox 浏览器中不起作用。</li>
-            </ol>
-            插入样式表的方法：
+            </ol></details>
+            <details><summary>插入样式表的方法：</summary>
             <ol>
                 <li>外联样式表（CSS文件）：&lt;link rel="当前文档与被链接文档之间的关系" type="文档的MIME类型" href="css文件名.css"&gt;</li>
                 <li>内部样式表：通过style标签在文档头部定义内部样式表</li>
                 <li>内联样式：在相关的标签内使用样式（style）属性</li>
                 <li>多重样式优先级： 内联样式 > 内联样式表 > 外联样式表 > 浏览器默认样式</li>
-            </ol>
-            背景设置（body选择器中设置，以下顺序为简写时的顺序）：
+            </ol></details>
+            <details><summary>背景设置（body选择器中设置，以下顺序为简写时的顺序）：</summary>
             <ol>
                 <li>background-color-------背景颜色</li>
                 <li>background-image-------背景图片</li>
                 <li>background-repeat------背景图片是否复制排列以及复制排列方向</li>
                 <li>background-attachment--背景是否随鼠标滚动</li>
                 <li>background-position----背景图片摆放的起始位置（左上角）</li>
-            </ol>
-            文本设置（在对应选择器中设置，p、h1-h6选择器）：
+            </ol></details>
+            <details><summary>文本设置（在对应选择器中设置，p、h1-h6选择器）：</summary>
             <ol>
                 <li>字体间距属性letter-spacing：1px，px是像素单位，数值可正可负</li>
                 <li>行间距属性line-height：100%，用百分数表示</li>
@@ -224,8 +225,8 @@
                     </ol>
                 <li>文本转换属性text-transform：uppercase大写、lowercase小写、capitalize首字母大写</li>
                 <li>文本首行缩进属性text-indent：10px</li>
-            </ol>
-            字体设置：
+            </ol></details>
+            <details><summary>字体设置：</summary>
             <ol>
                 <li>字体<b>样式</b>font-style：正常normal、斜体italic、倾斜的字体oblique</li>
                 <li>字体<b>粗细</b>font-weight：500(nomal)，&lt;500(lighter)、&gt;500(bold)</li>
@@ -234,7 +235,7 @@
                 <li>字体<b>字型</b>：同在font-family中设置，跟在类型之后；Serif字符末端有修饰，San-serif无修饰，Monospace等宽字符</li>
                 <li>字体转变font-variant：small-caps小型大写字母、normal正常</li>
                 <li>font声明简写顺序：样式 粗细 大小/行间距 类型 字型</li>
-            </ol>
+            </ol></details>
         </div><hr/>
         <!--6月27日！！！！！！！！-->
         <!--6月27日！！！！！！！！-->
@@ -269,8 +270,14 @@
                 </details></li>
                 <li>页面内连接到指定位置：在指定位置用a标签标记id属性即可在使用a标签链接；</li>
                 <li><details>
-                    <summary></summary>
-                    <p></p>
+                    <summary>table标签</summary>
+                    <p>定义一个表格，其内的子标签和属性有：</p>
+                    <p>tr定义行，th定义表头，td定义单元格，caption定义标题；<br>
+                    clogroup定义表格列的组；col定义属性用于表格列；<br>
+                    thead、tbody、tfoot分别定义表格页眉、主体和页脚。
+                    </p> 
+                    <p>边框属性：cellpadding(单元格内边距)、cellspacing（单元格的间距）；
+                    跨行、跨列属性：&lt;colspan(rowspan)="数值"&gt;——数值表示跨过的行和列数；</p>
                 </details></li>
             </ol>
 
@@ -279,7 +286,7 @@
     
     <div class="footer" style="clear: both; padding: 2px; background-color:rgb(172, 221, 221); color: rgb(255, 255, 255);text-align: center;">
     Copyright © 2020 Alex-alading.dong
-    </div> 
+    </div> colspan
 </code>
 </body>
 </html>
