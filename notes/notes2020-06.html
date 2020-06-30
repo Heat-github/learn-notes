@@ -32,6 +32,7 @@
             <li><a href="#C24">24号笔记</a></li>
             <li><a href="#C27">27号笔记</a></li>
             <li><a href="#C29">29号笔记</a></li>
+            <li><a href="#C30">总结</a></li>
         </ul>
     </div><!--catalog结束标签-->
     <div class="body_tag content">
@@ -295,18 +296,64 @@
         <p></p>
         <div class="note_tag">
             <details>
-                <summary>表单：form标签(只有此标签内的内容能收集到指定的文件中)，子标签：input、select、textarea、</summary>
+                <summary>表单：form标签(只有此标签内的信息能收集到指定的文件中)，action属性定义保存信息的文件，以文件类型为.php；
+                    子标签：input、select、textarea、fieldset、button、datalist。</summary>
                 <ol>
                     <li>input标签，定义单行文本输入，其主要属性为type，name，value：<br>
-                        type属性：定义输入类型；text定义文本域，password定义密码字段，radio定义单选框，checkbox定义多选框，button创建按钮，submit定义提交按钮。<br>
+                        type属性：定义输入类型
+                        <p style="margin-left: 2em;">
+                        text定义文本域；password定义密码字段；radio定义单选框；checkbox定义多选框；
+                        button创建按钮；submit定义提交按钮；range创建进度条(默认0-100)；color定义取色器；
+                        date定义年月日选择按钮；email定义邮件格式，自动对 email 字段进行验证；
+                        hidden定义隐藏文本，用于储存默认值；img定义图片作为提交按钮；searc定义搜索字段；
+                        month定义年月、week定义年和周、number定义可选数字、time定义时和分；reset定义重置表单；
+                        tel定义电话号码；url定义URL字段；<br>
+                        file定义上传文件；<input type="file" name="img"><br>
+                        </p>
                         name属性：定义输入框所收集的数据类型；values属性：定义收集的数据值，只有按钮和选框时使用。
                     </li>
                     <li>select标签：定义下拉列表；name属性定义数据类型；<br>
-                        其内使用option子标签定义下拉列表的内容，option标签的属性有value属性定义可选内容，selected属性定义预选内容，一个option标签只能有一个值，一个select标签内只能有一个option可以使用预选属性selected。
+                        其内使用option子标签定义下拉列表的内容，option标签的属性有value属性定义可选内容，selected属性定义预选内容，一个option标签只能有一个值，一个select标签内只能有一个option可以使用预选属性selected；<br>
+                        optgroup则定义选项组，将下拉列表内容性质一致的定义为同一组。骨架标签如下：<br>
+                        <fieldset>
+                        <legend>骨架标签</legend>
+                <pre>
+                    &lt;select&gt;
+                        &lt;optgroup1&gt;
+                            &lt;option value="option1"&gt;option1&lt;/option&gt;
+                            &lt;option value="option2"&gt;option2&lt;/option&gt;
+                            ......
+                        &lt;/optgroup1&gt;
+                        &lt;optgroup2&gt;
+                            &lt;option value="option3"&gt;option3&lt;/option&gt;
+                            &lt;option value="option4"&gt;option4&lt;/option&gt;
+                            ......
+                        &lt;/optgroup2&gt;
+                        ......
+                    &lt;/select&gt;</pre>
+                        </fieldset>
                     </li>
+                    <li>fieldset标签：定义一组相关的表单元素，并用外框标记，其标题则有legend子标签定义</li>
+                    <li>button标签：定义一个按钮；type属性有button、reset、submit；</li>
+                    <li>datalist标签：可配合input标签使用，定义输入控件的选项列表，input需要设定list属性，其名称与datalist的id名称要一致；datalist的内容定义子标签也是option标签。</li>
+                    <li>textarea标签：定义多行文本框</li>
                 </ol>
             </details>
+            <details>
+                <summary>iframe标签：框架标签，可以显示链接目标的内容</summary>
+                <p>首页页面可以在下面显示，点击 <a href="../index.html" target="iframe_a" >主页页面</a>
+                则跳转到主页页面：</p>
+                <iframe src="alex-index.html" frameborder="2px" name="iframe_a" width="100%" height="300"></iframe>
+            </details>
         </div>
+        <h3><a id="C30">总结</a></h3>
+        <div class="note_tag">
+        到此为止，html的基本知识算是学完了，基本的html结构的css渲染已经掌握，
+        但是网页交互功能还没开始入手，下个月开始会逐渐深入学习HTML5以及CSS，
+        初步学习JavaScript语言。同时，会将后面学到的新知识不断完善这个网页，那么，
+        7月！我来啦！！！！！！</div>
+        <p style="text-align: right;"><a href="notes2020-07.html" style="font-size: 1.5em;color: greenyellow;text-decoration: none;"><b>-Next→</b></a></p>
+
     </div><!--content结束标签-->
     
     <div class="footer" style="clear: both; padding: 2px; background-color:rgb(172, 221, 221); color: rgb(255, 255, 255);text-align: center;">
