@@ -1,8 +1,8 @@
 *{box-sizing: border-box;}
 body{
     background-color: rgb(128, 128, 128);
-    border:5px solid coral;
-    padding: 0.25em;
+    border:0.5vw solid coral;
+    padding: 0.5vw;
     margin:0;}
 
 .body_tag{
@@ -11,10 +11,10 @@ body{
     padding: 0px;}
 
 .catalog{
-    width: 17%;
+    width: 16vw;
     background-color: rgb(110, 110, 110);
     list-style-type: none;
-    margin: 0.25em;
+    margin: 0.5vw;
     padding: 0;
     position: relative;}
     .catalog ul {
@@ -36,10 +36,10 @@ body{
             .catalog li a:hover{font-size: larger;}
 
 .content{
-    width: 80%;
+    width: 77vw;
     background-color: rgb(187, 187, 187);
-    margin: 0.25em;
-    padding:0.5em;}
+    margin: 0.5vw;
+    padding:1vw;}
 
 .topmenu{
     list-style-type: none；
@@ -94,6 +94,14 @@ ol.lwalpha
 {list-style-type:lower-alpha;}
 ol.lwroman
 {list-style-type:lower-roman;}
+
+img.backtop{
+    position: fixed;
+    right: 0.5vw;
+    bottom: 2em;
+    width: 3opx;
+    height: 30px;
+}
 
 h1{ color:rgb(255, 0, 0);}
 

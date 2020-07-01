@@ -5,13 +5,14 @@
     <title>HTML | 学习笔记2020-06</title>
     <meta name="作者" content="Alex Wong">
     <meta name="关键字" content="HTML,第一个,新手,笔记">
-    <meta name="描述" content="用于笔记记，免费分享">
+    <meta name="描述" content="用于记笔记，免费分享">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="notes.css">
     <link rel="shortcut icon" href="../picture/favicon.ico">
 </head>
-<body>
+<body id="Cbody">
 <code style="font-size: 18px;">
+    <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
     <div class="topmenu">
         <a href="alex-index.html"  target="_self">首页</a>
         <a href="notes2020-06.html"  target="_self" class="active"> 2020年6月</a>
@@ -33,6 +34,20 @@
             <li><a href="#C27">27号笔记</a></li>
             <li><a href="#C29">29号笔记</a></li>
             <li><a href="#C30">总结</a></li>
+            <li><a href="#Cform">form表单标签</a></li>
+            <li><a href="#Ciframe">iframe框架标签</a></li>
+            <li><a href="#table">table表格标签</a></li>
+            <li><a href="#Cinput">input文本输入</a></li>
+            <li><a href="#Cfloat">float浮动标签</a></li>
+            <li><a href="#Cfloat">clear清除格式</a></li>
+            <li><a href="#Cdetails">details细节标签</a></li>
+            <li><a href="#Cfont">font字体设置</a></li>
+            <li><a href="#Ctext">text文本设置</a></li>
+            <li><a href="#Cback">background背景</a></li>
+            <li><a href="#CCSS2">CSS创建规则</a></li>
+            <li><a href="#Cimg">img图像标签</a></li>
+            <li><a href="#CCSS">CSS样式表</a></li>
+            <li><a href="#Ctag">基本标签列表></a></li>
         </ul>
     </div><!--catalog结束标签-->
     <div class="body_tag content">
@@ -57,7 +72,7 @@
             <b>比如：name="value"</b>。<br/>
         </p>
         <!--笔记内容-->
-        <div class="note_tag">
+        <div id="Ctag" class="note_tag">
             今天学到的元素、标签和属性：<br/>
             &lt;p&gt;----------------定义一个段落<br/>
             &lt;html&gt;-------------定义整个HTML文档<br/>
@@ -83,7 +98,7 @@
         <h3><a id="C21">2020.06.21 周日</a></h3>
         <p>今天主要学习HTML的文本格式化、计算机输出标签以及引文引用标签，计算机输出标签暂时还搞不太明白，只能在后面遇到实际应用的时候再加深理解。</p> 
         <!--笔记内容-->
-        <div class="note_tag">
+        <div id="Ctag" class="note_tag">
             &lt;b&gt;、&lt;strong&gt;--------定义粗体文字，后者着重语气；<br/>
             &lt;i&gt;、&lt;em&gt;------------定义斜体文字，后者着重语气；<br/>
             &lt;sup&gt;、&lt;sub&gt;---------分别定义上下标文字；<br/>
@@ -156,7 +171,7 @@
         <!--6月23日！！！！！！！！！！-->
         <h3><a id="C23">2020.06.23 周二</a></h3>
         <P>今天主要学习了图像、表格的插入。</P>
-        <div id="note_tag">
+        <div id="Cimg" claa="note_tag">
             图像插入使用img标签，包含地址属性src，加载图像过程中显示的图片信息属性alt，在CSS中使用align属性可定义图像在文本中时偏上还是偏下或居中，float属性定义图像浮动在文本的两侧，以及高度宽度属性，usemap定义可用于map标签图像定义；<br>
             map标签定义图像地图，可通过像素点位置索引图像上的指定位置，name属性必须有且与img标签中的usemap属性名称一致；<br>
             area标签在map标签内使用，可创建带有可供点击区域的图像地图，图像的特定区域都是一个超级链接；其内属性与定义如下表所示：
@@ -189,7 +204,7 @@
         <h3><a id="C24">2020.06.24 周三</a></h3>
         <p>今天主要学习CSS的创建以及一部分样式与特点。</p>
         <div class="note_tag">
-            <details><summary>CSS创建规则：</summary>
+            <details><summary id="CCSS">CSS创建规则：</summary>
             <ol>
                 <li>CSS规则由两个主要的部分构成：选择器，以及一条或多条声明;</li>
                 <li>CSS声明总是以分号(;)结束，声明总以大括号({})括起来;</li>
@@ -210,7 +225,7 @@
                 <li>内联样式：在相关的标签内使用样式（style）属性</li>
                 <li>多重样式优先级： 内联样式 > 内联样式表 > 外联样式表 > 浏览器默认样式</li>
             </ol></details>
-            <details><summary>背景设置（body选择器中设置，以下顺序为简写时的顺序）：</summary>
+            <details><summary id="Cback">背景设置（body选择器中设置，以下顺序为简写时的顺序）：</summary>
             <ol>
                 <li>background-color-------背景颜色</li>
                 <li>background-image-------背景图片</li>
@@ -218,7 +233,7 @@
                 <li>background-attachment--背景是否随鼠标滚动</li>
                 <li>background-position----背景图片摆放的起始位置（左上角）</li>
             </ol></details>
-            <details><summary>文本设置（在对应选择器中设置，p、h1-h6选择器）：</summary>
+            <details><summary id="Ctext">文本设置（在对应选择器中设置，p、h1-h6选择器）：</summary>
             <ol>
                 <li>字体间距属性letter-spacing：1px，px是像素单位，数值可正可负</li>
                 <li>行间距属性line-height：100%，用百分数表示</li>
@@ -235,7 +250,7 @@
                 <li>文本转换属性text-transform：uppercase大写、lowercase小写、capitalize首字母大写</li>
                 <li>文本首行缩进属性text-indent：10px</li>
             </ol></details>
-            <details><summary>字体设置：</summary>
+            <details><summary id="Cfont">字体设置：</summary>
             <ol>
                 <li>字体<b>样式</b>font-style：正常normal、斜体italic、倾斜的字体oblique</li>
                 <li>字体<b>粗细</b>font-weight：500(nomal)，&lt;500(lighter)、&gt;500(bold)</li>
@@ -253,11 +268,11 @@
         <div class="note_tag">
             <ol>
                 <li><details>
-                        <summary>details标签</summary>
+                        <summary id="Cdetails">details标签</summary>
                         <p>规定了用户可见的或者隐藏的需求的补充细节<br/>summary标签配合使用定义标题，标题可见，点击标题时显示细节</p>
                 </details></li>
                 <li><details>
-                    <summary>float, clear标签</summary>
+                    <summary id="Cfloat">float, clear标签</summary>
                     <p>float：一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止，浮动元素之后的元素将围绕它，浮动元素之前的元素将不会受到影响。</p>
                     <p>clear：元素浮动之后，周围的元素会重新排列，为了避免这种情况，使用 clear 属性；clear属性指定元素两侧不能出现浮动元素。</p>
                 </details></li>
@@ -279,7 +294,7 @@
                 </details></li>
                 <li>页面内连接到指定位置：在指定位置用a标签标记id属性即可在使用a标签链接；</li>
                 <li><details>
-                    <summary>table标签</summary>
+                    <summary id="Ctable">table标签</summary>
                     <p>定义一个表格，其内的子标签和属性有：</p>
                     <p>tr定义行，th定义表头，td定义单元格，caption定义标题；<br>
                     clogroup定义表格列的组；col定义属性用于表格列；<br>
@@ -296,10 +311,10 @@
         <p></p>
         <div class="note_tag">
             <details>
-                <summary>表单：form标签(只有此标签内的信息能收集到指定的文件中)，action属性定义保存信息的文件，以文件类型为.php；
+                <summary id="Cform">表单：form标签(只有此标签内的信息能收集到指定的文件中)，action属性定义保存信息的文件，以文件类型为.php；
                     子标签：input、select、textarea、fieldset、button、datalist。</summary>
                 <ol>
-                    <li>input标签，定义单行文本输入，其主要属性为type，name，value：<br>
+                    <li id="Cinput">input标签，定义单行文本输入，其主要属性为type，name，value：<br>
                         type属性：定义输入类型
                         <p style="margin-left: 2em;">
                         text定义文本域；password定义密码字段；radio定义单选框；checkbox定义多选框；
@@ -340,7 +355,7 @@
                 </ol>
             </details>
             <details>
-                <summary>iframe标签：框架标签，可以显示链接目标的内容</summary>
+                <summary id="Ciframe">iframe标签：框架标签，可以显示链接目标的内容</summary>
                 <p>首页页面可以在下面显示，点击 <a href="../index.html" target="iframe_a" >主页页面</a>
                 则跳转到主页页面：</p>
                 <iframe src="alex-index.html" frameborder="2px" name="iframe_a" width="100%" height="300"></iframe>
