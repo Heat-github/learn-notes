@@ -15,8 +15,7 @@ body{
     background-color: rgb(110, 110, 110);
     list-style-type: none;
     margin: 0.5vw;
-    padding: 0;
-    position: relative;}
+    padding: 0;}
     .catalog ul {
         font-size: 1em;
         list-style-type: none;
@@ -45,9 +44,12 @@ body{
     list-style-type:none;
     background-color: rgb(110, 110, 110);
     width:100%;
+    max-height:70px;
     margin:0;
     padding:4px;
-    overflow:hidden;}
+    position: sticky;
+    top: 0;
+    overflow: auto;}
 
 .topmenu a{
     display: inline-block;
@@ -61,7 +63,7 @@ body{
 .topmenu a.active{
     background-color: rgb(143, 252, 140);
     color: blue;
-    box-shadow:0px 0px 5px 3px rgb(0, 0, 0);}
+    border-style: inset;}
 
 .note_tag{
         background-color: rgb(255, 255, 255);
@@ -102,6 +104,13 @@ img.backtop{
     width: 3opx;
     height: 30px;
 }
+
+.footer{
+    clear: both; 
+    padding: 2px; 
+    background-color:rgb(172, 221, 221); 
+    color: rgb(255, 255, 255);
+    text-align: center;}
 
 .indent{
     text-indent: 2em;

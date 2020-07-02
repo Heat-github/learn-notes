@@ -86,11 +86,31 @@
 	padding-left:14px;
     }</pre></li>
                 </ul>
-            CSS边框属性：
+            Position定位：
+                <ul>
+                    <li>static：HTML 元素的默认值，即没有定位，遵循正常的文档流对象。</li>
+                    <li>absolute：元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于$lt;html&gt;（而不像fixed相对窗口定位），使元素的位置与文档流无关，因此不占据空间；</li>
+                    <li>fixed：元素的位置相对于浏览器窗口是固定位置，如右下角的回顶部；</li>
+                    <li>relative：移动相对定位元素，但它原本所占的空间不会改变，常被用来作为绝对定位元素的容器块；</li>
+                    <li>sticky：元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位，如顶部目录；</li>
+                    <li>z-index：重叠元素用图层属性设置哪部分内容在上层显示，数值大图层在上；</li>
+                    <li>cursor：设定鼠标停在其定义的内容上时鼠标光标的变化；</li>
+                    <a href="../picture/cursor属性.jpg">
+                    <img src="../picture/cursor属性.jpg" alt="光标" style="width: 70%;border:2px solclass #EE872A;"></a>
+                    <li>overflow：定义元素溢出时显示的方式：<br>
+                        <ul style="list-style-type: none;">
+                            <li>auto：如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容；</li>
+                            <li>hidde：内容会被修剪；</li>
+                            <li>visib：默认值，溢出仍然显示；</li>
+                            <li>scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容；</li>
+                            <li>inherit：继承父属性。</li>
+                        </ul>
+                    </li>
+                </ul>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
-    <div class="footer" style="clear: both; padding: 2px; background-color:rgb(172, 221, 221); color: rgb(255, 255, 255);text-align: center;">
+    <div class="footer">
     Copyright © Alex-alading.dong @ 2020
     </div>
 </code>
