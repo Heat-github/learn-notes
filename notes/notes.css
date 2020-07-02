@@ -42,17 +42,17 @@ body{
     padding:1vw;}
 
 .topmenu{
-    list-style-type: none；
+    list-style-type:none;
     background-color: rgb(110, 110, 110);
-    width: 100%;
+    width:100%;
     margin:0;
-    padding: 0.25em;
-    overflow: hidden;}
+    padding:4px;
+    overflow:hidden;}
 
 .topmenu a{
     display: inline-block;
     text-decoration: none;
-    padding: 1em;
+    padding: 10px 5px;
     color: rgb(255, 255, 255);}
 
 .topmenu a:hover{
