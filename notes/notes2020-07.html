@@ -23,6 +23,8 @@
         <a href="notes2020-12.html">12月</a>
         <a href="notes2021-01.html">2021年</a> 
     </div><hr>
+
+    <!--catalog开始标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     <div class="body_tag catalog">
         <ul>
             <li><a href="#C02">2号笔记</a></li>
@@ -33,8 +35,8 @@
             <li><a href="#C27">xx号笔记</a></li>
             <li><a href="#C29">xx号笔记</a></li>
             <li><a href="#C30">总结</a></li>
-            <li><a href="#Cform">form表单标签</a></li>
-            <li><a href="#Ciframe">iframe框架标签</a></li>
+            <li><a href="#Cintro">前言</a></li>
+            <li><a href="#Chref">链接状态</a></li>
             <li><a href="#table">table表格标签</a></li>
             <li><a href="#Cinput">input文本输入</a></li>
             <li><a href="#Cfloat">float浮动标签</a></li>
@@ -48,10 +50,45 @@
             <li><a href="#CCSS">CSS样式表</a></li>
             <li><a href="#Ctag">基本标签列表></a></li>
         </ul>
-    </div><!--catalog结束标签-->
+    </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
+
+    <!--content开始标签！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
     <div class="body_tag content">
-     
-    </div><!--content结束标签-->
+        <h3 id="Cintro">前言</h3>
+        <p class="indent">经过一个月的学习，制作简单的网页以及网页之间的互转已经不是问题，同时也做了一个可以实时更新的<a href="http://www.alexjenny.cn">个人网站</a>，将自己制作的学习笔记html上传，随时随地可以温习。</p>
+        <p class="indent">接下来我主要投入到CSS的样式学习中，将网页设计成自己想要看到的样子，其实之前刚申请域名建立网页时就已经迫不及待提前学习了一部分样式去修饰自己的网页了，所以html结构的学习才会这么拖拉，当然也是如此，我对CSS的学习才会更有兴趣，类似动态交互和音频处理等CSS样式还未设计分毫呢。</p>
+        <hr>
+        <!--7月2号！！！-->
+        <!--7月2号！！！-->
+        <h3 id="C02">7月2日 周四</h3>
+        <p>今日关键词：链接状态、</p>
+        <div class="note_tag">
+            链接有四种状态：
+                <ul id="Chref">
+                    <li>a:link------正常状态，没有访问过</li>
+                    <li>a:hover-----鼠标停留在链接上时</li>
+                    <li>a:active----点击链接的那一刻</li>
+                    <li>a:visited---已访问过的链接</li>
+                </ul>
+            列表样式(ul、ol、li)：
+                <ul id="Clist">
+                    <li>list-style-type：指定列表标记类型<br>
+                    ul：circle空心圆、disc实心圆点、square正方形、none不设定格式；<br>
+                    ol：roman罗马数字、lapha字母，前缀lower时小写、upper时大写；Cjk-ideographic中文大写；decimal阿拉伯数字；decimal-leading-zero带零的数字；lower-greek希腊字母；</li>
+                    <li>list-style-position：inside和outside属性设置标记类型在border的内外。</li>
+                    <li>list-style-image：自定义标记图像<br>
+                    list-style-image:url("URL")，兼容性问题可以使用no-repeat的background-image代替：
+                    <pre style="border:2px solid;padding: 5px;">li.class
+    {
+	background-image:url("URL");
+	background-repeat:no-repeat;
+	background-position:0px 5px; 
+	padding-left:14px;
+    }</pre></li>
+                </ul>
+            CSS边框属性：
+        </div>
+    </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
     <div class="footer" style="clear: both; padding: 2px; background-color:rgb(172, 221, 221); color: rgb(255, 255, 255);text-align: center;">
     Copyright © Alex-alading.dong @ 2020
