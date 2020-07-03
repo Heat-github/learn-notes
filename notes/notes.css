@@ -44,7 +44,7 @@ body{
     list-style-type:none;
     background-color: rgb(110, 110, 110);
     width:100%;
-    max-height:70px;
+    max-height:60px;
     margin:0;
     padding:4px;
     position: sticky;
@@ -61,8 +61,8 @@ body{
     background-color: rgb(247, 148, 0);}
 
 .topmenu a.active{
-    background-color: rgb(143, 252, 140);
-    color: blue;
+    background-color: rgb(130, 253, 206);
+    color: rgb(0, 0, 0);
     border-style: inset;}
 
 .note_tag{
@@ -74,6 +74,8 @@ body{
 ul ol{
     font-size: 1em;}
 
+li span{
+    background-color: silver;}
 /*表格的样式表！！！！！！！！！！！*/
 /*表格的样式表！！！！！！！！！！！*/
 .alex {
