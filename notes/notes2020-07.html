@@ -23,7 +23,7 @@
         <a href="notes2020-12.html">12月</a>
         <a href="notes2021-01.html">2021年</a> 
     </div><hr>
-
+    
     <!--catalog开始标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     <div class="body_tag catalog">
         <ul>
@@ -89,10 +89,10 @@
                     list-style-image:url("URL")，兼容性问题可以使用no-repeat的background-image代替：
                     <pre style="width:100%;border:2px solid;padding:5px 2px;">li.class
     {
-	background-image:url("URL");
-	background-repeat:no-repeat;
-	background-position:0px 5px; 
-	padding-left:14px;
+    background-image:url("URL");
+    background-repeat:no-repeat;
+    background-position:0px 5px; 
+    padding-left:14px;
     }</pre></li>
                 </ul>
             Position定位：
@@ -159,19 +159,64 @@
         <!-- 7月4号！！！ -->
         <!-- 7月4号！！！ -->
         <h3 id="C04">7月4号 周六</h3>
-        <p>今日关键词：伪类</p>
+        <p>今日关键词：伪类、下拉菜单、提示框</p>
         <div class="note_tag">
-            <p id="Cpseudo">伪类：用来添加一些选择器的特殊效果</p>
+            <p id="Cpseudo">伪类：用来添加一些选择器的特殊效果，语法：selector:pseudo-class {property:value;}</p>
             <ol>
-                <li>语法：selector:pseudo-class {property:value;}</li>
                 <li>first-child 伪类：选择父元素的第一个子元素→p:first-child{...}</li>
                 <li>lang 伪类：为不同的语言定义特殊的规则→q:lang(no) {quotes: "~" "~";}，使用q标签的lang属性为no时双引号替换为破折号；</li>
                 <li>focus伪类：元素获得焦点时向元素添加特殊的样式→input:focus{...}，点击输入可设置表单样式；</li>
                 <li>checked伪类：为所有选中的输入元素设置背景样式→input:checked{...}；</li>
                 <li>invalid伪类：为无效、不合法的元素设置样式；</li>
+                <li>伪元素--CSS3使用双冒号区分伪类和伪元素，::before、::after分别定义指定元素前后加上指定内容，内容用content定义。</li>
                 <li>更多伪类查看<a href="https://www.runoob.com/css/css-pseudo-classes.html">CSS伪类|菜鸟教程。</a></li>
             </ol>
-            <p></p>
+            <p id="Cdrdo">下拉菜单和提示框--盒子模型的一种表现形式，具体实现过程如下：</p>
+            <ol>
+                <li>定义包含下拉元素和下拉内容的div容器（dropdown）：relative定位，inline-block显示；</li>
+                <li>定义需要显示下拉列表的元素（dropbutton）：可以用button标签；</li>
+                <li>定义下拉列表内容（dropcontent）：默认设置隐藏属性，none显示，absolute定位保证菜单下拉后不会影响后续的文档流移位；</li>
+                <li>定义容器dropdown的hover伪类，使鼠标停在dropdown时dropcontent的显示属性变为可见(block)；</li>
+                <li>可定义下拉列表dropcontent以及其中a标签的基础样式，以及鼠标停在dropdown时dropbutton的样式变化、鼠标停在dropcontent的a标签上时的样式变化；<br />
+                    <div class="dropdown">
+                        <p class="droptip">这里查看下拉列表的CSS骨架</p>
+                        <div class="droptiptext">
+                            <fieldset>
+<pre>
+/*----------1----------*/
+.dropdown {
+    position:relative;
+    dispaly:inline-block;
+    ......;
+}
+/*----------2----------*/
+.dropbutton {
+    background:......;
+    color:.....;
+    ......;
+}
+/*----------3----------*/
+.dropcontent {
+    dispaly:none;
+    position:absolute;
+    ......;
+}
+/*----------4----------*/
+.dropdown:hover .dropcontent {
+    display: block;
+}
+/*----------5----------*/
+.dropdown:hover .dropbutton {......;}
+.dropcontent a {......;}
+.dropcontent a:hover {......;}
+
+</pre>
+                            </fieldset>
+                        </div>
+                    </div>
+                </li>
+                <li>使用::after（或者::before）伪元素配合content属性为空，可以为提示工具创建一个小箭头标志，箭头是由三面透明(transparent)的边框，配合绝对定位以及相对移动组成。</li>
+            </ol>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
