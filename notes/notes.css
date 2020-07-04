@@ -53,7 +53,6 @@ body{
 
 .topmenu a{
     display: inline-block;
-    text-decoration: none;
     padding: 10px 5px;
     color: rgb(255, 255, 255);}
 
@@ -99,6 +98,10 @@ ol.lwalpha
 ol.lwroman
 {list-style-type:lower-roman;}
 
+:target{
+	border: 2px solid #D4D4D4;
+	background-color: #e5eecc;}
+
 img.backtop{
     position: fixed;
     right: 0.5vw;
@@ -119,7 +122,8 @@ img.backtop{
 }
 
 a{
-    cursor: pointer;}
+    cursor: pointer;
+    text-decoration: none;}
 
 h1{ color:rgb(255, 0, 0);}
 

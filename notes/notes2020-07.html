@@ -29,26 +29,33 @@
         <ul>
             <li><a href="#C02">2号笔记</a></li>
             <li><a href="#C03">3号笔记</a></li>
-            <li><a href="#C22">xx号笔记</a></li>
-            <li><a href="#C23">xx号笔记</a></li>
-            <li><a href="#C24">xx号笔记</a></li>
-            <li><a href="#C27">xx号笔记</a></li>
-            <li><a href="#C29">xx号笔记</a></li>
-            <li><a href="#C30">总结</a></li>
+            <li><a href="#C04">4号笔记</a></li>
+            <li><a href="#C">xx号笔记</a></li>
+            <li><a href="#C">xx号笔记</a></li>
+            <li><a href="#C">xx号笔记</a></li>
+            <li><a href="#C">xx号笔记</a></li>
+            <li><a href="#C">总结</a></li>
             <li><a href="#Cintro">前言</a></li>
-            <li><a href="#Chref">链接状态</a></li>
+            <li><a href="#Chref">链接伪类</a></li>
             <li><a href="#Clist">列表样式</a></li>
             <li><a href="#Cpstn">Position定位</a></li>
             <li><a href="#Cbox">box模型属性</a></li>
             <li><a href="#Cclass">class分组嵌套</a></li>
-            <li><a href="#Cdetails">details细节标签</a></li>
-            <li><a href="#Cfont">font字体设置</a></li>
-            <li><a href="#Ctext">text文本设置</a></li>
-            <li><a href="#Cback">background背景</a></li>
-            <li><a href="#CCSS2">CSS创建规则</a></li>
-            <li><a href="#Cimg">img图像标签</a></li>
-            <li><a href="#CCSS">CSS样式表</a></li>
-            <li><a href="#Ctag">基本标签列表></a></li>
+            <li><a href="#Cdis">可见性设置</a></li>
+            <li><a href="#Csele">组合选择器</a></li>
+            <li><a href="#Cpseudo">伪类选择器</a></li>
+            <li><a href="#C"></a></li>
+            <li><a href="#C"></a></li>
+            <li><a href="#C"></a></li>
+            <li><a href="#C"></a></li>
+            <li><a href="#C"></a></li>
+            <li><a href="#C"></a></li>
+            <li><a href="#C"></a></li>
+            <li><a href="#C"></a></li>
+            <li><a href="#C"></a></li>
+            <li><a href="#C"></a></li>
+            <li><a href="#C"></a></li>
+            <li><a href="#C"></a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -63,12 +70,13 @@
         <h3 id="C02">7月2日 周四</h3>
         <p>今日关键词：链接状态、列表样式、元素定位-</p>
         <div class="note_tag">
-            链接有四种状态：
+            链接有四种状态（伪类）：
                 <ul id="Chref">
                     <li>a:link------正常状态，没有访问过</li>
                     <li>a:hover-----鼠标停留在链接上时</li>
                     <li>a:active----点击链接的那一刻</li>
                     <li>a:visited---已访问过的链接</li>
+                    <li><strong>注意：</strong>在CSS定义中，a:hover 必须被置于 a:link 和 a:visited 之后，a:active 必须被置于 a:hover，才是有效的</li>
                 </ul>
             列表样式(ul、ol、li)：
                 <ul id="Clist">
@@ -133,13 +141,37 @@
                 <li><span>.marked p{ }:</span> 为所有 class="marked" 元素内的 p 元素指定一个样式；</li>
                 <li><span>p.marked{ }:</span> 为所有 class="marked" 的 p 元素指定一个样式。</li>
             </ul>
-            <p>display显示和visibility可见性：</p>
+            <p id="Cdis">display显示和visibility可见性：</p>
             <ul>
                 <li>display：inline内联元素，block-块元素，inline-block-内联块元素，表现为同行显示并可修改宽高内外边距等属性一般用于&lt;li&gt;元素，none-隐藏元素且不占用空间</li>
                 <li>visibility：hidden-隐藏元素但占用空间，collapse-平时元素的表现与 visibility: hidden 一样，也即其会占用空间。但如果该元素是与 table 相关的元素，例如 table row、table column、table column group、table column group 等，其表现却跟 display: none 一样，也即其占用的空间会释放。</li>
             </ul>
+            <p id="Csele">组合选择符：在 CSS3 中包含了四种组合方式----</p>
+            <ul>
+                <li>后代选择器：用空格分隔，包含在左边元素内的所有后代元素，包括子元素的子元素；</li>
+                <li>子元素选择器：用 &gt; 分隔，选取某元素的子元素，而子元素的子元素（后两代之后）则不包含其内</li>
+                <li>相邻兄弟选择器：用 + 分隔，选择<strong style="color: red;">紧接</strong>在指定元素后的元素，且二者父元素相同。</li>
+                <li>普通兄弟选择器：用 ~ 分隔，选取所有指定元素之后的相邻兄弟元素。</li>
+            </ul>
         </div>
 
+        <!-- 7月3号！！！ -->
+        <!-- 7月3号！！！ -->
+        <h3 id="C04">7月4号 周六</h3>
+        <p>今日关键词：伪类</p>
+        <div class="note_tag">
+            <p id="Cpseudo">伪类：用来添加一些选择器的特殊效果</p>
+            <ol>
+                <li>语法：selector:pseudo-class {property:value;}</li>
+                <li>first-child 伪类：选择父元素的第一个子元素→p:first-child{...}</li>
+                <li>lang 伪类：为不同的语言定义特殊的规则→q:lang(no) {quotes: "~" "~";}，使用q标签的lang属性为no时双引号替换为破折号；</li>
+                <li>focus伪类：元素获得焦点时向元素添加特殊的样式→input:focus{...}，点击输入可设置表单样式；</li>
+                <li>checked伪类：为所有选中的输入元素设置背景样式→input:checked{...}；</li>
+                <li>invalid伪类：为无效、不合法的元素设置样式；</li>
+                <li>更多伪类查看<a href="https://www.runoob.com/css/css-pseudo-classes.html">CSS伪类|菜鸟教程。</a></li>
+            </ol>
+            <p></p>
+        </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
     <div class="footer">
