@@ -202,13 +202,15 @@
     ......;
 }
 /*----------4----------*/
-.dropdown:hover .dropcontent {
+.dropdown:hover .dropcontent{
     display: block;
 }
 /*----------5----------*/
-.dropdown:hover .dropbutton {......;}
+.dropdown:hover .dropbutton{
+    ......;}
 .dropcontent a {......;}
-.dropcontent a:hover {......;}
+.dropcontent a:hover{
+    ......;}
 
 </pre>
                             </fieldset>
@@ -217,6 +219,25 @@
                 </li>
                 <li>使用::after（或者::before）伪元素配合content属性为空，可以为提示工具创建一个小箭头标志，箭头是由三面透明(transparent)的边框，配合绝对定位以及相对移动组成。</li>
             </ol>
+            <p id="Cmedia">媒体类型--指定文件将如何在不同媒体呈现：</p>
+            <ol>
+                <li>@media规则————允许在同一样式表内为不同媒体设置不同的样式；</li>
+                <li>print————用于打印机，可以设定打印时的样式与显示效果不一样；</li>
+                <li>screen————用于电脑或者手机显示器，手机和电脑显示不同CSS样式可以设置@media screen and (max-width: 800px)来分辨时小屏显示器还是大屏显示器；</li>
+                <li>projection————用于方案展示，比如幻灯片；tv————用于电视机类型设备；</li>
+                <li>all————用于所有媒体设备。</li>
+            </ol>
+            <p id="Ctype">属性和值选择器--为设定有某一属性或者设定有某一属性与特定值的所有元素设定样式：</p>
+            <ol>
+                <li>属性选择器，如[title]{...;}为所有包含title属性的标签内的元素设定样式，不需要对应值；</li>
+                <li>属性和值选择器①：如[title=alex]{...;}为title="alex"（唯一值）的所有标签内元素设定样式；</li>
+                <li>属性和值选择器②：如[title|=alex]{...;}为title属性的值以alex开头（单独单词）的所有标签内元素设定样式；</li>
+                <li>属性和值选择器③：如[title~=alex]{...;}为title属性的值包含alex（单独单词但不要求顺序）的所有标签内元素设定样式；</li>
+                <li>属性和值选择器④：如[title^=alex]{...;}为title属性的值的前几个字母为alex的所有标签内元素设定样式；</li>
+                <li>属性和值选择器⑤：如[title*=alex]{...;}为title属性的值中包含alex（不需要单独单词）的所有标签内元素设定样式；</li>
+                <li>属性和值选择器④：如[title$=alex]{...;}为title属性的值的后几个字母为alex的所有标签内元素设定样式；</li>
+            </ol>
+            <p>属性选择器应用到表单中，通过input[type=text]等设定输入框和按钮的</p>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
