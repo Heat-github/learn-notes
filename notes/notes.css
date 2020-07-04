@@ -48,6 +48,8 @@ body{
     margin: 0.5vw;
     padding:1vw;}
 
+/*----------------------手机显示样式-----------------------*/
+/*----------------------手机显示样式-----------------------*/
 @media screen and (max-width: 800px){
     .body_tag{
         clear: both;
@@ -61,13 +63,14 @@ body{
         .catalog ul {
             list-style-type: none;}
         .catalog li{
-            width: 25%;
+            width: 33%;
             padding: 1px;}
             .catalog li a{
                 background-color: #eee;
                 color: rgb(0, 0, 0);
                 text-align: center;
                 height: 40px;
+                padding: 10px;
                 text-decoration: none; }
                 .catalog li a:hover{background-color: rgb(16, 196, 0);}
     
