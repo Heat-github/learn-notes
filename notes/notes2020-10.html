@@ -4,46 +4,46 @@
     <meta charset="utf-8">
     <title>HTML | 学习笔记2020-10</title>
     <meta name="作者" content="Alex Wong">
-    <meta name="关键字" content="HTML,第一个,新手,笔记">
-    <meta name="描述" content="用于笔记记，免费分享">
-    <base href="../" target="_blank">
-    <link rel="stylesheet" type="text/css" href="css/table-style.css" />
-    <link rel="stylesheet" type="text/css" href="css/笔记页面样式表.css">
-    <link rel="shortcut icon" href="picture/favicon.ico">
+    <meta name="描述" content="用于记笔记，免费分享">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="notes.css">
+    <link rel="shortcut icon" href="../picture/favicon.ico">
+    <script src="notes_js.js"></script>
 </head>
-<body style="padding:10px;border-radius:0px;border:5px solid #EE872A;">
+
+<body id="Cbody">
 <code style="font-size: 18px;">
-    <div id="menu">
-                        <a href="index.html" style="text-decoration:none" target="_self">
-            首页       </a>
-                        <a href="html/HTML学习笔记2020-06.html" style="text-decoration:none">
-            2020年6月   </a>
-                        <a href="html/HTML学习笔记2020-07.html" style="text-decoration:none">
-            2020年7月   </a> 
-                        <a href="html/HTML学习笔记2020-08.html" style="text-decoration:none">
-            2020年8月   </a> 
-                        <a href="html/HTML学习笔记2020-09.html" style="text-decoration:none">
-            2020年9月   </a> 
-                        <a href="html/HTML学习笔记2020-10.html" style="text-decoration:none" target="_self">
-            2020年10月  </a> 
-                        <a href="html/HTML学习笔记2020-11.html" style="text-decoration:none">
-            2020年11月  </a> 
-                        <a href="html/HTML学习笔记2020-12.html" style="text-decoration:none">
-            2020年12月  </a>------
-                        <a href="html/HTML学习笔记2021-01.html" style="text-decoration:none">
-             2021年 </a> 
-    </div>
-    <div id="content" style="background-color: rgb(243, 243, 243);">
-        <h1 style="color:rgb(255, 0, 0);">第一个HTML程序</h1>
-        <hr/>
-        <p><b>摘要：</b>2020.06.20开始接触HTML，感觉上手编辑网页原来这么有意思，鬼使神差之下就开始看各种课程。打算用HTML的方式来记录学习过程，
-            学习内容来自于<a href="https://www.runoob.com" style="text-decoration:none">RUNOOB菜鸟教程网站</a>。</p>
-        <hr/>
-    </div>
+    <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
+    <div class="topmenu">
+        <a href="alex-index.html"  target="_self">首页</a>
+        <a href="notes2020-06.html">6月</a>
+        <a href="notes2020-07.html">7月</a>
+        <a href="notes2020-08.html">8月</a>
+        <a href="notes2020-09.html">9月</a>
+        <a href="notes2020-10.html" class="active">2020年10月</a>
+        <a href="notes2020-11.html">11月</a>
+        <a href="notes2020-12.html">12月</a>
+        <a href="#">2021年</a> 
+    </div><hr>
     
-    <div id=footer style="margin: 2px; background-color:rgb(172, 221, 221); color: rgb(255, 255, 255);text-align: center;">
-    HTML @ alading.dong 2020
-    </div> 
+    <!--catalog开始标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
+    <div class="body_tag catalog">
+        <button type="button" onclick="cataTrans()">目录</button>
+        <ul id="acatalog">
+            <li><a href="#C">x号笔记</a></li>
+            <li><a href="#C">x号笔记</a></li>
+            <li><a href="#C">x号笔记</a></li>
+        </ul>
+    </div><!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
+
+    <!--content开始标签！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
+    <div class="body_tag content">
+        
+    </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
+    
+    <div class="footer">
+    Copyright © Alex-alading.dong @ 2020
+    </div>
 </code>
 </body>
 </html>
