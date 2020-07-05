@@ -70,7 +70,7 @@ body{
                 color: rgb(0, 0, 0);
                 text-align: center;
                 height: 40px;
-                padding: 10px;
+                vertical-align: middle;
                 text-decoration: none; }
                 .catalog li a:hover{background-color: rgb(16, 196, 0);}
     
@@ -115,18 +115,22 @@ body{
 
 /*-------------------------笔记布局-----------------------*/
 /*-------------------------笔记布局-----------------------*/  
-    .note_tag{
-        max-width: 99%;
-        background-color: rgb(255, 255, 255);
-        color:rgb(1, 136, 30);
-        margin: 10px 0px;
-        padding: 1em 0.5em;}
+.note_tag{
+    max-width: 99%;
+    background-color: rgb(255, 255, 255);
+    color:rgb(1, 136, 30);
+    margin: 10px 0px;
+    padding: 1em 0.5em;}
 
-ul ol{
-    font-size: 1em;}
+    .note_tag p{
+        border-left: 10px solid rgb(45, 110, 250);
+        background-color: rgb(255, 198, 196);}
 
-li span{
-    background-color: silver;}
+    .note_tag ul ol{
+        font-size: 1em;}
+
+    .note_tag li span{
+        background-color: silver;}
 
 
 

@@ -30,11 +30,11 @@
             <li><a href="#C02">2号笔记</a></li>
             <li><a href="#C03">3号笔记</a></li>
             <li><a href="#C04">4号笔记</a></li>
-            <li><a href="#C">xx号笔记</a></li>
-            <li><a href="#C">xx号笔记</a></li>
-            <li><a href="#C">xx号笔记</a></li>
-            <li><a href="#C">xx号笔记</a></li>
-            <li><a href="#C">总结</a></li>
+            <li><a href="#C05">5号笔记</a></li>
+            <li><a href="#C06">6号笔记</a></li>
+            <li><a href="#C07">7号笔记</a></li>
+            <li><a href="#C08">8号笔记</a></li>
+            <li><a href="#Cfinal">总结</a></li>
             <li><a href="#Cintro">前言</a></li>
             <li><a href="#Chref">链接伪类</a></li>
             <li><a href="#Clist">列表样式</a></li>
@@ -44,11 +44,11 @@
             <li><a href="#Cdis">可见性设置</a></li>
             <li><a href="#Csele">组合选择器</a></li>
             <li><a href="#Cpseudo">伪类选择器</a></li>
-            <li><a href="#C"></a></li>
-            <li><a href="#C"></a></li>
-            <li><a href="#C"></a></li>
-            <li><a href="#C"></a></li>
-            <li><a href="#C"></a></li>
+            <li><a href="#Cdrdo">下拉菜单</a></li>
+            <li><a href="#Cmedia">媒体类型</a></li>
+            <li><a href="#Ctype">属性选择器</a></li>
+            <li><a href="#Ccounter">counter计数器</a></li>
+            <li><a href="#Cjava">JavaScript语言</a></li>
             <li><a href="#C"></a></li>
             <li><a href="#C"></a></li>
             <li><a href="#C"></a></li>
@@ -116,7 +116,8 @@
                         </ul>
                     </li>
                 </ul>
-        </div>
+        </div><hr />
+
         <!--7月3号！！！-->
         <!--7月3号！！！-->
         <h3 id="C03">7月3号 周五</h3>
@@ -154,7 +155,7 @@
                 <li>相邻兄弟选择器：用 + 分隔，选择<strong style="color: red;">紧接</strong>在指定元素后的元素，且二者父元素相同。</li>
                 <li>普通兄弟选择器：用 ~ 分隔，选取所有指定元素之后的相邻兄弟元素。</li>
             </ul>
-        </div>
+        </div><hr />
 
         <!-- 7月4号！！！ -->
         <!-- 7月4号！！！ -->
@@ -178,8 +179,8 @@
                 <li>定义下拉列表内容（dropcontent）：默认设置隐藏属性，none显示，absolute定位保证菜单下拉后不会影响后续的文档流移位；</li>
                 <li>定义容器dropdown的hover伪类，使鼠标停在dropdown时dropcontent的显示属性变为可见(block)；</li>
                 <li>可定义下拉列表dropcontent以及其中a标签的基础样式，以及鼠标停在dropdown时dropbutton的样式变化、鼠标停在dropcontent的a标签上时的样式变化；<br />
-                    <div class="dropdown">
-                        <p class="droptip">这里查看下拉列表的CSS骨架</p>
+                    <div class="dropdown"><br />
+                        <span class="droptip">这里查看下拉列表的CSS骨架</span>
                         <div class="droptiptext">
                             <fieldset>
 <pre>
@@ -216,7 +217,7 @@
                             </fieldset>
                         </div>
                     </div>
-                </li>
+                </li><br />
                 <li>使用::after（或者::before）伪元素配合content属性为空，可以为提示工具创建一个小箭头标志，箭头是由三面透明(transparent)的边框，配合绝对定位以及相对移动组成。</li>
             </ol>
             <p id="Cmedia">媒体类型--指定文件将如何在不同媒体呈现：</p>
@@ -237,8 +238,24 @@
                 <li>属性和值选择器⑤：如[title*=alex]{...;}为title属性的值中包含alex（不需要单独单词）的所有标签内元素设定样式；</li>
                 <li>属性和值选择器④：如[title$=alex]{...;}为title属性的值的后几个字母为alex的所有标签内元素设定样式；</li>
             </ol>
-            <p>属性选择器应用到表单中，通过input[type=text]等设定输入框和按钮的</p>
+            <p>属性选择器应用到表单中，通过input[type=text]等设定输入框和按钮的样式。</p>
         </div>
+
+        <!-- 7月5号！！！ -->
+        <!-- 7月5号！！！ -->
+        <h3 id="C05">7月5号 周日</h3>
+        <p>今日关键词：计数器、JavaScript初始认识、</p>
+        <div class="note_tag">
+            <p id="Ccounter">计数器--对某一属性值设置变量增量计数：</p>
+            <ol>
+                <li>counter-reset:section x--创建新的计数器或重置计数器；其后的值设置变量名和起始值x（则从x+1开始）；</li>
+                <li>counter-increment:section--为section变量计数递增（+1）；</li>
+                <li>content:"x""y""..."--插入生成或指定的内容；指定内容需要引号包围，函数生成内容则不需要；</li>
+                <li>counter(section)--将section变量的数值添加到元素中；</li>
+                <li>counters(section,"string"[,list-style-type])--嵌套计数，遇到同名父子标签则自动嵌套计数，string是项目符之间的分隔符，list-style-type是计数后显示的符号类型，默认是阿拉伯数字；</li>
+            </ol>
+            <p id="Cjava">JavaScript是脚本语言，是插入HTML的轻量级编程语言：</p>
+        </div><hr />
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
     <div class="footer">
