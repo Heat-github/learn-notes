@@ -48,43 +48,6 @@ body{
     margin: 0.5vw;
     padding:1vw;}
 
-/*----------------------手机显示样式-----------------------*/
-/*----------------------手机显示样式-----------------------*/
-@media screen and (max-width: 800px){
-    .body_tag{
-        clear: both;
-        width: 100%;
-        padding: 0px;}
-    /*-------------------------左侧目录-----------------------*/
-    /*-------------------------左侧目录-----------------------*/
-    .catalog{
-        width: 100%;
-        background-color: rgb(110, 110, 110);}
-        .catalog ul {
-            list-style-type: none;}
-        .catalog li{
-            width: 33%;
-            padding: 1px;}
-            .catalog li a{
-                background-color: #eee;
-                color: rgb(0, 0, 0);
-                text-align: center;
-                height: 40px;
-                vertical-align: middle;
-                text-decoration: none; }
-                .catalog li a:hover{background-color: rgb(16, 196, 0);}
-    
-    
-    
-    /*-------------------------右侧内容-----------------------*/
-    /*-------------------------右侧内容-----------------------*/
-    .content{
-        width: 100%;
-        background-color: rgb(187, 187, 187);
-        margin: 0;
-        padding:1vw;}
-}
-
 /*-------------------------顶部菜单-----------------------*/
 /*-------------------------顶部菜单-----------------------*/
     .topmenu{
@@ -96,6 +59,7 @@ body{
         padding:4px;
         position: sticky;
         top: 0;
+        z-index: 1;
         overflow: auto;}
 
     .topmenu a{
@@ -120,11 +84,20 @@ body{
     background-color: rgb(255, 255, 255);
     color:rgb(1, 136, 30);
     margin: 10px 0px;
-    padding: 1em 0.5em;}
+    padding: 0.5em 0.5em 1em;}
 
-    .note_tag p{
+    .note_tag>p{
         border-left: 10px solid rgb(45, 110, 250);
-        background-color: rgb(255, 198, 196);}
+        background-color: rgb(255, 198, 196);
+        padding: 2px 5px;}
+
+    .note_tag details{
+            padding: 2px;
+            border-bottom: 2px solid rgb(255, 255, 255);}
+
+    .note_tag summary{
+        background-color: rgb(255, 198, 196);
+        list-style-type: none;}
 
     .note_tag ul ol{
         font-size: 1em;}
@@ -240,3 +213,54 @@ h1{ color:rgb(255, 0, 0);}
 h3{
     color: seagreen;
     font-weight: 600;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+/*----------------------手机显示样式-----------------------*/
+/*----------------------手机显示样式-----------------------*/
+@media screen and (max-width: 800px){
+    .body_tag{
+        clear: both;
+        width: 100%;
+        padding: 0px;}
+/*-------------------------左侧目录-----------------------*/
+/*-------------------------左侧目录-----------------------*/
+    .catalog{
+        width: 100%;
+        background-color: rgb(110, 110, 110);}
+        .catalog ul {
+            list-style-type: none;}
+        .catalog li{
+            width: 33%;
+            padding: 1px;}
+            .catalog li a{
+                background-color: #eee;
+                color: rgb(0, 0, 0);
+                text-align: center;
+                height: 40px;
+                vertical-align: middle;
+                text-decoration: none; }
+                .catalog li a:hover{background-color: rgb(16, 196, 0);}
+    
+/*-------------------------右侧内容-----------------------*/
+/*-------------------------右侧内容-----------------------*/
+    .content{
+        width: 100%;
+        background-color: rgb(187, 187, 187);
+        margin: 0;
+        padding:1vw;}
+}

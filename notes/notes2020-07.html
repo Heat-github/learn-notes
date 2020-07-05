@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="notes.css">
     <link rel="shortcut icon" href="../picture/favicon.ico">
 </head>
+
 <body id="Cbody">
 <code style="font-size: 18px;">
     <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
@@ -35,27 +36,28 @@
             <li><a href="#C07">7号笔记</a></li>
             <li><a href="#C08">8号笔记</a></li>
             <li><a href="#Cfinal">总结</a></li>
-            <li><a href="#Cintro">前言</a></li>
             <li><a href="#Chref">链接伪类</a></li>
             <li><a href="#Clist">列表样式</a></li>
             <li><a href="#Cpstn">Position定位</a></li>
             <li><a href="#Cbox">box模型属性</a></li>
-            <li><a href="#Cclass">class分组嵌套</a></li>
+            <li><a href="#Cclass">类的分组嵌套</a></li>
             <li><a href="#Cdis">可见性设置</a></li>
             <li><a href="#Csele">组合选择器</a></li>
             <li><a href="#Cpseudo">伪类选择器</a></li>
             <li><a href="#Cdrdo">下拉菜单</a></li>
             <li><a href="#Cmedia">媒体类型</a></li>
             <li><a href="#Ctype">属性选择器</a></li>
-            <li><a href="#Ccounter">counter计数器</a></li>
-            <li><a href="#Cjava">JavaScript语言</a></li>
-            <li><a href="#C"></a></li>
-            <li><a href="#C"></a></li>
-            <li><a href="#C"></a></li>
-            <li><a href="#C"></a></li>
-            <li><a href="#C"></a></li>
-            <li><a href="#C"></a></li>
-            <li><a href="#C"></a></li>
+            <li><a href="#Ccounter">counter计数</a></li>
+            <li><a href="#Cjs">JavaScript</a></li>
+            <li><a href="#Cout">输出函数</a></li>
+            <li><a href="#Cgram">JS语法结构</a></li>
+            <li><a href="#Cdata">JS数据类型</a></li>
+            <li><a href="#Cevent">事件及其处理</a></li>
+            <li><a href="#Cstr">字符串及属性</a></li>
+            <li><a href="#Clog">比较与逻辑</a></li>
+            <li><a href="#Cifsw">if与switch</a></li>
+            <li><a href="#Cforw">循环语句</a></li>
+            <li><a href="#Cintro">前言</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -71,16 +73,16 @@
         <h3 id="C02">7月2日 周四</h3>
         <p>今日关键词：链接状态、列表样式、元素定位-</p>
         <div class="note_tag">
-            链接有四种状态（伪类）：
-                <ul id="Chref">
+            <p id="Chref">链接有四种状态（伪类）：</p>
+                <ul>
                     <li>a:link------正常状态，没有访问过</li>
                     <li>a:hover-----鼠标停留在链接上时</li>
                     <li>a:active----点击链接的那一刻</li>
                     <li>a:visited---已访问过的链接</li>
                     <li><strong>注意：</strong>在CSS定义中，a:hover 必须被置于 a:link 和 a:visited 之后，a:active 必须被置于 a:hover，才是有效的</li>
                 </ul>
-            列表样式(ul、ol、li)：
-                <ul id="Clist">
+            <p id="Clist">列表样式(ul、ol、li)：</p>
+                <ul>
                     <li>list-style-type：指定列表标记类型<br>
                     ul：circle空心圆、disc实心圆点、square正方形、none不设定格式；<br>
                     ol：roman罗马数字、lapha字母，前缀lower时小写、upper时大写；Cjk-ideographic中文大写；decimal阿拉伯数字；decimal-leading-zero带零的数字；lower-greek希腊字母；</li>
@@ -95,8 +97,8 @@
     padding-left:14px;
     }</pre></li>
                 </ul>
-            Position定位：
-                <ul id="Cpstn">
+            <p id="Cpstn">Position定位：</p>
+                <ul>
                     <li>static：HTML 元素的默认值，即没有定位，遵循正常的文档流对象。</li>
                     <li>absolute：元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于$lt;html&gt;（而不像fixed相对窗口定位），使元素的位置与文档流无关，因此不占据空间；</li>
                     <li>fixed：元素的位置相对于浏览器窗口是固定位置，如右下角的回顶部；</li>
@@ -222,11 +224,11 @@
             </ol>
             <p id="Cmedia">媒体类型--指定文件将如何在不同媒体呈现：</p>
             <ol>
-                <li>@media规则————允许在同一样式表内为不同媒体设置不同的样式；</li>
-                <li>print————用于打印机，可以设定打印时的样式与显示效果不一样；</li>
-                <li>screen————用于电脑或者手机显示器，手机和电脑显示不同CSS样式可以设置@media screen and (max-width: 800px)来分辨时小屏显示器还是大屏显示器；</li>
-                <li>projection————用于方案展示，比如幻灯片；tv————用于电视机类型设备；</li>
-                <li>all————用于所有媒体设备。</li>
+                <li>@media规则：允许在同一样式表内为不同媒体设置不同的样式；</li>
+                <li>print：用于打印机，可以设定打印时的样式与显示效果不一样；</li>
+                <li>screen：用于电脑或者手机显示器，手机和电脑显示不同CSS样式可以设置@media screen and (max-width: 800px)来分辨时小屏显示器还是大屏显示器；</li>
+                <li>projection：用于方案展示，比如幻灯片；tv：用于电视机类型设备；</li>
+                <li>all：用于所有媒体设备。</li>
             </ol>
             <p id="Ctype">属性和值选择器--为设定有某一属性或者设定有某一属性与特定值的所有元素设定样式：</p>
             <ol>
@@ -244,7 +246,7 @@
         <!-- 7月5号！！！ -->
         <!-- 7月5号！！！ -->
         <h3 id="C05">7月5号 周日</h3>
-        <p>今日关键词：计数器、JavaScript初始认识、</p>
+        <p>今日关键词：计数器、JavaScript初始认识、JS输出函数</p>
         <div class="note_tag">
             <p id="Ccounter">计数器--对某一属性值设置变量增量计数：</p>
             <ol>
@@ -254,7 +256,54 @@
                 <li>counter(section)--将section变量的数值添加到元素中；</li>
                 <li>counters(section,"string"[,list-style-type])--嵌套计数，遇到同名父子标签则自动嵌套计数，string是项目符之间的分隔符，list-style-type是计数后显示的符号类型，默认是阿拉伯数字；</li>
             </ol>
-            <p id="Cjava">JavaScript是脚本语言，是插入HTML的轻量级编程语言：</p>
+            <p id="Cjs">JavaScript是脚本语言，是插入HTML的轻量级编程语言，基本介绍与功能有：</p>
+            <ol>
+                <li>脚本必须位于 &lt;script&gt; 与 &lt;/script&gt; 标签之间，可以放在head、body部分，最好统一放一起不影响页面布局，也可以把脚本保存到外部文件中；</li>
+                <li>导入外部脚本文件的方法：&lt;script src="myScript.js"&gt;&lt;/script&gt;，外部文件不能包含script标签；</li>
+                <li>输出数据：如document.write()，仅能在HTML输出中使用，如果加载完成后使用则会覆盖整个文档；</li>
+                <li>对事件反应：如 onclick="alert('string')" 当点击按钮时会小窗口弹出 string 提示；</li>
+                <li>对事件反应后改变内容、图像、样式等：如 onclick="MyFunction()')" ，MyFunction设定改变方式；</li>
+                <li>判断事件：if语句等判断语句；</li>
+            </ol>
+            <p id="Cout">输出函数：</p>
+            <ol>
+                <li>window.alert()：弹出警告框；也可以在一些事件反应的属性值中使用alert()函数</li>
+                <li>document.write()：将内容写到 HTML 文档中；</li>
+                <li>innerHTML：将内容写入到 HTML 元素中；</li>
+                <li>console.log()：写入到浏览器的控制台中；</li>
+            </ol>
+            <p id="Cgram">JavaScript的语法和语言结构：</p>
+            <ol>
+                <li>字面量：一般固定值称为字面量，如数字、字符串、表达式、数组[num1,num2,...,numn]、对象{key1:"value1",key2:"value2"}、函数</li>
+                <li>变量：变量用于存储数据值，用关键字var定义；变量是名称，字面量是值；</li>
+                <li>操作符：赋值(=)、算术(+-*/)、位运算、条件、逻辑(== != &lt; &gt;)、比较运算符；</li>
+                <li>字母大小写：JavaScript语言对字母大小写敏感，命名多采用驼峰规则，如lastName；</li>
+                <li>语句：语句用分号隔开是可选的，但同一行内必须用分号隔开；折行则需要私用反斜杠（\）；</li>
+                <li>注释：单行注释用双斜杠（//），多行注释用/*开头、*/结尾；</li>
+            </ol>
+            <p id="Cdata">数据类型--分为值类型与引用数据类型两大类：</p>
+            <ol>
+                <li>值类型：包括数字、字符串、布尔、对空(Null)、未定义(undefined)、Symbol（新的原始数据类型，表示独一无二的值）；</li>
+                <li>引用数据类型：array、object、function；</li>
+                <li>定义变量：var var1 = new datatype 或者 var var1 = (...)；即要么用var定义并用new+数据类型声明，或者var定义并直接赋值；</li>
+            </ol>
+            <p>对象、函数与作用域：</p>
+            <ol>
+                <li>对象的创建--var object1 = {key:"value"...}，可换行定义；</li>
+                <li>对像属性的访问--object.key 或者object["key"]，将返回key属性对应的值；</li>
+                <li>函数的定义--function myFunction(var1,var2){代码}；</li>
+                <li>作用域--可访问变量的集合，若变量在函数内声明，变量为局部作用域，函数执行完后局部变量会自动销毁；变量在函数外定义，即为全局变量，全局变量有全局作用域: 网页中所有脚本和函数均可使用。</li>
+            </ol>
+            <p id="Cevent">事件--发生在 HTML 元素上的事情，可以是浏览器行为，也可以是用户行为：</p>
+            <ol>
+                <li>onchange事件：HTML 的元素发生改变时；</li>
+                <li>onclick事件：用户点击 HTML 元素时；</li>
+                <li>onmouseover：用户鼠标在 HTML 元素上移动时；</li>
+                <li>onmouseout：用户从 HTML 元素上移开时；</li>
+                <li>onkeydown：用户按下键盘时；</li>
+                <li>onload事件：浏览器已经完成页面的加载时。</li>
+                <li>事件触发时的处理：&lt;element event="js program"&gt;，即针对某一元素发生某种事件时执行js程序；</li>
+            </ol>
         </div><hr />
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
