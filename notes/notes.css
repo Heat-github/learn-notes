@@ -222,6 +222,9 @@ h1{ color:rgb(255, 0, 0);}
 h3{
     color: seagreen;
     font-weight: 600;}
+h3+p{
+    text-align: justify;
+}
 
 
 
@@ -262,8 +265,7 @@ h3{
             height: 40px;}
         .catalog ul {
             list-style-type: none;
-            display:block;
-            transition: all 2s;}
+            display:none;}
         .catalog li{
             width: 33%;
             padding: 1px;}
