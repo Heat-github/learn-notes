@@ -56,8 +56,10 @@
             <li><a href="#Cevent">事件及其处理</a></li>
             <li><a href="#Cstr">字符串及属性</a></li>
             <li><a href="#Clog">比较与逻辑</a></li>
-            <li><a href="#Cifsw">if与switch</a></li>
+            <li><a href="#Cifsw">条件语句</a></li>
             <li><a href="#Cforw">循环语句</a></li>
+            <li><a href="#Creg">正则表达式</a></li>
+            <li><a href="#Cerr">程序异常处理</a></li>
             <li><a href="#Cintro">前言</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
@@ -166,7 +168,7 @@
         <p>今日关键词：伪类、下拉菜单、提示框</p>
         <div class="note_tag">
             <p id="Cpseudo">伪类：用来添加一些选择器的特殊效果，语法：selector:pseudo-class {property:value;}</p>
-            <ol>
+            <ul>
                 <li>first-child 伪类：选择父元素的第一个子元素→p:first-child{...}</li>
                 <li>lang 伪类：为不同的语言定义特殊的规则→q:lang(no) {quotes: "~" "~";}，使用q标签的lang属性为no时双引号替换为破折号；</li>
                 <li>focus伪类：元素获得焦点时向元素添加特殊的样式→input:focus{...}，点击输入可设置表单样式；</li>
@@ -174,9 +176,9 @@
                 <li>invalid伪类：为无效、不合法的元素设置样式；</li>
                 <li>伪元素--CSS3使用双冒号区分伪类和伪元素，::before、::after分别定义指定元素前后加上指定内容，内容用content定义。</li>
                 <li>更多伪类查看<a href="https://www.runoob.com/css/css-pseudo-classes.html">CSS伪类|菜鸟教程。</a></li>
-            </ol>
+            </ul>
             <p id="Cdrdo">下拉菜单和提示框--盒子模型的一种表现形式，具体实现过程如下：</p>
-            <ol>
+            <ul>
                 <li>定义包含下拉元素和下拉内容的div容器（dropdown）：relative定位，inline-block显示；</li>
                 <li>定义需要显示下拉列表的元素（dropbutton）：可以用button标签；</li>
                 <li>定义下拉列表内容（dropcontent）：默认设置隐藏属性，none显示，absolute定位保证菜单下拉后不会影响后续的文档流移位；</li>
@@ -222,17 +224,17 @@
                     </div>
                 </li><br />
                 <li>使用::after（或者::before）伪元素配合content属性为空，可以为提示工具创建一个小箭头标志，箭头是由三面透明(transparent)的边框，配合绝对定位以及相对移动组成。</li>
-            </ol>
+            </ul>
             <p id="Cmedia">媒体类型--指定文件将如何在不同媒体呈现：</p>
-            <ol>
+            <ul>
                 <li>@media规则：允许在同一样式表内为不同媒体设置不同的样式；</li>
                 <li>print：用于打印机，可以设定打印时的样式与显示效果不一样；</li>
                 <li>screen：用于电脑或者手机显示器，手机和电脑显示不同CSS样式可以设置@media screen and (max-width: 800px)来分辨时小屏显示器还是大屏显示器；</li>
                 <li>projection：用于方案展示，比如幻灯片；tv：用于电视机类型设备；</li>
                 <li>all：用于所有媒体设备。</li>
-            </ol>
+            </ul>
             <p id="Ctype">属性和值选择器--为设定有某一属性或者设定有某一属性与特定值的所有元素设定样式：</p>
-            <ol>
+            <ul>
                 <li>属性选择器，如[title]{...;}为所有包含title属性的标签内的元素设定样式，不需要对应值；</li>
                 <li>属性和值选择器①：如[title=alex]{...;}为title="alex"（唯一值）的所有标签内元素设定样式；</li>
                 <li>属性和值选择器②：如[title|=alex]{...;}为title属性的值以alex开头（单独单词）的所有标签内元素设定样式；</li>
@@ -240,63 +242,63 @@
                 <li>属性和值选择器④：如[title^=alex]{...;}为title属性的值的前几个字母为alex的所有标签内元素设定样式；</li>
                 <li>属性和值选择器⑤：如[title*=alex]{...;}为title属性的值中包含alex（不需要单独单词）的所有标签内元素设定样式；</li>
                 <li>属性和值选择器④：如[title$=alex]{...;}为title属性的值的后几个字母为alex的所有标签内元素设定样式；</li>
-            </ol>
+            </ul>
             <p>属性选择器应用到表单中，通过input[type=text]等设定输入框和按钮的样式。</p>
         </div>
 
         <!-- 7月5号！！！ -->
         <!-- 7月5号！！！ -->
         <h3 id="C05">7月5号 周日</h3>
-        <p>今日关键词：计数器、JavaScript初始认识、JS输出函数，今天最大收获时写了第一个JS脚本，实现了目录在点击时的展开与隐藏，主要方法时在用if语句判断是否是手机端的情况下，通过使用 element=getElementById("demo") 方法对指定元素的事件进行响应，再用 element.style.display.match("none") 方法来判断当前目录是否隐藏，如果隐藏通过赋值方式（element.style.display = block）来设置展开，否则赋值为none可实现隐藏。</p>
+        <p>今日关键词：计数器、JavaScript初始认识、JS输出函数。<br />今天最大收获时写了第一个JS脚本，实现了目录在点击时的展开与隐藏，主要方法时在用if语句判断是否是手机端的情况下，通过使用element=getElementById("demo")方法对指定元素的事件进行响应，再用element.style.display.match("none")方法来判断当前目录是否隐藏，如果隐藏通过赋值方式(element.style.display = "block")来设置展开，否则赋值为none可实现隐藏。</p>
         <div class="note_tag">
             <p id="Ccounter">计数器--对某一属性值设置变量增量计数：</p>
-            <ol>
+            <ul>
                 <li>counter-reset:section x--创建新的计数器或重置计数器；其后的值设置变量名和起始值x（则从x+1开始）；</li>
                 <li>counter-increment:section--为section变量计数递增（+1）；</li>
                 <li>content:"x""y""..."--插入生成或指定的内容；指定内容需要引号包围，函数生成内容则不需要；</li>
                 <li>counter(section)--将section变量的数值添加到元素中；</li>
                 <li>counters(section,"string"[,list-style-type])--嵌套计数，遇到同名父子标签则自动嵌套计数，string是项目符之间的分隔符，list-style-type是计数后显示的符号类型，默认是阿拉伯数字；</li>
-            </ol>
+            </ul>
             <p id="Cjs">JavaScript是脚本语言，是插入HTML的轻量级编程语言，基本介绍与功能有：</p>
-            <ol>
+            <ul>
                 <li>脚本必须位于 &lt;script&gt; 与 &lt;/script&gt; 标签之间，可以放在head、body部分，最好统一放一起不影响页面布局，也可以把脚本保存到外部文件中；</li>
                 <li>导入外部脚本文件的方法：&lt;script src="myScript.js"&gt;&lt;/script&gt;，外部文件不能包含script标签；</li>
                 <li>输出数据：如document.write()，仅能在HTML输出中使用，如果加载完成后使用则会覆盖整个文档；</li>
                 <li>对事件反应：如 onclick="alert('string')" 当点击按钮时会小窗口弹出 string 提示；</li>
                 <li>对事件反应后改变内容、图像、样式等：如 onclick="MyFunction()')" ，MyFunction设定改变方式；</li>
                 <li>判断事件：if语句等判断语句；</li>
-            </ol>
+            </ul>
             <p id="Cout">输出函数：</p>
-            <ol>
+            <ul>
                 <li>window.alert()：弹出警告框；也可以在一些事件反应的属性值中使用alert()函数</li>
                 <li>document.write()：将内容写到 HTML 文档中；</li>
                 <li>innerHTML：将内容写入到 HTML 元素中；</li>
                 <li>console.log()：写入到浏览器的控制台中；</li>
-            </ol>
+            </ul>
             <p id="Cgram">JavaScript的语法和语言结构：</p>
-            <ol>
+            <ul>
                 <li>字面量：一般固定值称为字面量，如数字、字符串、表达式、数组[num1,num2,...,numn]、对象{key1:"value1",key2:"value2"}、函数</li>
                 <li>变量：变量用于存储数据值，用关键字var定义；变量是名称，字面量是值；</li>
                 <li>操作符：赋值(=)、算术(+-*/)、位运算、条件、逻辑(== != &lt; &gt;)、比较运算符；</li>
                 <li>字母大小写：JavaScript语言对字母大小写敏感，命名多采用驼峰规则，如lastName；</li>
                 <li>语句：语句用分号隔开是可选的，但同一行内必须用分号隔开；折行则需要私用反斜杠（\）；</li>
                 <li>注释：单行注释用双斜杠（//），多行注释用/*开头、*/结尾；</li>
-            </ol>
+            </ul>
             <p id="Cdata">数据类型--分为值类型与引用数据类型两大类：</p>
-            <ol>
+            <ul>
                 <li>值类型：包括数字、字符串、布尔、对空(Null)、未定义(undefined)、Symbol（新的原始数据类型，表示独一无二的值）；</li>
                 <li>引用数据类型：array、object、function；</li>
                 <li>定义变量：var var1 = new datatype 或者 var var1 = (...)；即要么用var定义并用new+数据类型声明，或者var定义并直接赋值；</li>
-            </ol>
+            </ul>
             <p>对象、函数与作用域：</p>
-            <ol>
+            <ul>
                 <li>对象的创建--var object1 = {key:"value"...}，可换行定义；</li>
                 <li>对像属性的访问--object.key 或者object["key"]，将返回key属性对应的值；</li>
                 <li>函数的定义--function myFunction(var1,var2){代码}；</li>
                 <li>作用域--可访问变量的集合，若变量在函数内声明，变量为局部作用域，函数执行完后局部变量会自动销毁；变量在函数外定义，即为全局变量，全局变量有全局作用域: 网页中所有脚本和函数均可使用。</li>
-            </ol>
+            </ul>
             <p id="Cevent">事件--发生在 HTML 元素上的事情，可以是浏览器行为，也可以是用户行为：</p>
-            <ol>
+            <ul>
                 <li>onchange事件：HTML 的元素发生改变时；</li>
                 <li>onclick事件：用户点击 HTML 元素时；</li>
                 <li>onmouseover：用户鼠标在 HTML 元素上移动时；</li>
@@ -304,13 +306,80 @@
                 <li>onkeydown：用户按下键盘时；</li>
                 <li>onload事件：浏览器已经完成页面的加载时。</li>
                 <li>事件触发时的处理：&lt;element event="js program"&gt;，即针对某一元素发生某种事件时执行js程序；</li>
-            </ol>
+            </ul>
         </div><hr />
 
         <!-- 7月6号！！！ -->
         <!-- 7月6号！！！ -->
         <h3 id="C06">7月6号 周一</h3>
-        <p>今日关键词：</p>
+        <p>今日关键词：字符串与属性、比较与逻辑运算符、条件语句、循环语句：</p>
+        <div class="note_tag">
+            <p id="Cstr">字符串--用于存储和处理文本：</p>
+            <ul>
+                <li>字符串可以是插入到引号中的任何字符，单引号和双引号均可；</li>
+                <li>str.length属性：计算字符串长度；</li>
+                <li>转义字符\：特殊字符可以使用转义字符来转义；\'单引号，\"双引号，\\反斜杠，\n换行，\r回车，\tTab制表符，\b退格符，\f换页符；</li>
+                <li>String定义：用new string创建字符串得到的是对象类型；</li>
+                <li>constructor属性：返回创建字符串属性的函数；</li>
+                <li>prototype属性：允许向对象添加属性和方法；</li>
+                <li>字符串的方法：对字符串进行操作，如str3 = str1.concat(str2) 链连接个字符串并返回给str3；</li>
+            </ul>
+            <p id="Clog">比较与逻辑运算符：</p>
+            <ul>
+                <li>比较运算符：==等于，!=不等于，===绝对等于（值和类型都相等），!===不绝对相等（值和类型有一个不相等，或两个都不相等）;</li>
+                <li>逻辑年算符：&&（与）、||（或）、!（非）；</li>
+            </ul>
+            <p id="Cifsw">条件语句--if...else和switch...case：</p>
+            <ul>
+                <li>if-else：三个条件以上（含三个）时，中间使用else if语句；条件语句中只有一行代码时，可以写在一行企鹅省去花括号；</li>
+                <li>switch-case-default：每一次case语句后跟随一个break，最后需要默认语句default，用于所有case语句都不执行时的响应。</li>
+            </ul>
+            <p id="Cforw">循环语句--for和while：</p>
+            <ul>
+                <li>for循环：for(var innitial;condition;var processing){program;}</li>
+                <li>for/in循环：for(x in var){program;}</li>
+                <li>while循环：while(condition){program;}条件为true时执行；</li>
+                <li>do/while循环：do{program;}while(condition);至少执行一次，do语句中条件变量要变化，否则会进入死循环。</li>
+            </ul>
+            <p id="Cbreak">循环中断：break直接跳出循环程序，continue则是终止本次迭代，进入下一次迭代；</p>
+            <p id="Creg">正则表达式--由一个字符序列形成的搜索模式，可用于所有文本搜索和文本替换的操作：</p>
+            <ul>
+                <li>语法：/正则表达式主体/修饰符(可选)；</li>
+                <li>正则表达式主体：用于检索；</li>
+                <li>修饰符：i-不区分大小写；g-全局匹配（第一个匹配之后不停止）；m-多行匹配；</li>
+                <li>模式：[abc]查找方括号内的任何字符，[0-9]查找任何0-9的数字，(x|y)查找任何以 | 分隔的选项；</li><br />
+                <li>元字符：\d查找数字，\s查找空白字符，\b匹配单词边界，\uxxxx查找十六进制数xxxx规定的Unicode字符；</li><br />
+                <li>量词：n+ 匹配任何包含至少一个 n 的字符串，n* 匹配任何包含零个或多个 n 的字符串，n? 匹配任何包含零个或一个 n 的字符串；</li><br />
+                <li>search方法：str1.search(str2)，查找str2子字符串在str1字符串中是否存在并返回子字符串的起始位置，若不存在则返回-1；str2可以是正则表达式</li><br />
+                <li>replace方法：str1.replace(str2,str3)，查找str2子字符串在str1字符串中是否存在并将str2替换为str3（str1中存在str2才替换），str2可以是正则表达式；</li><br />
+                <li>test方法：str1.test(str2)，检测str2字符串是否包含str1，如果字符串中含有匹配的文本，则返回 true，否则返回 false，str1可以是正则表达式；</li><br />
+                <li>exec方法：str1.exec(str2)，用于检索str2字符串是否包含str1，如果有则返回存放匹配结果的数组，否则返回null，str1可以是正则表达式；</li>
+            </ul>
+            <p id="Cerr">错误与异常的处理：</p>
+            <ul>
+                <li>JavaScript引擎在执行js程序时会因为语法、功能缺乏、服务器或用户输出等的错误而停止工作，并抛出异常，生成错误信息；</li>
+                <li>err：生成的错误信息储存在err中，默认形式为（错误类型：错误内容），err内容也可以用throw自定义；</li>
+                <li>try语句：对程序进行测试，可用于调试或者对用户的输入进行判断，后者一般会有自定义错误信息，需要用到throw语句，其程序骨架如下：<br />
+                    <fieldset>
+                        <legend>try语句程序骨架</legend>
+<pre>
+try{
+    //异常抛出与错误信息定义
+    //需要自定义错误信息则用throw
+    if() throw "err1";
+    if() throw "errr2";
+    else() throw "err3";
+}
+catch(err){
+    ...;     //异常处理
+}
+finally{
+    ...;     //结束处理
+}</pre>
+                </li>
+            </ul>
+        </div><hr />
+        
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
     <div class="footer">

@@ -25,7 +25,7 @@
         <a href="notes2020-12.html">12月</a>
         <a href="notes2021-01.html">2021年</a> 
     </div><hr>
-
+    <!--catalog开始标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     <div class="body_tag catalog">
         <button type="button" onclick="cataTrans()">目录</button>
         <ul  id="acatalog">
@@ -335,25 +335,25 @@
                         </p>
                         name属性：定义输入框所收集的数据类型；values属性：定义收集的数据值，只有按钮和选框时使用。
                     </li>
-                    <li style="width: 100%;overflow: auto;">select标签：定义下拉列表；name属性定义数据类型；<br>
+                    <li>select标签：定义下拉列表；name属性定义数据类型；<br>
                         其内使用option子标签定义下拉列表的内容，option标签的属性有value属性定义可选内容，selected属性定义预选内容，一个option标签只能有一个值，一个select标签内只能有一个option可以使用预选属性selected；<br>
                         optgroup则定义选项组，将下拉列表内容性质一致的定义为同一组。骨架标签如下：<br>
                         <fieldset>
                         <legend>骨架标签</legend>
 <pre>
-    &lt;select&gt;
-        &lt;optgroup1&gt;
-            &lt;option value="option1"&gt;option1&lt;/option&gt;
-            &lt;option value="option2"&gt;option2&lt;/option&gt;
-            ......
-        &lt;/optgroup1&gt;
-        &lt;optgroup2&gt;
-                &lt;option value="option3"&gt;option3&lt;/option&gt;
-                &lt;option value="option4"&gt;option4&lt;/option&gt;
-                ......
-        &lt;/optgroup2&gt;
+&lt;select&gt;
+    &lt;optgroup1&gt;
+        &lt;option value="opt1"&gt;opt1&lt;/option&gt;
+        &lt;option value="opt2"&gt;opt2&lt;/option&gt;
         ......
-    &lt;/select&gt;
+    &lt;/optgroup1&gt;
+    &lt;optgroup2&gt;
+        &lt;option value="opt3"&gt;opt3&lt;/option&gt;
+        &lt;option value="opt4"&gt;opt4&lt;/option&gt;
+        ......
+    &lt;/optgroup2&gt;
+    ......
+&lt;/select&gt;
 </pre>
                         </fieldset>
                     </li>
