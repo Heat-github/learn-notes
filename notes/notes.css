@@ -111,6 +111,9 @@ body{
 
     .note_tag ul ol{
         font-size: 1em;}
+    
+    .note_tag>ul>li{
+        margin: 12px;}
 
     .note_tag li span{
         background-color: silver;}
@@ -217,6 +220,7 @@ img.backtop{
 a{
     cursor: pointer;
     text-decoration: none;}
+
 
 h1{ color:rgb(255, 0, 0);}
 

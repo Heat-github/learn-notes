@@ -61,7 +61,7 @@
             <li><a href="#Creg">正则表达式</a></li>
             <li><a href="#Cerr">程序异常处理</a></li>
             <li><a href="#Cnote">常见问题</a></li>
-            <li><a href="#Cjsform">JavaScript表单</a></li>
+            <li><a href="#Cjsform">JS表单验证</a></li>
             <li><a href="#Cintro">前言</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
@@ -349,12 +349,12 @@
                 <li>语法：/正则表达式主体/修饰符(可选)；</li>
                 <li>正则表达式主体：用于检索；</li>
                 <li>修饰符：i-不区分大小写；g-全局匹配（第一个匹配之后不停止）；m-多行匹配；</li>
-                <li>模式：[abc]查找方括号内的任何字符，[0-9]查找任何0-9的数字，(x|y)查找任何以 | 分隔的选项；</li><br />
-                <li>元字符：\d查找数字，\s查找空白字符，\b匹配单词边界，\uxxxx查找十六进制数xxxx规定的Unicode字符；</li><br />
-                <li>量词：n+ 匹配任何包含至少一个 n 的字符串，n* 匹配任何包含零个或多个 n 的字符串，n? 匹配任何包含零个或一个 n 的字符串；</li><br />
-                <li>search方法：str1.search(str2)，查找str2子字符串在str1字符串中是否存在并返回子字符串的起始位置，若不存在则返回-1；str2可以是正则表达式</li><br />
-                <li>replace方法：str1.replace(str2,str3)，查找str2子字符串在str1字符串中是否存在并将str2替换为str3（str1中存在str2才替换），str2可以是正则表达式；</li><br />
-                <li>test方法：str1.test(str2)，检测str2字符串是否包含str1，如果字符串中含有匹配的文本，则返回 true，否则返回 false，str1可以是正则表达式；</li><br />
+                <li>模式：[abc]查找方括号内的任何字符，[0-9]查找任何0-9的数字，(x|y)查找任何以 | 分隔的选项；</li>
+                <li>元字符：\d查找数字，\s查找空白字符，\b匹配单词边界，\uxxxx查找十六进制数xxxx规定的Unicode字符；</li>
+                <li>量词：n+ 匹配任何包含至少一个 n 的字符串，n* 匹配任何包含零个或多个 n 的字符串，n? 匹配任何包含零个或一个 n 的字符串；</li>
+                <li>search方法：str1.search(str2)，查找str2子字符串在str1字符串中是否存在并返回子字符串的起始位置，若不存在则返回-1；str2可以是正则表达式</li>
+                <li>replace方法：str1.replace(str2,str3)，查找str2子字符串在str1字符串中是否存在并将str2替换为str3（str1中存在str2才替换），str2可以是正则表达式；</li>
+                <li>test方法：str1.test(str2)，检测str2字符串是否包含str1，如果字符串中含有匹配的文本，则返回 true，否则返回 false，str1可以是正则表达式；</li>
                 <li>exec方法：str1.exec(str2)，用于检索str2字符串是否包含str1，如果有则返回存放匹配结果的数组，否则返回null，str1可以是正则表达式；</li>
             </ul>
             <p id="Cerr">错误与异常的处理：</p>
@@ -386,17 +386,20 @@ finally{
         <!-- 7月7号!!! -->
         <h3 id="C07">7月7号 周二</h3>
         <p>今日关键词：变量提升，严格模式，使用误区，表单验证，；</p>
-        <div id="note_tag">
+        <div class="note_tag">
             <p id="Cnote">JavaScript中需要注意的点：</p>
             <ul>
-                <li>变量提升：函数声明和变量声明总是会被解释器"提升"到方法体的最顶部，而初始化不会被提升；</li><br />
-                <li>严格模式：使用字面里"use strict"，使用严格模式后，不能使用未声明的变量，不允许删除变量或对象，不允许删除函数，不允许变量重名，不允许使用八进制，不允许使用转义字符，不允许对只读属性赋值，不允许对一个使用getter方法读取的属性进行赋值，不允许删除一个不允许删除的属性，变量名不能使用"eval"和"arguments"字符串，新增一些保留关键字。</li><br />
+                <li>变量提升：函数声明和变量声明总是会被解释器"提升"到方法体的最顶部，而初始化不会被提升；</li>
+                <li>严格模式：使用字面里"use strict"，使用严格模式后，不能使用未声明的变量，不允许删除变量或对象，不允许删除函数，不允许变量重名，不允许使用八进制，不允许使用转义字符，不允许对只读属性赋值，不允许对一个使用getter方法读取的属性进行赋值，不允许删除一个不允许删除的属性，变量名不能使用"eval"和"arguments"字符串，新增一些保留关键字。</li>
                 <li>常见的使用误区：浮点型数据精确度很难确定，如0.1+0.2=0.30000000000000004，因此在JavaScript中0.1+0.2!=0.3；可用整数乘除法解决大部分问题；</li>
             </ul>
             <p id="Cjsform">JavaScript表单：</p>
             <ul>
-                <li>常见验证内容：必需字段是否有输入？用户是否输入了合法的数据？在数字字段是否输入了文本？</li>
-                <li></li>
+                <li>常见验证内容：表单数据是否为空发？email地址是否正确？日期是否正确？输入内容是否为数字类型</li>
+                <li>获取表单内容的方法：document.forms["myForm"]["fname"].value，myForm和fname分别是form标签和表单字段标签(如input)name属性的值，对获取的值判断即可作验证；</li>
+                <li>表单自动验证：在表单字段中使用required属性定义该字段必需获取有效信息（直接在开始标签中声明required或者required="required"，在严格模式中只能使用后者定义）；</li>
+                <li>表单字段的其他属性：<br />disabled定义输入的元素不可用；<br />max和min分别定义输入元素的最大最小值；<br />pattern定义输入值的模式；type规定输入元素的类型；</li>
+                <li>选择特定属性的伪类选择器：<br />:disabled选取属性为"disabled"属性的input元素；<br />:valid和:invalid分别选择有效和无效的input元素；<br />:required和:optional分别选取有和没有required属性的input元素；<br /></li>
             </ul>
         </div><hr />
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
