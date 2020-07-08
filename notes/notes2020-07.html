@@ -382,10 +382,10 @@ finally{
             </ul>
         </div><hr />
 
-        <!-- 7月7号!!! -->
-        <!-- 7月7号!!! -->
+        <!-- 7月7号！！！ -->
+        <!-- 7月7号！！！ -->
         <h3 id="C07">7月7号 周二</h3>
-        <p>今日关键词：变量提升，严格模式，使用误区，表单验证，；</p>
+        <p>今日关键词：变量提升，严格模式，使用误区，表单验证；</p>
         <div class="note_tag">
             <p id="Cnote">JavaScript中需要注意的点：</p>
             <ul>
@@ -402,6 +402,38 @@ finally{
                 <li>选择特定属性的伪类选择器：<br />:disabled选取属性为"disabled"属性的input元素；<br />:valid和:invalid分别选择有效和无效的input元素；<br />:required和:optional分别选取有和没有required属性的input元素；<br /></li>
             </ul>
         </div><hr />
+
+        <!-- 7月8号！！！ -->
+        <!-- 7月8号！！！ -->
+        <h3 id="C08">7月8号 周三</h3>
+        <p>今日关键词：验证API，保留关键字，</p>
+        <div class="note_tag">
+            <p id="CAPI">API（Application Programming Interface）验证：</p>
+            <ul>
+                <li>约束验证DOM（Document Object Model）方法：<br />
+                    checkValidity()：如果 input 元素中的数据是合法的返回 true，否则返回 false；<br />
+                    setCustomValidity()：设置 input 元素的 validationMessage 属性，用于自定义错误提示信息的方法。使用 setCustomValidity 设置了自定义提示后，validity.customError 就会变成true，则 checkValidity 总是会返回false。如果要重新判断需要取消自定义提示，方式有：setCustomValidity('') 、setCustomValidity(null)、 setCustomValidity(undefined)；
+                </li>
+                <li>约束验证DOM属性：<br />
+                    validity：布尔值属性，返回input输入值是否合法；<br />
+                    validationMessage：浏览器错误提示的信息；<br />
+                    willvalidate：指定input是否需要验证；
+                </li>
+                <li>validity属性：
+                    customError：如果设置了自定义的 validity 信息，则返回true；
+                    rangrOverflow：如果元素的值大于设置的最大值，则返回true；
+                    rangeUnderflow：如果元素的值小于它的最小值，则返回true；
+                    patternMismatch：如果元素的值不匹配它的模式属性，则返回true；
+                    typeMismatch：如果元素的值不是预期相匹配的类型，则返回true；
+                    stepMismatch：如果元素的值不是按照规定的 step 属性设置，则返回true；
+                    valueMissing：如果元素 (required 属性) 没有值，则返回true；
+                    tooLong：如果元素的值超过了 maxLength 属性设置的长度，则返回true；
+                    valid：如果元素的值是合法的，则返回true；
+                </li>
+            </ul>
+            <p id="Creserved">保留关键字详情可访问<a href="https://www.runoob.com/js/js-reserved.html" style="text-decoration: none;"> [JavaScript 保留关键字 | 菜鸟教程] </a></p>
+            <p></p>
+        </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
     <div class="footer">
