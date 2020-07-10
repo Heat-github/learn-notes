@@ -482,7 +482,7 @@ finally{
                 <li>空格与运算符：通常运算符 ( = + - * / ) ；前后需要添加空格，方便阅读。</li>
                 <li>代码缩进：使用 4 个空格符号来缩进代码块而不推荐Tab键（不同编辑器 TAB 键的解析不一样）。</li>
                 <li>语句规则：<br />
-                    简单语句：一通常以分号作为结束符；<br />
+                    简单语句：通常以分号作为结束符；<br />
                     复杂语句：左花括号前添加空格并放在第一行的结尾；右花括号独立放在一行；不要以分号结束一个复杂的声明。</li>
                 <li>对象规则：<br />
                     将左花括号与类名放在同一行；<br />
@@ -492,6 +492,33 @@ finally{
                     短的对象代码可以直接写成一行；<br />
                     将右花括号独立放在一行，并以分号作为结束符号。</li>
                 <li>大小写：HTML对大小写敏感，注意变量与函数名；推荐使用小写文件名。</li>
+            </ul>
+            <p id="CJSFunc">JavaScript函数的知识点：</p>
+            <ul>
+                <li>ES5函数中参数会默认设置为undefined；ES6函数可以自带参数；</li>
+                <li>arguments对象：包含了函数调用的参数数组；arguments是对象类型，属性为0到n以及callee，n为实参的个属，0到n的值是顺序所对应的实参，而callee的值是函数本身，如arguments.callee(n-1)即为函数内调用本身，常用于迭代；</li>
+                <li>this关键字：指向调用函数的当前对象；函数没有被自身的对象调用时 this 的值就会变成全局对象[Object Window]；</li>
+                <li>闭包：能够读取其他函数内部变量的函数；（！！！！！！！！！没搞懂！！！！！！！！！）</li>
+            </ul>
+            <p id="CDOM">文档对象模型：当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。</p>
+            <ul>
+                <li>查找 HTML 元素：<br />
+                通过ID名查找元素：document.getElementById("idname")；<br />
+                通过标签名查找对象：document.getElementsByTagName("tagname")；<br />
+                通过类名查找元素：document.getElementsByClassName("classname")。</li>
+            </ul>
+            <p>HTML DOM 的作用：</p>
+            <ul>
+                <li>改变HTML：改变 HTML 输出内容：(document.getElementById(id).innerHTML="新的内容")；<br />改变 HTML 属性：（document.getElementById(id).attribute="新属性值"）</li>
+                <li>改变CSS样式：document.getElementById(id).style.property="新样式"；</li>
+                <li><a href="#Cevent" style="text-decoration: none;">事件响应与处理</a></li>
+                <li>事件监听，创建事件句柄：addEventListener() 方法<br />
+                语法结构：element.addEventListener(event, function, useCapture);<br />
+                event：事件类型，不要加on前缀；<br />
+                function：函数名，不能加后缀()；<br />
+                useCapture：参数是个布尔值用于描述事件是冒泡还是捕获，该参数是可选的<br /></li>
+                <li>移除事件句柄：removeEventListener() 方法，用于移除由 addEventListener() 方法添加的事件句柄。</li>
+                <li>IE 8 及更早版本的addEventListener() 方法需要用attachEvent()方法代替，此时事件类型中on前缀是必须的。</li>
             </ul>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
