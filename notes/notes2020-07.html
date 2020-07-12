@@ -471,7 +471,7 @@ finally{
             <ul>
                 <li>语法结构：<br />void func()<br />javascript:void func()<br />或者：<br />void(func())<br />javascript:void(func())</li>
                 <li>&lt;a href="javascript:void(0)"&gt;&lt;/a&gt;：定义死链接，点击不会有任何反应；</li>
-                <li>&lt;a href="javascript:void(alert('Warning!!!'))"&gt;&lt;/a&gt;：显示警告信息；</li>
+                <li>&lt;a href="javascript:void(alert())"&gt;&lt;/a&gt;：弹出警告框；</li>
                 <li>a = void ( b = 5, c = 7 )：a返回undefined，但b,c正常赋值；</li>
             </ul>
         </div><hr />
@@ -508,9 +508,9 @@ finally{
             <p id="CDOM">文档对象模型：当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。</p>
             <ul>
                 <li>查找 HTML 元素：<br />
-                通过ID名查找元素：document.getElementById("idname")；<br />
-                通过标签名查找对象：document.getElementsByTagName("tagname")；<br />
-                通过类名查找元素：document.getElementsByClassName("classname")。</li>
+                通过ID名查找元素：document. getElementById("idname")；<br />
+                通过标签名查找对象：document. getElementsByTagName("tagname")；<br />
+                通过类名查找元素：document. getElementsByClassName("classname")。</li>
             </ul>
             <p>HTML DOM 的作用：</p>
             <ul>

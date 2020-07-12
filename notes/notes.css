@@ -186,7 +186,7 @@ img.backtop{
     border-radius: 50%;
     right: 5px;
     bottom: 6em;
-    width: 3opx;
+    width: 30px;
     height: 30px;}
 /*------------------------去到底部-----------------------*/
 /*------------------------去到底部-----------------------*/
@@ -291,7 +291,40 @@ h3+p{text-align: justify;}
 /*-------------------------笔记内容-----------------------*/
     .content{
         width: 100%;
+        overflow: hidden;
         background-color: rgb(187, 187, 187);
         margin: 0;
         padding:1vw;}
+
+/*------------------------回到顶部-----------------------*/
+/*------------------------回到顶部-----------------------*/
+img.backtop{
+    position: fixed;
+    border-radius: 50%;
+    right: 5px;
+    bottom: 9em;
+    width: 30px;
+    height: 30px;}
+/*------------------------去到底部-----------------------*/
+/*------------------------去到底部-----------------------*/
+img.gobottom{
+        position: fixed;
+        transform:rotate(180deg);
+        border-radius: 50%;
+        right: 5px;
+        bottom: 3em;
+        width: 30px;
+        height: 30px;}
+/*------------------------夜间模式-----------------------*/
+/*------------------------夜间模式-----------------------*/
+.darkmode{
+    position: fixed;
+    border-radius: 50%;
+    opacity:0.5;
+    right: 5px;
+    bottom: 6em;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    }
 }
