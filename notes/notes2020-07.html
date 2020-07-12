@@ -11,7 +11,7 @@
     <script src="notes_js.js"></script>
 </head>
 
-<body id="Cbody">
+<body id="Cbody" onload="modeFunc()">
 <code style="font-size: 18px;">
     <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
     <a href="#Cfooter"><img class="gobottom" src="../picture/back-to-top.jpg" alt="去到底部" /></a>
@@ -74,6 +74,7 @@
             <li><a href="#Cstandard">JS代码规范</a></li>
             <li><a href="#JSFunc">JS函数知识点</a></li>
             <li><a href="#CDOM">文档对象模型</a></li>
+            <li><a href="#Cnode">DOM元素节点</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -522,7 +523,7 @@ finally{
                 语法结构：element.addEventListener(event, function, useCapture);<br />
                 event：事件类型，不要加on前缀；<br />
                 function：函数名，不能加后缀()；<br />
-                useCapture：参数是个布尔值用于描述事件是冒泡还是捕获，该参数是可选的<br /></li>
+                useCapture：参数是个布尔值用于描述事件是冒泡还是捕获，该参数是可选的。<br /></li>
                 <li>移除事件句柄：removeEventListener() 方法，用于移除由 addEventListener() 方法添加的事件句柄。</li>
                 <li>IE 8 及更早版本的addEventListener() 方法需要用attachEvent()方法代替，此时事件类型中on前缀是必须的。</li>
             </ul>
@@ -531,7 +532,40 @@ finally{
         <!-- 7月12号！！！ -->
         <!-- 7月12号！！！ -->
         <h3 id="C12">7月12号 周日</h3>
-        <p>今日关键词：</p>
+        <p>今日关键词：DOM元素节点</p>
+        <div class="note_tag">
+            <p id="Cnode">DOM 元素节点，节点可以是文本也可以是一个标签元素</p>
+            <ul>
+                <li>x = document.createElement("TagName")：创建名为TagName的元素；</li>
+                <li>y = document.createTextNode("xxx")：创建文本节点，内容为xxx；</li>
+                <li>x.appendChild(y)：将y节点添加到x元素中，如果有父元素则添加到父元素的结尾；</li>
+                <li>element.insertBefore( para, child)：在elememt（父元素）的子元素child之前添加节点para；</li>
+                <li>parent.removeChild(child)：移除parent（父元素）内的子元素child；</li>
+                <li>parent.replaceChild( node, child)：用node节点替换parent（父元素）内的child节点。</li>
+            </ul>
+            <p id="Ccollection">DOM 集合</p>
+            <ul>
+                <li>getElementsByTagName() 方法返回 HTMLCollection 对象，该对象是包含同一标签名的元素的集合；</li>
+                <li>节点列表和集合中的元素均可以通过索引(以 0 为起始位置)来访问；</li>
+                <li>Collection 和NodeList 对象的 length 属性定义了集合中元素的数量；</li>
+            </ul>
+            <p id="CNodeList">DOM节点列表</p>
+            <ul>
+                <li>NodeList 对象是一个从文档中获取的节点列表对象，节点列表类似于一个集合；</li>
+                <li>getElementsByTClassName() 方法在部分旧版浏览器中返回节点列表，新版一般返回集合对象；</li>
+                <li>所有浏览器的 childNodes 属性返回的是 NodeList 对象；</li>
+                <li>大部分浏览器的 querySelectorAll() 返回 NodeList 对象。</li>
+            </ul>
+            <p id="CC&N">DOM 集合与 DOM 节点列表的区别：</p>
+            <ul>
+                <li>HTMLCollection 是 HTML 元素的集合，NodeList 是一个文档节点的集合；</li>
+                <li>HTMLCollection 元素可以通过 name，id 或索引来获取，NodeList 只能通过索引来获取；</li>
+                <li>只有 NodeList 对象有包含属性节点和文本节点；</li>
+                <li>NodeList 与 HTMLCollection 都与数组对象有点类似，可以使用索引来获取元素；</li>
+                <li>NodeList 与 HTMLCollection 都有 length 属性；</li>
+                <li>NodeList 与 HTMLCollection 都无法使用数组的方法： valueOf(), pop(), push(), 或 join() 。</li>
+            </ul>
+        </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
     <div id="Cfooter" class="footer">

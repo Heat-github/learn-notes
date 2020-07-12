@@ -100,7 +100,7 @@ body{
             border-bottom: 2px solid rgb(255, 255, 255);}
 
     .note_tag summary{
-        background-color: rgb(255, 198, 196);
+        background-color: rgb(164, 184, 162);
         list-style-type: none;}
 
     .note_tag ul ol{
@@ -124,7 +124,9 @@ body{
     .alex td, .alex th{
         border:2px solid #EE872A; 
         text-align: center;}
-    .alex tr.oringe{background-color: rgb(252, 252, 168);}
+    .alex tr.oringe{
+        color:rgb(0,0,0);
+        background-color: rgb(255, 192, 176);}
 
 
 /*----------------------列表的样式表----------------------*/
