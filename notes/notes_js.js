@@ -24,8 +24,8 @@ function darkMode(){
         elet2[0].style.backgroundColor = "rgb(60,60,60)";
         elet3[0].style.backgroundColor = "rgb(60,60,60)";
         for(i=0;i<elet4.length;i++){
-            elet4[i].style.backgroundColor = "rgb(128,128,128)";
-            elet4[i].style.color = "rgb(255,255,255)";
+            elet4[i].style.backgroundColor = "rgb(88,88,88)";
+            elet4[i].style.color = "rgb(234,234,234)";
         }
     }
     else{
