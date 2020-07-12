@@ -196,7 +196,7 @@ img.gobottom{
         border-radius: 50%;
         right: 5px;
         bottom: 2em;
-        width: 3opx;
+        width: 30px;
         height: 30px;}
 /*------------------------夜间模式-----------------------*/
 /*------------------------夜间模式-----------------------*/
@@ -206,7 +206,7 @@ img.gobottom{
     opacity:0.5;
     right: 5px;
     bottom: 4em;
-    width: 3opx;
+    width: 30px;
     height: 30px;
     cursor: pointer;
     }
