@@ -14,6 +14,8 @@
 <body id="Cbody">
 <code style="font-size: 18px;">
     <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
+    <a href="#Cfooter"><img class="gobottom" src="../picture/back-to-top.jpg" alt="去到底部" /></a>
+    <img class="darkmode" onclick="darkMode()" src="../picture/夜间模式.jpg" alt="夜间模式"/>
     <div class="topmenu">
         <a href="alex-index.html"  target="_self">首页</a>
         <a href="notes2020-06.html">6月</a>
@@ -37,6 +39,8 @@
             <li><a href="#C07">7号笔记</a></li>
             <li><a href="#C08">8号笔记</a></li>
             <li><a href="#C09">9号笔记</a></li>
+            <li><a href="#C10">10号笔记</a></li>
+            <li><a href="#C12">12号笔记</a></li>
             <li><a href="#Cfinal">总结</a></li>
             <li><a href="#Chref">链接伪类</a></li>
             <li><a href="#Clist">列表样式</a></li>
@@ -68,7 +72,8 @@
             <li><a href="#Clet">let关键字</a></li>
             <li><a href="#Cconst">const关键字</a></li>
             <li><a href="#Cstandard">JS代码规范</a></li>
-            <li><a href="#Cintro">前言</a></li>
+            <li><a href="#JSFunc">JS函数知识点</a></li>
+            <li><a href="#CDOM">文档对象模型</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -87,10 +92,10 @@
             <p id="Chref">链接有四种状态（伪类）：</p>
                 <ul>
                     <li>a:link------正常状态，没有访问过</li>
+                    <li>a:visited---已访问过的链接</li>
                     <li>a:hover-----鼠标停留在链接上时</li>
                     <li>a:active----点击链接的那一刻</li>
-                    <li>a:visited---已访问过的链接</li>
-                    <li><strong>注意：</strong>在CSS定义中，a:hover 必须被置于 a:link 和 a:visited 之后，a:active 必须被置于 a:hover，才是有效的</li>
+                    <li><strong>注意：</strong>在CSS定义中，a:hover 必须被置于 a:link 和 a:visited 之后，a:active 必须被置于 a:hover之后，才是有效的</li>
                 </ul>
             <p id="Clist">列表样式(ul、ol、li)：</p>
                 <ul>
@@ -101,17 +106,17 @@
                     <li>list-style-image：自定义标记图像<br>
                     list-style-image:url("URL")，兼容性问题可以使用no-repeat的background-image代替：
                     <pre style="width:100%;border:2px solid;padding:5px 2px;">li.class
-    {
-    background-image:url("URL");
-    background-repeat:no-repeat;
-    background-position:0px 5px; 
-    padding-left:14px;
-    }</pre></li>
+{
+background-image:url("URL");
+background-repeat:no-repeat;
+background-position:0px 5px; 
+padding-left:14px;
+}</pre></li>
                 </ul>
             <p id="Cpstn">Position定位：</p>
                 <ul>
                     <li>static：HTML 元素的默认值，即没有定位，遵循正常的文档流对象。</li>
-                    <li>absolute：元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于$lt;html&gt;（而不像fixed相对窗口定位），使元素的位置与文档流无关，因此不占据空间；</li>
+                    <li>absolute：元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于&lt;html&gt;（而不像fixed相对窗口定位），使元素的位置与文档流无关，因此不占据空间；</li>
                     <li>fixed：元素的位置相对于浏览器窗口是固定位置，如右下角的回顶部；</li>
                     <li>relative：移动相对定位元素，但它原本所占的空间不会改变，常被用来作为绝对定位元素的容器块；</li>
                     <li>sticky：元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位，如顶部目录；</li>
@@ -372,11 +377,11 @@
                         <legend>try语句程序骨架</legend>
 <pre>
 try{
-    //异常抛出与错误信息定义
-    //需要自定义错误信息则用throw
-    if() throw "err1";
-    if() throw "errr2";
-    else() throw "err3";
+  //异常抛出与错误信息定义
+  //自定义错误信息用throw
+  if() throw "err1";
+  if() throw "errr2";
+  else() throw "err3";
 }
 catch(err){
     ...;     //异常处理
@@ -411,7 +416,7 @@ finally{
 
         <!-- 7月8号！！！ -->
         <!-- 7月8号！！！ -->
-        <h3 id="C09">7月8号 周三</h3>
+        <h3 id="C08">7月8号 周三</h3>
         <p>今日关键词：API验证。</p>
         <div class="note_tag">
             <p id="CAPI">API（Application Programming Interface）验证：</p>
@@ -520,10 +525,15 @@ finally{
                 <li>移除事件句柄：removeEventListener() 方法，用于移除由 addEventListener() 方法添加的事件句柄。</li>
                 <li>IE 8 及更早版本的addEventListener() 方法需要用attachEvent()方法代替，此时事件类型中on前缀是必须的。</li>
             </ul>
-        </div>
+        </div><hr />
+
+        <!-- 7月12号！！！ -->
+        <!-- 7月12号！！！ -->
+        <h3 id="C12">7月12号 周日</h3>
+        <p>今日关键词：</p>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
-    <div class="footer">
+    <div id="Cfooter" class="footer">
     Copyright © Alex-alading.dong @ 2020
     </div>
 </code>

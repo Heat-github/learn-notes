@@ -1,7 +1,6 @@
 *{box-sizing: border-box;}
 body{
     background-color: rgb(128, 128, 128);
-    border:5px solid coral;
     padding: 5px;
     margin:0;}
 
@@ -66,10 +65,6 @@ body{
         max-height:60px;
         margin:0;
         padding:4px;
-        position: sticky;
-        top: 0;
-        z-index: 1;
-        opacity: 0.95;
         overflow: auto;}
 
         .topmenu a{
@@ -90,8 +85,8 @@ body{
 /*-------------------------笔记布局-----------------------*/  
 .note_tag{
     width: 100%;
-    background-color: rgb(255, 255, 255);
-    color:rgb(1, 136, 30);
+    background-color: rgb(246, 253, 236);
+    color:rgb(0, 0, 0);
     margin: 10px 0px;
     padding: 0.5em 0.5em 1em;}
 
@@ -112,7 +107,8 @@ body{
         font-size: 1em;}
     
     .note_tag>ul>li{
-        margin: 12px;}
+        margin-top: 12px;
+        text-align: justify;}
 
     .note_tag li span{
         background-color: silver;}
@@ -189,10 +185,32 @@ img.backtop{
     position: fixed;
     border-radius: 50%;
     right: 5px;
-    bottom: 2em;
+    bottom: 6em;
     width: 3opx;
     height: 30px;}
-
+/*------------------------去到底部-----------------------*/
+/*------------------------去到底部-----------------------*/
+img.gobottom{
+        position: fixed;
+        transform:rotate(180deg);
+        border-radius: 50%;
+        right: 5px;
+        bottom: 2em;
+        width: 3opx;
+        height: 30px;}
+/*------------------------夜间模式-----------------------*/
+/*------------------------夜间模式-----------------------*/
+.darkmode{
+    position: fixed;
+    border-radius: 50%;
+    opacity:0.5;
+    right: 5px;
+    bottom: 4em;
+    width: 3opx;
+    height: 30px;
+    cursor: pointer;
+    }
+        
 /*------------------------底部声明-----------------------*/
 /*------------------------底部声明-----------------------*/
 .footer{
