@@ -10,13 +10,14 @@
     <link rel="shortcut icon" href="../picture/favicon.ico">
     <script src="notes_js.js"></script>
     <script src="../jquery-3.5.1.min.js"></script>
+    <script src="notes_jQ.js"></script>
 </head>
 
 <body id="Cbody" onload="modeFunc()">
 <code style="font-size: 18px;">
     <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
     <a href="#Cfooter"><img class="gobottom" src="../picture/back-to-top.jpg" alt="去到底部" /></a>
-    <img class="darkmode" onclick="darkMode()" src="../picture/夜间模式.jpg" alt="夜间模式"/>
+    <img id="img1" class="darkmode" onclick="darkMode()" src="../picture/夜间模式.jpg" alt="夜间模式"/>
     <div class="topmenu">
         <a href="alex-index.html"  target="_self">首页</a>
         <a href="notes2020-06.html">6月</a>
@@ -30,7 +31,7 @@
     </div><hr>
     <!--catalog开始标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     <div class="body_tag catalog">
-        <button type="button" onclick="cataTrans()">目录</button>
+        <button type="button" class="catabutton">目录</button>
         <ul id="acatalog">
             <li><a href="#C02">2号笔记</a></li>
             <li><a href="#C03">3号笔记</a></li>
@@ -78,6 +79,9 @@
             <li><a href="#Cnode">DOM元素节点</a></li>
             <li><a href="#CCollection">HTML集合</a></li>
             <li><a href="#CNodeList">节点列表</a></li>
+            <li><a href="#CjQbrief">jQuery介绍</a></li>
+            <li><a href="#CjQgram">jQuery语法</a></li>
+            <li><a href="#CjQselector">jQ选择器</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -599,6 +603,15 @@ finally{
                     &nbsp;防止文档 DOM 在完全加载（就绪）之前运行 jQuery 代码；</li>
             </ul>
             <p id="CjQselector">jQuery选择器</p>
+            <ul>
+                <li>$("*")：选取所有元素；</li>
+                <li>元素选择器：$("tagName")，如$("p")，选择所有p标签；</li>
+                <li>#id选择器：$("#idName")，如$("#test")，选择id="test"的元素；</li>
+                <li>.class选择器：$(".className")，如$(".test")，选择class="test"的元素；</li>
+                <li>更多选择器语法：<br /><br />
+                <img src="../picture/jQuery选择器.jpg" alt="选择器语法" style="width: 360px;"></li>
+            </ul>
+            <p></p>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
