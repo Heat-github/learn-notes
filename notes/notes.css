@@ -103,7 +103,7 @@ body{
         background-color: rgb(164, 184, 162);
         list-style-type: none;}
 
-    .note_tag ul ol{
+    .note_tag ul+ol{
         font-size: 1em;}
     
     .note_tag>ul>li{
@@ -212,6 +212,10 @@ img.gobottom{
     height: 30px;
     cursor: pointer;
     }
+
+.imggroup{
+    width: 70%;
+    border:2px solid #EE872A;}
         
 /*------------------------底部声明-----------------------*/
 /*------------------------底部声明-----------------------*/
@@ -297,6 +301,10 @@ h3+p{text-align: justify;}
         background-color: rgb(136, 136, 136);;
         margin: 0;
         padding:1vw;}
+        .note_tag>ul>li{
+            margin-left: -16px;
+            margin-top: 12px;
+            text-align: justify;}
 
 /*------------------------回到顶部-----------------------*/
 /*------------------------回到顶部-----------------------*/
@@ -329,4 +337,11 @@ img.gobottom{
     height: 30px;
     cursor: pointer;
     }
+
+.imggroup{
+    width: 100%;
+    border:2px solid #EE872A;
+}
+
+
 }

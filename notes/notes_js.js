@@ -5,7 +5,7 @@ function modeFunc(){
     elet2 = document.getElementsByTagName("body");
     elet3 = document.getElementsByClassName("catalog");
     elet4 = document.getElementsByClassName("note_tag");
-    if(time>19){
+    if(time>19 || time<6){
         elet1[0].style.opacity = "1.0";
         elet2[0].style.backgroundColor = "rgb(60,60,60)";
         elet3[0].style.backgroundColor = "rgb(60,60,60)";

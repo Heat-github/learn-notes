@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML | 学习笔记2020-07</title>
     <meta name="作者" content="Alex Wong">
+
     <meta name="描述" content="用于记笔记，免费分享">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="notes.css">
@@ -17,7 +18,7 @@
 <code style="font-size: 18px;">
     <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
     <a href="#Cfooter"><img class="gobottom" src="../picture/back-to-top.jpg" alt="去到底部" /></a>
-    <img id="img1" class="darkmode" onclick="darkMode()" src="../picture/夜间模式.jpg" alt="夜间模式"/>
+    <img class="darkmode" onclick="darkMode()" src="../picture/夜间模式.jpg" alt="夜间模式"/>
     <div class="topmenu">
         <a href="alex-index.html"  target="_self">首页</a>
         <a href="notes2020-06.html">6月</a>
@@ -82,6 +83,10 @@
             <li><a href="#CjQbrief">jQuery介绍</a></li>
             <li><a href="#CjQgram">jQuery语法</a></li>
             <li><a href="#CjQselector">jQ选择器</a></li>
+            <li><a href="#CjQparent">遍历祖先选择</a></li>
+            <li><a href="#CjQchild">遍历后代选择</a></li>
+            <li><a href="#CjQsibling">遍历同胞选择</a></li>
+            <li><a href="#CjQfilter">遍历过滤选择</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -129,9 +134,8 @@ padding-left:14px;
                     <li>relative：移动相对定位元素，但它原本所占的空间不会改变，常被用来作为绝对定位元素的容器块；</li>
                     <li>sticky：元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位，如顶部目录；</li>
                     <li>z-index：重叠元素用图层属性设置哪部分内容在上层显示，数值大图层在上；</li>
-                    <li>cursor：设定鼠标停在其定义的内容上时鼠标光标的变化；</li>
-                    <a href="../picture/cursor属性.jpg" style="display: block;">
-                    <img src="../picture/cursor属性.jpg" alt="光标" style="width: 70%;border:2px solclass #EE872A;"></a>
+                    <li>cursor：设定鼠标停在其定义的内容上时鼠标光标的变化；</li><br />
+                    <img class="imggroup" src="../picture/cursor属性.jpg" alt="光标">
                     <li>overflow：定义元素溢出时显示的方式：<br>
                         <ul style="list-style-type: none;">
                             <li>auto：如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容；</li>
@@ -572,7 +576,7 @@ finally{
                 <li>NodeList 与 HTMLCollection 都有 length 属性；</li>
                 <li>NodeList 与 HTMLCollection 都无法使用数组的方法： valueOf(), pop(), push(), 或 join() 。</li>
             </ul>
-        </div>
+        </div><hr />
 
         <!-- 7月13号！！！ -->
         <!-- 7月13号！！！ -->
@@ -609,9 +613,18 @@ finally{
                 <li>#id选择器：$("#idName")，如$("#test")，选择id="test"的元素；</li>
                 <li>.class选择器：$(".className")，如$(".test")，选择class="test"的元素；</li>
                 <li>更多选择器语法：<br /><br />
-                <img src="../picture/jQuery选择器.jpg" alt="选择器语法" style="width: 360px;"></li>
+                <img class="imggroup" src="../picture/jQuery选择器.jpg" alt="选择器语法"></li>
             </ul>
-            <p></p>
+            <p id="CjQparent">jQuery遍历-DOM树-祖先</p>
+            <ul>
+                <li>jQuery 遍历，用于根据相对于其他元素的关系来"查找"（或选取）HTML 元素；</li>
+                <li>以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止；</li>
+                <li>parent() 方法：返回被选元素的直接父元素，该方法只会向上一级对 DOM 树进行遍历；</li>
+                <li>parents("tag") 方法，tag可选：<br />
+                    若没有tag限制则返回被选元素的所有祖先元素，一路向上直到文档的根元素 (html)；<br />
+                    若有tag，则返回所有名为&lt;tag&gt;标签元素；</li>
+                <li>parentsUntil("tag") 方法：返回介于两个给定元素之间的所有祖先元素。</li>
+            </ul>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
