@@ -44,6 +44,8 @@
             <li><a href="#C09">9号笔记</a></li>
             <li><a href="#C10">10号笔记</a></li>
             <li><a href="#C12">12号笔记</a></li>
+            <li><a href="#C13">13号笔记</a></li>
+            <li><a href="#C14">14号笔记</a></li>
             <li><a href="#Cfinal">总结</a></li>
             <li><a href="#Chref">链接伪类</a></li>
             <li><a href="#Clist">列表样式</a></li>
@@ -87,6 +89,7 @@
             <li><a href="#CjQchild">遍历后代选择</a></li>
             <li><a href="#CjQsibling">遍历同胞选择</a></li>
             <li><a href="#CjQfilter">遍历过滤选择</a></li>
+            <li><a href="#CjQevent">jQue事件</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -626,7 +629,7 @@ finally{
                     若有tag，则返回所有名为&lt;tag&gt;标签元素；</li>
                 <li>parentsUntil("tag")方法：返回介于两个给定元素之间的所有祖先元素。</li>
             </ul>
-        </div>
+        </div><hr />
 
         <!-- 7月14号！！！ -->
         <!-- 7月14号！！！ -->
@@ -659,6 +662,62 @@ finally{
                 <li>eq()方法：返回被选元素中带有指定索引号的元素，索引号从 0 开始；</li>
                 <li>filter("#idName")方法：返回被选元素的id名为 idName 的所有元素；idName除了是id名，也可以是类名或者标签名；</li>
                 <li>not()方法：与 filter() 相反，返回被选元素中不符合指定规则的所有元素。</li>
+            </ul>
+            <p id="CjQevent">jQuery事件，每一个事件对应被选元素和方法。</p>
+            <ul>
+                <li>方法对应事件加上小括号，括号内可添加函数对事件作出反应；</li>
+                <li>常见事件有鼠标事件、键盘事件、表单事件、文档与窗口事件：</li>
+                <table class="alex">
+                    <tr>
+                        <td rowspan="5">鼠标事件</td>
+                        <td>click事件</td>       <td>鼠标单击被选元素时触发</td>
+                    </tr>
+                    <tr> 
+                        <td>dbclick事件</td>     <td>鼠标双击被选元素时触发</td> 
+                    </tr>
+                    <tr> 
+                        <td>mouseenter事件</td>  <td>鼠标指针穿过（进入）被选元素时触发</td> 
+                    </tr>
+                    <tr> 
+                        <td>mouseleave事件</td>  <td>当鼠标指针离开被选元素时触发</td> 
+                    </tr>
+                    <tr> 
+                        <td>hover事件</td>       <td>鼠标指针悬停在被选元素上时触发</td> 
+                    </tr>
+                    <tr>
+                        <td rowspan="3" >键盘事件</td>
+                        <td>keypress事件</td>    <td>键盘被按下的过程触发，只能触发字母数字以及符号键</td>
+                    </tr>
+                    <tr > 
+                        <td>keydown事件</td>     <td>键盘被按下的过程触发，可触发ALT、CTRL、SHIFT、ESC、BACKSPACE等按键</td> 
+                    </tr>
+                    <tr> 
+                        <td>keyup事件</td>       <td>键盘被松开时触发</td> 
+                    </tr>
+                    <tr>
+                        <td rowspan="3">文档/窗口事件</td>
+                        <td>load和unload事件</td><td>时触发</td>
+                    </tr>
+                    <tr> 
+                        <td>resize事件</td>      <td>时触发</td> 
+                    </tr>
+                    <tr> 
+                        <td>scroll事件</td>      <td>时触发</td> 
+                    </tr>
+                    <tr>
+                        <td rowspan="4">表单事件</td>
+                        <td>submit事件</td>      <td>时触发</td>
+                    </tr>
+                    <tr> 
+                        <td>change事件</td>      <td>时触发</td> 
+                    </tr>
+                    <tr> 
+                        <td>focus事件</td>       <td>时触发</td> 
+                    </tr>
+                    <tr> 
+                        <td>blur事件</td>        <td>时触发</td> 
+                    </tr>
+                </table>
             </ul>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->

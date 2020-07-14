@@ -119,9 +119,11 @@ body{
 .alex {
     font-family: 'Times New Roman', Times, serif;
     border-collapse: collapse;
+    margin: 16px 0px 16px -16px;
     width: 100%;
     border:2px solid #EE872A; text-align: center;}
     .alex td, .alex th{
+        padding:3px;
         border:2px solid #EE872A; 
         text-align: center;}
     .alex tr.oringe{
@@ -301,6 +303,12 @@ h3+p{text-align: justify;}
         background-color: rgb(136, 136, 136);;
         margin: 0;
         padding:1vw;}
+        
+        .note_tag ol>li{
+            margin-left: -16px;
+            margin-top: 12px;
+            text-align: justify;}
+
         .note_tag>ul>li{
             margin-left: -16px;
             margin-top: 12px;
