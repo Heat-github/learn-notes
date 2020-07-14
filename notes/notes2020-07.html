@@ -19,6 +19,7 @@
     <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
     <a href="#Cfooter"><img class="gobottom" src="../picture/back-to-top.jpg" alt="去到底部" /></a>
     <img class="darkmode" onclick="darkMode()" src="../picture/夜间模式.jpg" alt="夜间模式"/>
+    
     <div class="topmenu">
         <a href="alex-index.html"  target="_self">首页</a>
         <a href="notes2020-06.html">6月</a>
@@ -30,10 +31,11 @@
         <a href="notes2020-12.html">12月</a>
         <a href="notes2021-01.html">2021年</a> 
     </div><hr>
+
     <!--catalog开始标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     <div class="body_tag catalog">
         <button type="button" class="catabutton">目录</button>
-        <ul id="acatalog">
+        <ul id="acatalog">c
             <li><a href="#C02">2号笔记</a></li>
             <li><a href="#C03">3号笔记</a></li>
             <li><a href="#C04">4号笔记</a></li>
@@ -89,7 +91,7 @@
             <li><a href="#CjQchild">遍历后代选择</a></li>
             <li><a href="#CjQsibling">遍历同胞选择</a></li>
             <li><a href="#CjQfilter">遍历过滤选择</a></li>
-            <li><a href="#CjQevent">jQue事件</a></li>
+            <li><a href="#CjQevent">jQuery事件</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -121,13 +123,14 @@
                     <li>list-style-position：inside和outside属性设置标记类型在border的内外。</li>
                     <li>list-style-image：自定义标记图像<br>
                     list-style-image:url("URL")，兼容性问题可以使用no-repeat的background-image代替：
-                    <pre style="width:100%;border:2px solid;padding:5px 2px;">li.class
-{
-background-image:url("URL");
-background-repeat:no-repeat;
-background-position:0px 5px; 
-padding-left:14px;
-}</pre></li>
+                    <p style="display: block;">
+                        li.class<br />
+                        {<br />
+                        background-image:url("URL");<br />
+                        background-repeat:no-repeat;<br />
+                        background-position:0px 5px; <br />
+                        padding-left:14px;<br />
+                        }</p></li>
                 </ul>
             <p id="Cpstn">Position定位：</p>
                 <ul>
@@ -216,37 +219,37 @@ padding-left:14px;
                         <span class="droptip">这里查看下拉列表的CSS骨架</span>
                         <div class="droptiptext">
                             <fieldset>
-<pre>
-/*----------1----------*/
-.dropdown {
-    position:relative;
-    dispaly:inline-block;
-    ......;
-}
-/*----------2----------*/
-.dropbutton {
-    background:......;
-    color:.....;
-    ......;
-}
-/*----------3----------*/
-.dropcontent {
-    dispaly:none;
-    position:absolute;
-    ......;
-}
-/*----------4----------*/
-.dropdown:hover .dropcontent{
-    display: block;
-}
-/*----------5----------*/
-.dropdown:hover .dropbutton{
-    ......;}
-.dropcontent a {......;}
-.dropcontent a:hover{
-    ......;}
+                                <p><br />
+                                /*----------1----------*/<br />
+                                .dropdown {<br />
+                                    position:relative;<br />
+                                    dispaly:inline-block;<br />
+                                    ......;<br />
+                                }<br />
+                                /*----------2----------*/<br />
+                                .dropbutton {<br />
+                                    background:......;<br />
+                                    color:.....;<br />
+                                    ......;<br />
+                                }<br />
+                                /*----------3----------*/<br />
+                                .dropcontent {<br />
+                                    dispaly:none;<br />
+                                    position:absolute;<br />
+                                    ......;<br />
+                                }<br />
+                                /*----------4----------*/<br />
+                                .dropdown:hover .dropcontent{<br />
+                                    display: block;<br />
+                                }<br />
+                                /*----------5----------*/<br />
+                                .dropdown:hover .dropbutton{<br />
+                                    ......;}<br />
+                                .dropcontent a {......;}<br />
+                                .dropcontent a:hover{<br />
+                                    ......;}<br />
 
-</pre>
+                                </p>
                             </fieldset>
                         </div>
                     </div>
@@ -390,20 +393,22 @@ padding-left:14px;
                 <li>try语句：对程序进行测试，可用于调试或者对用户的输入进行判断，后者一般会有自定义错误信息，需要用到throw语句，其程序骨架如下：<br />
                     <fieldset>
                         <legend>try语句程序骨架</legend>
-<pre>
-try{
-  //异常抛出与错误信息定义
-  //自定义错误信息用throw
-  if() throw "err1";
-  if() throw "errr2";
-  else() throw "err3";
-}
-catch(err){
-    ...;     //异常处理
-}
-finally{
-    ...;     //结束处理
-}</pre>
+                            <div>
+                                try{<br />
+                                //异常抛出与错误信息定义<br />
+                                //自定义错误信息用throw<br />
+                                if() throw "err1";<br />
+                                if() throw "errr2";<br />
+                                else() throw "err3";<br />
+                                }<br />
+                                catch(err){<br />
+                                    ...;     //异常处理<br />
+                                }<br />
+                                finally{<br />
+                                ...;     //结束处理<br />
+                                }<br />
+                            </div>
+                    </fieldset>
                 </li>
             </ul>
         </div><hr />
@@ -695,31 +700,36 @@ finally{
                         <td>keyup事件</td>       <td>键盘被松开时触发</td> 
                     </tr>
                     <tr>
-                        <td rowspan="3">文档/窗口事件</td>
-                        <td>load和unload事件</td><td>时触发</td>
+                        <td rowspan="4">表单事件</td>
+                        <td>submit事件</td>      <td>提交表单时触发</td>
                     </tr>
                     <tr> 
-                        <td>resize事件</td>      <td>时触发</td> 
+                        <td>change事件</td>      <td>当元素的值改变时触发（仅适用于表单字段）</td> 
                     </tr>
                     <tr> 
-                        <td>scroll事件</td>      <td>时触发</td> 
+                        <td>focus事件</td>       <td>当元素获得焦点时（当通过鼠标点击选中元素或通过 tab 键定位到元素时）触发</td> 
+                    </tr>
+                    <tr> 
+                        <td>blur事件</td>        <td>元素失去焦点时触发</td> 
                     </tr>
                     <tr>
-                        <td rowspan="4">表单事件</td>
-                        <td>submit事件</td>      <td>时触发</td>
+                        <td rowspan="4">文档/窗口事件</td>
+                        <td>load事件</td>        <td>当指定的元素已加载时触发</td>
+                    </tr>
+                    <tr>
+                        <td>unload事件</td>      <td>当用户离开页面时触发，如点击某个离开页面的链接、在地址栏中键入了新的 URL、使用前进或后退按钮、关闭浏览器窗口、重新加载页面；只应用于 window 对象</td>
                     </tr>
                     <tr> 
-                        <td>change事件</td>      <td>时触发</td> 
+                        <td>resize事件</td>      <td>当调整浏览器窗口大小时触发</td> 
                     </tr>
                     <tr> 
-                        <td>focus事件</td>       <td>时触发</td> 
-                    </tr>
-                    <tr> 
-                        <td>blur事件</td>        <td>时触发</td> 
+                        <td>scroll事件</td>      <td>当用户滚动指定的元素时触发</td> 
                     </tr>
                 </table>
             </ul>
-        </div>
+        </div><hr />
+
+
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
     <div id="Cfooter" class="footer">
