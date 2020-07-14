@@ -581,7 +581,7 @@ finally{
         <!-- 7月13号！！！ -->
         <!-- 7月13号！！！ -->
         <h3 id="C13">7月13号 周一</h3>
-        <p>今日关键词：jQuery简介、语法、选择器</p>
+        <p>今日关键词：jQuery简介、语法、选择器、jQuery遍历-DOM树-祖先</p>
         <div class="note_tag">
             <p id="CjQbrief">jQuery简介--轻量级的"写的少，做的多"的JavaScript函数库:</p>
             <ul>
@@ -619,11 +619,46 @@ finally{
             <ul>
                 <li>jQuery 遍历，用于根据相对于其他元素的关系来"查找"（或选取）HTML 元素；</li>
                 <li>以某项选择开始，并沿着这个选择移动，直到抵达期望的元素为止；</li>
-                <li>parent() 方法：返回被选元素的直接父元素，该方法只会向上一级对 DOM 树进行遍历；</li>
-                <li>parents("tag") 方法，tag可选：<br />
+                <li>$("curEle").traMed("quaObj")，curEle为当前被选元素，traMed为遍历方法，quaObj为限定遍历对象；</li>
+                <li>parent()方法：返回被选元素的直接父元素，该方法只会向上一级对 DOM 树进行遍历；</li>
+                <li>parents("tag")方法，tag可选：<br />
                     若没有tag限制则返回被选元素的所有祖先元素，一路向上直到文档的根元素 (html)；<br />
                     若有tag，则返回所有名为&lt;tag&gt;标签元素；</li>
-                <li>parentsUntil("tag") 方法：返回介于两个给定元素之间的所有祖先元素。</li>
+                <li>parentsUntil("tag")方法：返回介于两个给定元素之间的所有祖先元素。</li>
+            </ul>
+        </div>
+
+        <!-- 7月14号！！！ -->
+        <!-- 7月14号！！！ -->
+        <h3 id="C14">7月14号 周二</h3>
+        <p>今日关键词：jQuery遍历-DOM树-后代、同胞、过滤选择器</p>
+        <div class="note_tag">
+            <p id="CjQchild">jQuery遍历-DOM树-后代</p>
+            <ul>
+                <li>children()方法：返回被选元素的所有下一级子元素；<br />
+                    children("p")方法：返回被选元素的所有下一级p元素；<br />
+                    children("p.x")方法：返回被选元素的所有类名为x的下一级p元素；
+                </li>
+                <li>find("*")方法：返回被选元素的后代元素，一路向下直到最后一个后代；
+                    find("tagName")方法：返回属于所选元素后代的所有 tagName 元素：
+                </li>
+            </ul>
+            <p id="CjQsibling">jQuery遍历-DOM树-同胞</p>
+            <ul>
+                <li>siblings()方法：返回被选元素的所有同胞元素；</li>
+                <li>siblings("p")方法：返回被选元素的所有标签名为 p 的同胞元素；</li>
+                <li>next()方法：返回被选元素的下一个同胞元素；</li>
+                <li>nextAll()方法：返回被选元素的所有跟随的同胞元素；</li>
+                <li>$("tag1").nextUntil("tag2")方法：返回介于 tag1 和 tag2 之间的所有跟随的同胞元素；</li>
+                <li>prev(), prevAll() 以及 prevUntil() 方法的工作方式与 next 的方法类似，不过它们返回的是前面的同胞元素。</li>
+            </ul>
+            <p id="CjQfilter">jQuery遍历-DOM树-过滤</p>
+            <ul>
+                <li>first()方法：返回被选元素的首个元素；</li>
+                <li>last()方法：返回被选元素的最后一个元素；</li>
+                <li>eq()方法：返回被选元素中带有指定索引号的元素，索引号从 0 开始；</li>
+                <li>filter("#idName")方法：返回被选元素的id名为 idName 的所有元素；idName除了是id名，也可以是类名或者标签名；</li>
+                <li>not()方法：与 filter() 相反，返回被选元素中不符合指定规则的所有元素。</li>
             </ul>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
