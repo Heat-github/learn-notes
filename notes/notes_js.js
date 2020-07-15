@@ -1,3 +1,7 @@
+onload = function(){
+    modeFunc();
+    draw();
+};
 
 function modeFunc(){
     var time = new Date().getHours();
@@ -23,6 +27,13 @@ function modeFunc(){
             elet4[i].style.color = "rgb(0,0,0)";
         }
     }
+}
+
+function draw(){
+    var c = document.getElementById("myCanvas2");
+    var ctx=c.getContext("2d"); //获取context二维对象
+    ctx.fillStyle="#808080";    //绘画红色矩形框
+    ctx.fillRect(25,15,150,70);
 }
 
 function darkMode(){

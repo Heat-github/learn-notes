@@ -14,7 +14,7 @@
     <script src="notes_jQ.js"></script>
 </head>
 
-<body id="Cbody" onload="modeFunc()">
+<body id="Cbody">
 <code style="font-size: 18px;">
     <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
     <a href="#Cfooter"><img class="gobottom" src="../picture/back-to-top.jpg" alt="去到底部" /></a>
@@ -35,7 +35,7 @@
     <!--catalog开始标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     <div class="body_tag catalog">
         <button type="button" class="catabutton">目录</button>
-        <ul id="acatalog">c
+        <ul id="acatalog">
             <li><a href="#C02">2号笔记</a></li>
             <li><a href="#C03">3号笔记</a></li>
             <li><a href="#C04">4号笔记</a></li>
@@ -92,6 +92,7 @@
             <li><a href="#CjQsibling">遍历同胞选择</a></li>
             <li><a href="#CjQfilter">遍历过滤选择</a></li>
             <li><a href="#CjQevent">jQuery事件</a></li>
+            <li><a href="#Ccanvas">Canvas标签</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -728,6 +729,55 @@
                 </table>
             </ul>
         </div><hr />
+
+        <!-- 7月15号！！！ -->
+        <!-- 7月15号！！！ -->
+        <h3 id="C15">7月15号 周三</h3>
+        <p>今日关键词：后面很长一段时间应该会边学习新知识边学canvas元素，主要利用canvas去做实战练习，加强各个方面的实际运用；</p>
+        <div class="note_tag">
+            <p id="Ccanvas">&lt;canvas&gt;标签定义图形，比如图表和其他图像，必须使用脚本来绘制图形</p>
+            <ul>
+                <li>建立画布：&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;，其他边框样式在CSS中设置：</li>
+                <li style="list-style: none;">
+                    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #ff9292;">
+                        您的浏览器不支持 HTML5 canvas 标签。
+                    </canvas>
+                </li>
+                <li>使用JavaScript脚本可以在画布内绘制图形，如灰色矩形：</li>
+                <li style="list-style: none;">
+                    <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #ff9292;">
+                        您的浏览器不支持 HTML5 canvas 标签。
+                    </canvas>
+                </li>
+                <li>Canvas的限制：<br>
+                    ① 图形是静止的，要让图形动起来需要绘画每一帧图形；<br>
+                    ② 效率及普及性不够高，复杂图形和动画尚不如flash；<br>
+                    ③ Canvas只是二维画布，三维效果的实现需要第三方类库，如three.js，Papervision3D等。
+                </li>
+                <li>Canvas的学习记录会另外建立一个HTML文件，传送门在此：
+                    <a href="../Canvas/Canvas开发.html" style="text-decoration: double;"><strong>Canvas 开发</strong> &gt;&gt;&gt;</a>
+                </li>
+            </ul>
+            <p id="CjQefect">jQuery的效果</p>
+            <ul>
+                <li>jQuery的效果有隐藏、显示、切换、淡入淡出以及动画等；</li>
+                <li style="list-style: none;">
+                    <table class="alex">
+                        <tr>
+                            <td>效果</td>   <td>方法</td>   <td>具体动画</td>   <td>参数与取值</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">显示与隐藏</td> 
+                            <td>show(speed, method, callback)</td> <td>将隐藏的元素显示出来</td>
+                            <td rowspan="3">speed[可选]设置显示或隐藏的速度，可以取值slow、fast或者填入数值，单位为毫秒；<br>method[可选]设置过渡缓冲函数，jQuery自身有linear和swing两种<br>callback[可选]设置显示或隐藏完成后所执行的函数名称</td> 
+                        </tr>
+                            <tr> <td>hide(speed, method, callback)</td> <td>将显示的元素隐藏起来</td> </tr>
+                            <tr> <td>toggle(speed, method, callback)</td> <td>切换显示与隐藏效果</td> </tr>
+                    </table>
+                </li>
+            </ul>
+            
+        </div>
 
 
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
