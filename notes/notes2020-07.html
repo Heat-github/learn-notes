@@ -93,6 +93,7 @@
             <li><a href="#CjQfilter">遍历过滤选择</a></li>
             <li><a href="#CjQevent">jQuery事件</a></li>
             <li><a href="#Ccanvas">Canvas标签</a></li>
+            <li><a href="#CjQefect">jQuery的效果</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -673,60 +674,62 @@
             <ul>
                 <li>方法对应事件加上小括号，括号内可添加函数对事件作出反应；</li>
                 <li>常见事件有鼠标事件、键盘事件、表单事件、文档与窗口事件：</li>
-                <table class="alex">
-                    <tr>
-                        <td rowspan="5">鼠标事件</td>
-                        <td>click事件</td>       <td>鼠标单击被选元素时触发</td>
-                    </tr>
-                    <tr> 
-                        <td>dbclick事件</td>     <td>鼠标双击被选元素时触发</td> 
-                    </tr>
-                    <tr> 
-                        <td>mouseenter事件</td>  <td>鼠标指针穿过（进入）被选元素时触发</td> 
-                    </tr>
-                    <tr> 
-                        <td>mouseleave事件</td>  <td>当鼠标指针离开被选元素时触发</td> 
-                    </tr>
-                    <tr> 
-                        <td>hover事件</td>       <td>鼠标指针悬停在被选元素上时触发</td> 
-                    </tr>
-                    <tr>
-                        <td rowspan="3" >键盘事件</td>
-                        <td>keypress事件</td>    <td>键盘被按下的过程触发，只能触发字母数字以及符号键</td>
-                    </tr>
-                    <tr > 
-                        <td>keydown事件</td>     <td>键盘被按下的过程触发，可触发ALT、CTRL、SHIFT、ESC、BACKSPACE等按键</td> 
-                    </tr>
-                    <tr> 
-                        <td>keyup事件</td>       <td>键盘被松开时触发</td> 
-                    </tr>
-                    <tr>
-                        <td rowspan="4">表单事件</td>
-                        <td>submit事件</td>      <td>提交表单时触发</td>
-                    </tr>
-                    <tr> 
-                        <td>change事件</td>      <td>当元素的值改变时触发（仅适用于表单字段）</td> 
-                    </tr>
-                    <tr> 
-                        <td>focus事件</td>       <td>当元素获得焦点时（当通过鼠标点击选中元素或通过 tab 键定位到元素时）触发</td> 
-                    </tr>
-                    <tr> 
-                        <td>blur事件</td>        <td>元素失去焦点时触发</td> 
-                    </tr>
-                    <tr>
-                        <td rowspan="4">文档/窗口事件</td>
-                        <td>load事件</td>        <td>当指定的元素已加载时触发</td>
-                    </tr>
-                    <tr>
-                        <td>unload事件</td>      <td>当用户离开页面时触发，如点击某个离开页面的链接、在地址栏中键入了新的 URL、使用前进或后退按钮、关闭浏览器窗口、重新加载页面；只应用于 window 对象</td>
-                    </tr>
-                    <tr> 
-                        <td>resize事件</td>      <td>当调整浏览器窗口大小时触发</td> 
-                    </tr>
-                    <tr> 
-                        <td>scroll事件</td>      <td>当用户滚动指定的元素时触发</td> 
-                    </tr>
-                </table>
+                <li style="list-style: none;">
+                    <table class="alex">
+                        <tr>
+                            <td rowspan="5">鼠标事件</td>
+                            <td>click事件</td>       <td>鼠标单击被选元素时触发</td>
+                        </tr>
+                        <tr> 
+                            <td>dbclick事件</td>     <td>鼠标双击被选元素时触发</td> 
+                        </tr>
+                        <tr> 
+                            <td>mouseenter事件</td>  <td>鼠标指针穿过（进入）被选元素时触发</td> 
+                        </tr>
+                        <tr> 
+                            <td>mouseleave事件</td>  <td>当鼠标指针离开被选元素时触发</td> 
+                        </tr>
+                        <tr> 
+                            <td>hover事件</td>       <td>鼠标指针悬停在被选元素上时触发</td> 
+                        </tr>
+                        <tr>
+                            <td rowspan="3" >键盘事件</td>
+                            <td>keypress事件</td>    <td>键盘被按下的过程触发，只能触发字母数字以及符号键</td>
+                        </tr>
+                        <tr > 
+                            <td>keydown事件</td>     <td>键盘被按下的过程触发，可触发ALT、CTRL、SHIFT、ESC、BACKSPACE等按键</td> 
+                        </tr>
+                        <tr> 
+                            <td>keyup事件</td>       <td>键盘被松开时触发</td> 
+                        </tr>
+                        <tr>
+                            <td rowspan="4">表单事件</td>
+                            <td>submit事件</td>      <td>提交表单时触发</td>
+                        </tr>
+                        <tr> 
+                            <td>change事件</td>      <td>当元素的值改变时触发（仅适用于表单字段）</td> 
+                        </tr>
+                        <tr> 
+                            <td>focus事件</td>       <td>当元素获得焦点时（当通过鼠标点击选中元素或通过 tab 键定位到元素时）触发</td> 
+                        </tr>
+                        <tr> 
+                            <td>blur事件</td>        <td>元素失去焦点时触发</td> 
+                        </tr>
+                        <tr>
+                            <td rowspan="4">文档/窗口事件</td>
+                            <td>load事件</td>        <td>当指定的元素已加载时触发</td>
+                        </tr>
+                        <tr>
+                            <td>unload事件</td>      <td>当用户离开页面时触发，如点击某个离开页面的链接、在地址栏中键入了新的 URL、使用前进或后退按钮、关闭浏览器窗口、重新加载页面；只应用于 window 对象</td>
+                        </tr>
+                        <tr> 
+                            <td>resize事件</td>      <td>当调整浏览器窗口大小时触发</td> 
+                        </tr>
+                        <tr> 
+                            <td>scroll事件</td>      <td>当用户滚动指定的元素时触发</td> 
+                        </tr>
+                    </table>
+                </li>
             </ul>
         </div><hr />
 
@@ -764,20 +767,59 @@
                 <li style="list-style: none;">
                     <table class="alex">
                         <tr>
-                            <td>效果</td>   <td>方法</td>   <td>具体动画</td>   <td>参数与取值</td>
+                            <th>效果类型</th>   <th>操作方法/属性</th>   <th>动画效果</th>   <th>参数与取值</th>
                         </tr>
                         <tr>
                             <td rowspan="3">显示与隐藏</td> 
                             <td>show(speed, method, callback)</td> <td>将隐藏的元素显示出来</td>
-                            <td rowspan="3">speed[可选]设置显示或隐藏的速度，可以取值slow、fast或者填入数值，单位为毫秒；<br>method[可选]设置过渡缓冲函数，jQuery自身有linear和swing两种<br>callback[可选]设置显示或隐藏完成后所执行的函数名称</td> 
+                            <td rowspan="3">speed[可选]设置显示或隐藏的速度，可以取值slow、fast或者填入数值，单位为毫秒；<br>
+                                method[可选]设置过渡缓冲函数，jQuery自身有linear(匀速)和swing(慢-快-慢)两种；<br>
+                                callback[可选]设置显示或隐藏完成后所执行的函数名称；</td> 
                         </tr>
-                            <tr> <td>hide(speed, method, callback)</td> <td>将显示的元素隐藏起来</td> </tr>
-                            <tr> <td>toggle(speed, method, callback)</td> <td>切换显示与隐藏效果</td> </tr>
+                        <tr> <td>hide(speed, method, callback)</td> <td>将显示的元素隐藏起来</td> </tr>
+                        <tr> <td>toggle(speed, method, callback)</td> <td>切换显示与隐藏效果</td> </tr>
+
+                        <tr>
+                            <td rowspan="4">淡入与淡出</td> 
+                            <td>fadeIn(speed, callback)</td> <td>用于淡入已隐藏的元素</td>
+                            <td rowspan="4">speed[可选]设置显示或隐藏的速度，可以取值slow、fast或者填入数值，单位为毫秒；<br>
+                                callback[可选]设置显示或隐藏完成后所执行的函数名称；<br>
+                                fadeTo() 方法中opacity时必选属性，指定渐变后的透明度；
+                            </td> 
+                        </tr>
+                        <tr> <td>fadeOut(speed, callback)</td> <td>用于淡出可见元素</td> </tr>
+                        <tr> <td>fadeToggle(speed, callback)</td> <td>切换淡入淡出效果</td> </tr>
+                        <tr> <td>fadeTo(speed, opacity, callback)</td> <td>渐变为给定的不透明度</td> </tr>
+                        
+                        <tr>
+                            <td rowspan="3">滑动效果</td> 
+                            <td>slideDown(speed, method, callback)</td> <td>用于向下滑动元素</td>
+                            <td rowspan="3">speed[可选]设置显示或隐藏的速度，可以取值slow、fast或者填入数值，单位为毫秒；<br>
+                                method  [可选]设置过渡缓冲函数，jQuery自身有linear和swing两种；<br>
+                                callback[可选]设置显示或隐藏完成后所执行的函数名称；</td> 
+                        </tr>
+                        <tr> <td>slideUp(speed, method, callback)</td> <td>用于向上滑动元素</td> </tr>
+                        <tr> <td>slideToggle(speed, method, callback)</td> <td>切换向下与向上滑动的效果</td> </tr>
+
+                        <tr>
+                            <td rowspan="4">自定义动画animate()</td> 
+                            <td>操作多个属性</td> <td colspan="2">生成动画的过程中可同时使用多个属性，几乎可以操作所有 CSS 属性，必须使用 Camel 标记法书写所有的属性名，如带"-"的属性需要第二个单词首字母大写并去掉"-"，色彩动画需要另外下载插件</td> 
+                        </tr>
+                        <tr> <td>使用相对值</td> <td colspan="2">在属性值的前面加上 += 或 -= 可给动画对象设定相对变化的值</td> </tr>
+                        <tr> <td>使用预定义的值</td> <td colspan="2">把属性的动画值设置为 "show"、"hide" 或 "toggle"</td> </tr>
+                        <tr> <td>使用队列功能</td> <td colspan="2">同一animate内的效果同时变化，若要多个动画分开运行可使用队列功能，对同一对象编写多个animate()方法，jQuery 会创建包含这些方法调用的"内部"队列，然后逐一运行</td> </tr>
+
+                        <tr>
+                            <td>停止动画</td> 
+                            <td>stop(stopAll, goToEnd)</td> 
+                            <td colspan="2">在动画和效果完成前将他们停止；[stopAll]可选参数，规定是否应该清除动画队列，默认是false，即仅停止当前效果，但队列的后续效果依然继续；[goToEnd]可选参数，规定是否立即完成当前动画，默认是 false</td> 
+                        </tr>
                     </table>
                 </li>
+                <li>callBack回调函数：<br />在当前动画 100% 完成之后执行，如果没有回调函数，后面紧接着的函数可能会在隐藏效果完成前弹出；</li>
+                <li>链(Chaining)：<br />对同一对象编写多条动画效果命令需要浏览器多次查找元素，使用 Chaining 则只需要查找一次元素对象，Chaining 允许我们在一条语句中运行多个 jQuery 方法，中间使用 "." 连接，且 "." 可在换行后书写，避免代码过长。</li>
             </ul>
-            
-        </div>
+        </div> <hr />
 
 
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
