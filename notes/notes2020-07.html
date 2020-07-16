@@ -48,6 +48,8 @@
             <li><a href="#C12">12号笔记</a></li>
             <li><a href="#C13">13号笔记</a></li>
             <li><a href="#C14">14号笔记</a></li>
+            <li><a href="#C15">15号笔记</a></li>
+            <li><a href="#C16">16号笔记</a></li>
             <li><a href="#Cfinal">总结</a></li>
             <li><a href="#Chref">链接伪类</a></li>
             <li><a href="#Clist">列表样式</a></li>
@@ -79,7 +81,7 @@
             <li><a href="#Clet">let关键字</a></li>
             <li><a href="#Cconst">const关键字</a></li>
             <li><a href="#Cstandard">JS代码规范</a></li>
-            <li><a href="#JSFunc">JS函数知识点</a></li>
+            <li><a href="#CJSFunc">JS函数知识点</a></li>
             <li><a href="#CDOM">文档对象模型</a></li>
             <li><a href="#Cnode">DOM元素节点</a></li>
             <li><a href="#CCollection">HTML集合</a></li>
@@ -94,6 +96,10 @@
             <li><a href="#CjQevent">jQuery事件</a></li>
             <li><a href="#Ccanvas">Canvas标签</a></li>
             <li><a href="#CjQefect">jQuery的效果</a></li>
+            <li><a href="#Cget">获取内容属性</a></li>
+            <li><a href="#Cget">修改内容属性</a></li>
+            <li><a href="#Cadd">添加删除元素</a></li>
+            <li><a href="#CAudio">音频Audio</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -526,6 +532,21 @@
                 <li>arguments对象：包含了函数调用的参数数组；arguments是对象类型，属性为0到n以及callee，n为实参的个属，0到n的值是顺序所对应的实参，而callee的值是函数本身，如arguments.callee(n-1)即为函数内调用本身，常用于迭代；</li>
                 <li>this关键字：指向调用函数的当前对象；函数没有被自身的对象调用时 this 的值就会变成全局对象[Object Window]；</li>
                 <li>闭包：能够读取其他函数内部变量的函数；（！！！！！！！！！没搞懂！！！！！！！！！）</li>
+                <li>prototype属性：允许向函数添加属性和方法；存在指向关系，创建实例时不会重新复制一遍，节省空间；</li>
+                <li>在一个函数内创建多个方法或属性的方式：<br />
+                    function myFunction(var1,var2){...};<br />
+                    myFunction.prototype={<br />
+                        &nbsp;&nbsp;proType1:function(){...}<br />
+                        &nbsp;&nbsp;proType2:function(){...}<br />
+                        &nbsp;&nbsp;......<br />
+                    }<br />
+                    var cls1 = new myFunction(var1,var2);<br />
+                    //此时可直接引用proType1或proType2属性<br />
+                    cls1.proType1();<br />
+                </li>
+                <li>函数（类）的继承：使用apply()方法，方法的继承则使用 for in 方法；<br /><br />
+                    <img class="imggroup" src="../picture/函数与方法的继承.jpg" alt="函数与方法的继承">
+                </li>
             </ul>
             <p id="CDOM">文档对象模型：当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。</p>
             <ul>
@@ -821,6 +842,44 @@
             </ul>
         </div> <hr />
 
+        <!-- 7月16号！！！ -->
+        <!-- 7月16号！！！ -->
+        <h3 id="C16">7月16号 周四</h3>
+        <p>今日关键词：获取或设置元素内容与属性、添加或删除元素</p>
+        <div class="note_tag">
+            <p id="Cget">获取或设置内容与属性：jQuery 可对 DOM 进行操作；</p>
+            <ul>
+                <li>text()方法：设置或返回被选元素的文本内容，不包含标签标记；</li>
+                <li>html()方法：设置和返回被选元素内的字段内容，包含标签标记；</li>
+                <li>val()方法：设置或返回表单字段的值（value属性的值）;</li>
+                <li>attr()方法：设置或返回被选元素的属性；</li>
+                <li>前三种方法参数可选，如果没有则返回被选元素的内容，如果有则设置被选元素的内容；该可选参数也可以是回调函数，直接用function定义；</li>
+                <li>attr()方法第一个参数必须给定，指定需要返回或设置的属性类型，如href、title、width等等，第二个参数可选，如果没有则返回指定属性值，如果有则给第一个参数指定的属性设定值；第二个参数也可以是回调函数，直接用function定义；</li>
+                <li>四种方法均有回调函数(callback)，回调函数有两个默认参数：被选元素的下标，以及原始的值；如$().attr("href", function(i,orgVal){...});</li>
+            </ul>
+            <p id="Cadd">jQuery添加与删除元素</p>
+            <ul>
+                <li>append()方法：在被选元素的结尾添加内容；</li>
+                <li>prepend()方法：在被选元素的开头添加内容；</li>
+                <li>after()方法：在被选元素之后添加内容；</li>
+                <li>before()方法：在被选元素之前添加内容；</li>
+                <li>添加内容可以在圆括号内给定；</li>
+                <li>remove()方法：删除被选元素及子元素，参数限定被选元素的范围，如类或者id属性，过滤被删除的元素；</li>
+                <li>empty()方法：删除被选元素的所有子元素；</li>
+            </ul>
+            <p id="CAudio">HTML5音频Audio</p>
+            <ul>
+                <li>HTML5 规定了在网页上嵌入音频元素的标准，即使用 &lt;audio&gt; 元素，双标签；</li>
+                <li>语法结构：&lt;audio controls&gt;&lt;source src="url" type="MIME类型"&gt;&lt;/audio&gt;，controls属性定义播放控件；</li>
+                <li>&lt;source&gt;定义媒体资源，但标签，可在 audio 标签内定义多个 source 标签；</li>
+                <li>&lt;audio&gt; 元素支持三种音频格式文件: MP3, Wav, 和 Ogg:;</li>
+                <li>音频格式的MIME类型:MP3--audio/mpeg，Ogg--audio/ogg，Wav--audio/wav；</li>
+            </ul>
+            <p>JavaScript中的面向对象</p>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
 
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
