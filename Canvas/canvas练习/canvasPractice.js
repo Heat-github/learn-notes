@@ -1,10 +1,12 @@
 onload = function(){
     console.log("alex");
     console.log("Jenny");
+    canvasFunc1();
 };
 
 function canvasFunc1(){
     var c1 = document.getElementById("myCanvas1");
+    c1.style.border = "2px solid orange";
     var ctx1 = c1.getContext("2d");
     ctx1.lineWidth = 5;
     ctx1.lineCap = "round"; //定义线帽，butt方角，round圆角，square两端增加线宽的一半

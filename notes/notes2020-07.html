@@ -15,7 +15,6 @@
 </head>
 
 <body id="Cbody">
-<code style="font-size: 18px;">
     <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
     <a href="#Cfooter"><img class="gobottom" src="../picture/back-to-top.jpg" alt="去到底部" /></a>
     <img class="darkmode" onclick="darkMode()" src="../picture/夜间模式.jpg" alt="夜间模式"/>
@@ -50,6 +49,7 @@
             <li><a href="#C14">14号笔记</a></li>
             <li><a href="#C15">15号笔记</a></li>
             <li><a href="#C16">16号笔记</a></li>
+            <li><a href="#C17">17号笔记</a></li>
             <li><a href="#Cfinal">总结</a></li>
             <li><a href="#Chref">链接伪类</a></li>
             <li><a href="#Clist">列表样式</a></li>
@@ -100,6 +100,9 @@
             <li><a href="#Cget">修改内容属性</a></li>
             <li><a href="#Cadd">添加删除元素</a></li>
             <li><a href="#CAudio">音频Audio</a></li>
+            <li><a href="#CaddCls">获取设置CSS</a></li>
+            <li><a href="#Csize">jQuery尺寸</a></li>
+            <li><a href="#CAJAX">jQ AJAX</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -875,17 +878,107 @@
                 <li>&lt;audio&gt; 元素支持三种音频格式文件: MP3, Wav, 和 Ogg:;</li>
                 <li>音频格式的MIME类型:MP3--audio/mpeg，Ogg--audio/ogg，Wav--audio/wav；</li>
             </ul>
-            <p>JavaScript中的面向对象</p>
+        </div><hr />
+
+        <!-- 7月17号！！！ -->
+        <!-- 7月17号！！！ -->
+        <h3 id="C17">7月17号 周五</h3>
+        <p>今日关键词：获取或设置CSS类</p>
+        <div class="note_tag">
+            <p id="CaddCls">获取并设置 Class 类，classs 类可以在 css 中预先设定，后添加的类优先级更高</p>
             <ul>
-                <li></li>
+                <li>addClass()方法：向被选元素添加一个或多个类；</li>
+                <li>removeClass()方法：从被选元素删除一个或多个类；</li>
+                <li>toggleClass()方法：对被选元素进行添加/删除类的切换操作；</li>
+                <li>css()方法：设置或返回被选元素的一个或多个样式属性。</li>
+                <li>返回 CSS 属性：css("propertyname"); 如：<br />
+                    $("p").css("color"); 将返回首个匹配元素的 color 值；</li>
+                <li>设置 CSS 属性：css("propertyname", "value"); 如：<br>
+                    $("p").css("color","yellow"); 将为所有匹配元素设置 color 值。</li>
+                <li>设置多个 CSS 属性：css({"proname":"value", "proname":"value",...});</li>
             </ul>
-        </div>
+            <p id="Csize">jQuery尺寸</p>
+            <ul>
+                <li>width() 和 height() 方法：设置或返回元素的宽度和高度（不包括内边距、边框或外边距）；</li>
+                <li>innerWidth() 和 innerHeight() 方法：返回元素的宽度和高度（包括内边距）；</li>
+                <li>outerWidth() 和 outerHeight() 方法：返回元素的宽度和高度（包括内边距和边框）；</li>
+                <li>outerWidth(true) 和 outerHeight(true) 方法：返回元素的宽度和高度（包括内边距、边框和外边距）；</li>
+            </ul>
+            <p id="CAJAX">AJAX = 异步 JavaScript 和 XML（Asynchronous JavaScript and XML）</p>
+            <ul>
+                <li>服务器交换数据技术，在不重载全部页面的情况下，实现了对部分网页的更新：</li>
+                <li>load()方法：从服务器加载数据，并把返回的数据放入被选元素中；<br />
+                    $(selector). load(URL, data, callback);<br />
+                    <table class="alex">
+                        <tr>
+                            <th>参数</th> <th>注释</th>
+                        </tr>
+                        <tr>
+                            <td>URL</td> 
+                            <td>必需参数，规定希望加载的URL地址<br />
+                                $("#div1").load("demo_test.txt #p1"); 把 "demo_test.txt" 文件中 id="p1" 的元素的内容，加载到指定的 div 元素中：
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>data</td> 
+                            <td>可选参数，规定与请求一同发送的查询字符串键/值对集合。</td>
+                        </tr>
+                        <tr>
+                            <td>callback</td> 
+                            <td>可选参数，load() 方法完成后所执行的函数名称。
+                                回调函数可以设置不同的参数：<br />
+                                responseTxt - 包含调用成功时的结果内容<br />
+                                statusTXT - 包含调用的状态<br />
+                                xhr - 包含 XMLHttpRequest 对象
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <li> get() 方法：从指定的资源请求数据；语法：$.get(URL, callback);<br />
+                    <table class="alex">
+                        <tr>
+                            <th>参数</th> <th>注释</th>
+                        </tr>
+                        <tr>
+                            <td>URL</td> 
+                            <td>必需参数，规定希望请求的URL地址</td>
+                        </tr>
+                        <tr>
+                            <td>callback</td> 
+                            <td>可选参数，get() 方法完成后所执行的函数名称。第一个回调参数存有被请求页面的内容，第二个回调参数存有请求的状态
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <li> post() 方法：向指定的资源提交要处理的数据；语法：$.post(URL, data, callback);<br />
+                    <table class="alex">
+                        <tr>
+                            <th>参数</th> <th>注释</th>
+                        </tr>
+                        <tr>
+                            <td>URL</td> 
+                            <td>必需参数，规定希望请求的URL地址</td>
+                        </tr>
+                        <tr>
+                            <td>data</td> 
+                            <td>可选参数，规定连同请求发送的数据。</td>
+                        </tr>
+                        <tr>
+                            <td>callback</td> 
+                            <td>可选参数，post() 方法完成后所执行的函数名称，第一个回调参数存有被请求页面的内容，而第二个参数存有请求的状态</td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div><hr />
+
+        <!-- ！！！ -->
+        <!--  ！！！-->
 
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
     <div id="Cfooter" class="footer">
     Copyright © Alex-alading.dong @ 2020
     </div>
-</code>
 </body>
 </html>
