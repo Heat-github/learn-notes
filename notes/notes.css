@@ -137,6 +137,9 @@ ol.upalpha {list-style-type:upper-alpha;}
 ol.uproman {list-style-type:upper-roman;}
 ol.lwalpha {list-style-type:lower-alpha;}
 ol.lwroman {list-style-type:lower-roman;}
+li ol li{
+    padding: 5px 0;
+}
 
 
 /*---------------------下拉列表或提示框--------------------*/
@@ -265,9 +268,9 @@ h3+p{text-align: justify;}
     .body_tag{
         clear: both;
         width: 100%;
-        padding: 0px;}
-/*---------------------------目录-------------------------*/
-/*---------------------------目录-------------------------*/
+            padding: 0px;}
+    /*---------------------------目录-------------------------*/
+    /*---------------------------目录-------------------------*/
     .catalog{
         width: 100%;
         background-color: rgb(128,128,128);}
@@ -294,9 +297,9 @@ h3+p{text-align: justify;}
                 vertical-align: middle;
                 text-decoration: none; }
                 .catalog li a:hover{background-color: rgb(16, 196, 0);}
-    
-/*-------------------------笔记内容-----------------------*/
-/*-------------------------笔记内容-----------------------*/
+        
+    /*-------------------------笔记内容-----------------------*/
+    /*-------------------------笔记内容-----------------------*/
     .content{
         width: 100%;
         overflow: auto;
@@ -314,42 +317,42 @@ h3+p{text-align: justify;}
             margin-top: 12px;
             text-align: justify;}
 
-/*------------------------回到顶部-----------------------*/
-/*------------------------回到顶部-----------------------*/
-img.backtop{
-    position: fixed;
-    border-radius: 50%;
-    right: 5px;
-    bottom: 9em;
-    width: 30px;
-    height: 30px;}
-/*------------------------去到底部-----------------------*/
-/*------------------------去到底部-----------------------*/
-img.gobottom{
+    /*------------------------回到顶部-----------------------*/
+    /*------------------------回到顶部-----------------------*/
+    img.backtop{
         position: fixed;
-        transform:rotate(180deg);
         border-radius: 50%;
         right: 5px;
-        bottom: 3em;
+        bottom: 9em;
         width: 30px;
         height: 30px;}
-/*------------------------夜间模式-----------------------*/
-/*------------------------夜间模式-----------------------*/
-.darkmode{
-    position: fixed;
-    border-radius: 50%;
-    opacity:0.5;
-    right: 5px;
-    bottom: 6em;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    }
+    /*------------------------去到底部-----------------------*/
+    /*------------------------去到底部-----------------------*/
+    img.gobottom{
+            position: fixed;
+            transform:rotate(180deg);
+            border-radius: 50%;
+            right: 5px;
+            bottom: 3em;
+            width: 30px;
+            height: 30px;}
+    /*------------------------夜间模式-----------------------*/
+    /*------------------------夜间模式-----------------------*/
+    .darkmode{
+        position: fixed;
+        border-radius: 50%;
+        opacity:0.5;
+        right: 5px;
+        bottom: 6em;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        }
 
-.imggroup{
-    width: 100%;
-    border:2px solid #EE872A;
-}
+    .imggroup{
+        width: 100%;
+        border:2px solid #EE872A;
+    }
 
 
 }

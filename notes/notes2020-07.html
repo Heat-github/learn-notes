@@ -50,6 +50,7 @@
             <li><a href="#C15">15号笔记</a></li>
             <li><a href="#C16">16号笔记</a></li>
             <li><a href="#C17">17号笔记</a></li>
+            <li><a href="#C18">18号笔记</a></li>
             <li><a href="#Cfinal">总结</a></li>
             <li><a href="#Chref">链接伪类</a></li>
             <li><a href="#Clist">列表样式</a></li>
@@ -103,13 +104,16 @@
             <li><a href="#CaddCls">获取设置CSS</a></li>
             <li><a href="#Csize">jQuery尺寸</a></li>
             <li><a href="#CAJAX">jQ AJAX</a></li>
+            <li><a href="#Cmath">HTML mathML</a></li>
+            <li><a href="#CDrag">HTML 拖放</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
     <!--content开始标签！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
     <div class="body_tag content">
         <h3 id="Cintro">前言</h3>
-        <p class="indent">经过一个月的学习，制作简单的网页以及网页之间的互转已经不是问题，同时也做了一个可以实时更新的<a href="http://www.alexjenny.cn">个人网站</a>，将自己制作的学习笔记html上传，随时随地可以温习。</p>
+        <p class="indent">经过一个月的学习，制作简单的网页以及网页之间的互转已经不是问题，同时也做了一个可以实时更新的
+            <a href="http://www.alexjenny.cn">个人网站</a>，将自己制作的学习笔记html上传，随时随地可以温习。</p>
         <p class="indent">接下来我主要投入到CSS的样式学习中，将网页设计成自己想要看到的样子，其实之前刚申请域名建立网页时就已经迫不及待提前学习了一部分样式去修饰自己的网页了，所以html结构的学习才会这么拖拉，当然也是如此，我对CSS的学习才会更有兴趣，类似动态交互和音频处理等CSS样式还未设计分毫呢。</p>
         <hr>
 
@@ -291,7 +295,8 @@
         <!-- 7月5号！！！ -->
         <!-- 7月5号！！！ -->
         <h3 id="C05">7月5号 周日</h3>
-        <p>今日关键词：计数器、JavaScript初始认识、JS输出函数。<br />今天最大收获时写了第一个JS脚本，实现了目录在点击时的展开与隐藏，主要方法时在用if语句判断是否是手机端的情况下，通过使用element=getElementById("demo")方法对指定元素的事件进行响应，再用element.style.display.match("none")方法来判断当前目录是否隐藏，如果隐藏通过赋值方式(element.style.display = "block")来设置展开，否则赋值为none可实现隐藏。</p>
+        <p>今日关键词：计数器、JavaScript初始认识、JS输出函数。<br />
+        今天最大收获时写了第一个JS脚本，实现了目录在点击时的展开与隐藏，主要方法时在用if语句判断是否是手机端的情况下，通过使用element=getElementById("demo")方法对指定元素的事件进行响应，再用element.style.display.match("none")方法来判断当前目录是否隐藏，如果隐藏通过赋值方式(element.style.display = "block")来设置展开，否则赋值为none可实现隐藏。</p>
         <div class="note_tag">
             <p id="Ccounter">计数器--对某一属性值设置变量增量计数：</p>
             <ul>
@@ -883,7 +888,7 @@
         <!-- 7月17号！！！ -->
         <!-- 7月17号！！！ -->
         <h3 id="C17">7月17号 周五</h3>
-        <p>今日关键词：获取或设置CSS类</p>
+        <p>今日关键词：获取或设置CSS类，jquery尺寸，异步 JavaScript 和 XML</p>
         <div class="note_tag">
             <p id="CaddCls">获取并设置 Class 类，classs 类可以在 css 中预先设定，后添加的类优先级更高</p>
             <ul>
@@ -972,8 +977,49 @@
             </ul>
         </div><hr />
 
-        <!-- ！！！ -->
-        <!--  ！！！-->
+        <!-- 7月18号！！！ -->
+        <!-- 7月18号！！！-->
+        <h3 id="C18">7月18号 周六</h3>
+        <p>今日关键词：HTML5 mathML元素，HTML5 拖放</p>
+        <div class="note_tag">
+            <p id="Cmath">HTML5 math标签与mathML元素</p>
+            <ul>
+                <li>mathML 数学标记语言，是一种基于 XML 的标准，用来在互联网上书写数学符号和公式的置标语言；</li>
+                <li>最新版的 Firefox 或 Safari 浏览器支持math 标签；</li>
+            </ul>
+            <p id="CDrag">HTML5 拖放</p>
+            <ul>
+                <li>在 HTML5 中，拖放是标准的一部分，任何元素都能够拖放；</li>
+                <li>拖放的设置方法：<br>
+                    <ol style="margin:5px 0 5px -1.5em;">
+                        <li>【被拖动元素】设置为可拖放： draggable = "true"</li>
+                        <li>
+                            【被拖动元素】使用 ondragstart 属性（事件）调用函数，dataTransfer.setData() 方法设置被拖元素放到新位置时的数据类型，以及被拖放元素的值(id)；<br><br>
+                            function drag(ev){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;ev.dataTransfer.setData("Text", ev.target.id);<br>
+                            }<br><br>
+                        </li>
+                        <li>
+                            【新位置元素】使用 ondragover 属性（事件）调用函数，浏览器对任意元素的默认设定是不允许放置被拖动的元素，preventDefault() 阻止对元素的默认处理方式；<br><br>
+                            function allowDrop(ev){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br>
+                            }<br><br>
+                        </li>
+                        <li>
+                            【目标元素】使用 ondrop 属性（事件）调用函数，<br>
+                            调用 preventDefault() 来避免浏览器对数据的默认处理（drop 事件的默认行为是以链接形式打开）；<br>
+                            通过 dataTransfer.getData("Text") 方法获得被拖动的数据，返回在 setData() 方法中设置为相同类型的任何数据；<br>
+                            通过 appendChild() 方法把被拖动元素追加到目标元素中；<br><br>
+                            function drop(ev){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var data=ev.dataTransfer.getData("Text");<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;ev.target.appendChild(document.getElementById(data));<br>
+                            }
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </div><hr>
 
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     

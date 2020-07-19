@@ -8,10 +8,11 @@
     <link rel="stylesheet" type="text/css" href="canvasPractice.css">
     <script src="canvasPractice.js"></script>
     <script src="../../jquery-3.5.1.min.js"></script>
+    <script src="canvasPracticejQ.js"></script>
 </head>
 <body>
     <div class="header">
-
+        <img src="../../picture/alexaijenny.jpg" alt="alexaijenny" style="height: 70px;">
     </div>
 
     <div class="nav">
@@ -20,13 +21,35 @@
 
     <div class="main">
         <div class="left">
-            <p></p>
+            <p>基本属性与方法</p>
+            <ul>
+                <li>getContext("2d") 方法：定义环境类型</li>
+                <li>beginPath() 方法：创建新路径</li>
+                <li>moveTo(x,y) 方法：将画笔光标移动到指定位置</li>
+                <li>stroke() 方法：开始绘制定义好的路径</li>
+            </ul>
+
+            <p>线条属性与方法</p>
+            <ul>
+                <li>linewidth 属性：设定画笔线条宽度；</li>
+                <li>strokeStyle 属性：设置壁画颜色；</li>
+                <li>lineCap 属性：定义画笔线帽<br>butt方角，round圆角，square两端增加线宽的一半；</li>
+                <li>lineTo(x,y) 方法：定义画笔从当前坐标开始画直线到指定位置</li>
+            </ul>
+
+            <p>矩形属性与方法</p>
+            <ul>
+                <li>x,y--起始坐标，a,b--长宽</li>
+                <li>strokeRect(x,y,a,b) 方法：绘制空心矩形</li>
+                <li>fillRect(x,y,a,b) 方法：绘制实心矩形</li>
+            </ul>
         </div>
 
         <div class="content">
-            <div class="textCenter">
-            <canvas id="myCanvas1">这个浏览器不支持 canvas 元素呀。</canvas>
-            </div>
+            <canvas id="can1" class="canCss">这个浏览器不支持 canvas 元素呀。</canvas>
+            <button class="btn" onclick="canFun1()">画图</button>
+            <canvas id="can2" class="canCss">这个浏览器不支持 canvas 元素呀。</canvas>
+            <button class="btn" onclick="canFun2()">画图</button>
         </div>
 
         <div class="right">
