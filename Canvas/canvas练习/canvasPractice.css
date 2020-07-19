@@ -30,7 +30,18 @@ html,body{
     padding:10px;
     background-color: rgb(172, 172, 172);
 }
-
+/*left子标签*/
+    .left>p{
+        background-color: rgb(255, 255, 255);
+        padding:5px;
+    }
+        .left>p:hover{
+            background-color: lightgreen;
+        }
+    .left>ul{
+        text-align:justify;
+        margin-right: 5px;
+    }
 .content{
     float: left;
     width: 40%;
@@ -57,14 +68,6 @@ html,body{
     clear: both;
 }
 
-.left>p{
-    background-color: palegreen;
-    padding:5px;
-}
-.left>ul{
-    text-align:justify;
-    margin-right: 5px;
-}
 
 .canCss{
     display: block;

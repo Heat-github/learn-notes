@@ -23,14 +23,19 @@
         <div class="left">
             <p>基本属性与方法</p>
             <ul>
-                <li>getContext("2d") 方法：定义环境类型</li>
+                <li>getContext("2d")方法：定义二维环境类型</li>
                 <li>beginPath() 方法：创建新路径</li>
+                <li>closePath() 方法：关闭当前路径</li>
                 <li>moveTo(x,y) 方法：将画笔光标移动到指定位置</li>
-                <li>stroke() 方法：开始绘制定义好的路径</li>
+                <li>stroke() 方法：结束路径并绘制定义好的路径</li>
+                <li>fill() 方法：将路径内的图形填充</li>
+                <li>fillStyle 属性：定义填充颜色</li>
+                <li>clip() 方法：将当前路径作为窗户，后面路径的图形只显示在当前路径区域内的部分，其他部分被剪裁掉</li>
             </ul>
 
             <p>线条属性与方法</p>
             <ul>
+                <li><a href="#can0">实例</a></li>
                 <li>linewidth 属性：设定画笔线条宽度；</li>
                 <li>strokeStyle 属性：设置壁画颜色；</li>
                 <li>lineCap 属性：定义画笔线帽<br>butt方角，round圆角，square两端增加线宽的一半；</li>
@@ -39,17 +44,39 @@
 
             <p>矩形属性与方法</p>
             <ul>
+                <li><a href="#can0">实例</a></li>
                 <li>x,y--起始坐标，a,b--长宽</li>
+                <li>rect(x,y,a,b) 方法：定义矩形路径，需要 stroke() 方法绘制才能显示</li>
                 <li>strokeRect(x,y,a,b) 方法：绘制空心矩形</li>
                 <li>fillRect(x,y,a,b) 方法：绘制实心矩形</li>
+                <li>clearRect(x,y,a,b) 方法：定义矩形擦除区</li>
             </ul>
+
+            <p>圆弧属性与方法</p>
+            <ul>
+                <li><a href="#can1">实例</a></li>
+                <li>x,y--圆弧中心坐标，r--圆弧半径，d1,d2--圆弧起始角和终止角，anti--是否逆时针</li>
+                <li>arc(x,y,r,d1,d2,anti) 方法：定义一段圆弧</li>
+                <li>角度需要输入弧度，180°用 Meth.PI 表示</li>
+                <li><strong>注意：</strong>起始角和终止角均表示顺时针的角度，只是最后一个参数决定选择圆的逆时针部分还是顺时针部分；</li>
+                <li>arcTo(x1,y1,x2,y2,r) 方法：定义一段圆弧</li>
+                <li>x1,y1--定义P1点与当前点的连线与圆弧相切，x2,y2--定义P2点与P1点的连线与圆弧相切，r--圆弧半径</li>
+            </ul>
+
+            <p>贝塞尔曲线</p>
+            <ul>
+                <li>x1,y1--第一个控制点坐标，x2,y2--第二个控制点坐标，x,y--终点坐标</li>
+                <li>quadraticCurveTo(x1, y1, x, y) 方法：二阶贝塞尔曲线</li>
+                <li>bezierCurveTo(x1, y1, x2, y2, x, y) 方法：三阶贝塞尔曲线</li>
+            </ul>
+
         </div>
 
         <div class="content">
-            <canvas id="can1" class="canCss">这个浏览器不支持 canvas 元素呀。</canvas>
+            <canvas id="can0" class="canCss">这个浏览器不支持 canvas 元素呀。</canvas>
+            <button class="btn" onclick="canFun0()">画图</button>
+            <canvas id="can1" class="canCss"></canvas>
             <button class="btn" onclick="canFun1()">画图</button>
-            <canvas id="can2" class="canCss">这个浏览器不支持 canvas 元素呀。</canvas>
-            <button class="btn" onclick="canFun2()">画图</button>
         </div>
 
         <div class="right">
