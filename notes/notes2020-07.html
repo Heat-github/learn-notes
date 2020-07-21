@@ -1011,9 +1011,9 @@
                             通过 dataTransfer.getData("Text") 方法获得被拖动的数据，返回在 setData() 方法中设置为相同类型的任何数据；<br>
                             通过 appendChild() 方法把被拖动元素追加到目标元素中；<br><br>
                             function drop(ev){<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;var data=ev.dataTransfer.getData("Text");<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;ev.target.appendChild(document.getElementById(data));<br>
+                            ev.preventDefault();<br>
+                            var data=ev.dataTransfer.getData("Text");<br>
+                            ev.target.appendChild(document.getElementById(data));<br>
                             }
                         </li>
                     </ol>
@@ -1030,7 +1030,7 @@
             <ul>
                 <li>用于获得用户的地理位置，需征求用户同意；</li>
                 <li>语法：navigator.geolocation 判断用户是否同意获取地理位置</li>
-                <li>如果同一获取，则通过 navigator.geolocation.getCurrentPosition( showPosition, showError)</li>
+                <li>如果同一获取，则通过 navigator.geolocation.getCurrentPosition(showPosition,showError)</li>
             </ul>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
