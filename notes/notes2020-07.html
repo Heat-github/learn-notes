@@ -51,6 +51,8 @@
             <li><a href="#C16">16号笔记</a></li>
             <li><a href="#C17">17号笔记</a></li>
             <li><a href="#C18">18号笔记</a></li>
+            <li><a href="#C19">19号笔记</a></li>
+            <li><a href="#C22">22号笔记</a></li>
             <li><a href="#Cfinal">总结</a></li>
             <li><a href="#Chref">链接伪类</a></li>
             <li><a href="#Clist">列表样式</a></li>
@@ -106,6 +108,7 @@
             <li><a href="#CAJAX">jQ AJAX</a></li>
             <li><a href="#Cmath">HTML mathML</a></li>
             <li><a href="#CDrag">HTML 拖放</a></li>
+            <li><a href="#CGeolocation">HTML 地理位置</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -1024,14 +1027,32 @@
         <!-- 7月19号！！！ -->
         <!-- 7月19号！！！ -->
         <h3 id="C19">7月19号 周日</h3>
-        <p>今日关键词：</p>
+        <p>今日关键词：HTML5 获取地理位置</p>
         <div class="note_tag">
-            <p id="Geolocation">HTML5 地理定位</p>
+            <p id="CGeolocation">HTML5 地理定位</p>
             <ul>
                 <li>用于获得用户的地理位置，需征求用户同意；</li>
-                <li>语法：navigator.geolocation 判断用户是否同意获取地理位置</li>
-                <li>如果同一获取，则通过 navigator.geolocation.getCurrentPosition(showPosition,showError)</li>
+                <li>语法：navigator.geolocation 判断用户是否同意获取地理位置，同意则该属性返回True</li>
+                <li>如果同意获取，则通过 navigator.geolocation.getCurrentPosition(fun1,fun2,option)</li>
+                <li>getCurrentPosition() 方法运行成功后会向 fun1 函数的第一个参数返回 coords 和 timestamp 属性，失败则向 fun2 函数的第一个参数返回 message 和 code 属性</li>
+                <li>如 fun1 定义 showPosition(position) 函数，成功获取地位位置后，position 参数获得 coords 和 timestamp 属性，通过 position.coords.longitude 和 position.coords.latitude 分别获得经度和维度</li>
+                <li>而 fun2 定义 showError(error) 函数，地理位置获取失败后，error 参数获得 message 和 code 属性，code 表示错误代码：<br>
+                    PERMISSION_DENIED：表示用户拒绝浏览器获取位置信息的请求<br>
+                    POSITION_UNAVALIABLE：表示网络不可用或者连接不到卫星<br>
+                    TIMEOUT：表示获取超时。超时时间需要在 option 参数中指定<br>
+                    UNKNOW_ERROR：表示不包括在其它错误代码中的错误，这里可以在 message 中查找错误信息
+                </li>
+                <li>watchPosition() 方法：实时获取位置信息</li>
+                <li>clearWatch() 方法：停止 watchPosition() 方法</li>
             </ul>
+        </div><hr>
+
+        <!-- 7月22号！！！ -->
+        <!-- 7月22号！！！ -->
+        <h3 id="C22">7月22号 周三</h3>
+        <p>今日关键词：</p>
+        <div class="note_tag">
+            <p></p>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
