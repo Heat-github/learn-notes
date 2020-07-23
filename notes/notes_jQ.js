@@ -5,12 +5,13 @@ jQuery(document).ready(function($){
   //ready函数保证DOM加载完成在调用 jQuery 函数库
 
   $(".catabutton").click(function(){    //手机端(小屏幕)目录展开与收合
-    x = document.documentElement.clientWidth;
+    var x = document.documentElement.clientWidth;
     if(x < 888){$("#acatalog").slideToggle(200);}
   });
 
   $(window).resize(function(){        //调整窗口大小时
-    if(x < 888){
+    var x = document.documentElement.clientWidth;
+    if(x > 888){
       $("#acatalog").slideDown(200);
     }
     else {$("#acatalog").slideToggle(200);}

@@ -1,12 +1,29 @@
-*{box-sizing: border-box;}
+*{
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+
 body{
     background-color: rgb(128, 128, 128);
     padding: 5px;
     margin:0;}
-table tr th,td{
-    font-size: smaller;
-}
 
+    a{
+        cursor: pointer;
+        text-decoration: none;}
+    
+    
+    h1{ 
+        font-size: 25px;
+        color:rgb(255, 0, 0);}
+    
+    h3{
+        font-size: 18px;
+        color: seagreen;
+        font-weight: 600;}
+    h3+p{text-align: justify;}
 .body_tag{
     float: left;
     width: 100%;
@@ -61,7 +78,7 @@ table tr th,td{
 
 /*-------------------------顶部菜单-----------------------*/
 /*-------------------------顶部菜单-----------------------*/
-    .topmenu{
+.topmenu{
         list-style-type:none;
         background-color: rgb(110, 110, 110);
         width:100%;
@@ -91,13 +108,13 @@ table tr th,td{
     background-color: rgb(246, 253, 236);
     color:rgb(0, 0, 0);
     margin: 10px 0px;
-    padding: 0.5em 0.5em 1em;
-    word-break:break-all;}
+    padding:10px 10px 12px;}
 
     .note_tag>p{
         border-left: 10px solid rgb(45, 110, 250);
         background-color: rgb(164, 184, 162);
-        padding: 2px 5px;}
+        padding: 2px 5px;
+        word-break:break-all;}
 
     .note_tag details{
             padding: 2px;
@@ -112,7 +129,8 @@ table tr th,td{
     
     .note_tag>ul>li{
         margin-top: 12px;
-        text-align: justify;}
+        text-align: justify;
+        word-break:break-all;}
 
     .note_tag li span{
         background-color: silver;}
@@ -127,9 +145,11 @@ table tr th,td{
     width: 100%;
     border:2px solid #EE872A; text-align: center;}
     .alex td, .alex th{
-        padding:3px;
         border:2px solid #EE872A; 
-        text-align: center;}
+        text-align: center;
+        font-size: smaller;
+        word-break: normal;
+    }
     .alex tr.oringe{
         color:rgb(0,0,0);
         background-color: rgb(255, 192, 176);}
@@ -196,7 +216,7 @@ img.backtop{
     position: fixed;
     border-radius: 50%;
     right: 5px;
-    bottom: 6em;
+    bottom: 9em;
     width: 30px;
     height: 30px;}
 /*------------------------去到底部-----------------------*/
@@ -206,7 +226,7 @@ img.gobottom{
         transform:rotate(180deg);
         border-radius: 50%;
         right: 5px;
-        bottom: 2em;
+        bottom: 3em;
         width: 30px;
         height: 30px;}
 /*------------------------夜间模式-----------------------*/
@@ -216,7 +236,7 @@ img.gobottom{
     border-radius: 50%;
     opacity:0.5;
     right: 5px;
-    bottom: 4em;
+    bottom: 6em;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -237,19 +257,7 @@ img.gobottom{
 
 /*------------------------2字符缩减----------------------*/
 /*------------------------2字符缩减----------------------*/
-.indent{text-indent: 2em;}
 
-a{
-    cursor: pointer;
-    text-decoration: none;}
-
-
-h1{ color:rgb(255, 0, 0);}
-
-h3{
-    color: seagreen;
-    font-weight: 600;}
-h3+p{text-align: justify;}
 
 
 
@@ -317,7 +325,7 @@ h3+p{text-align: justify;}
             text-align: justify;}
 
         .note_tag>ul>li{
-            margin-left: -16px;
+            margin-left: -12px;
             margin-top: 12px;
             text-align: justify;}
 
