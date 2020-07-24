@@ -53,6 +53,7 @@
             <li><a href="#C18">18号笔记</a></li>
             <li><a href="#C19">19号笔记</a></li>
             <li><a href="#C23">23号笔记</a></li>
+            <li><a href="#C24">24号笔记</a></li>
             <li><a href="#Cfinal">总结</a></li>
             <li><a href="#Chref">链接伪类</a></li>
             <li><a href="#Clist">列表样式</a></li>
@@ -110,6 +111,8 @@
             <li><a href="#CDrag">HTML 拖放</a></li>
             <li><a href="#CGeolocation">HTML 地理位置</a></li>
             <li><a href="#Cvideo">HTML 媒体元素</a></li>
+            <li><a href="#Storage">HTML Web存储</a></li>
+            <li><a href="#SQL">HTML Web SQL</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -1063,7 +1066,38 @@
                 <li>&lt;video&gt; 元素可以用 DOM 控制，其中 pause() 方法控制暂停，play() 方法控制播放</li>
                 <li>&lt;track&gt; 元素，为媒体元素（比如 audio 或 video）规定外部文本轨道</li>
             </ul>
-            <p></p>
+        </div><hr>
+
+        <!-- 7月24号！！！ -->
+        <!-- 7月24号！！！ -->
+        <h3 id="C24">7月24号 周五</h3>
+        <p>今日关键词：HTML5 Web存储、SQL</p>
+        <div class="note_tag">
+            <p id="Storage">HTML5 Web存储：相对于 cookie 更加安全快速</p>
+            <ul>
+                <li>这些数据不会被保存在服务器上，只用在用户请求网站数据上</li>
+                <li>数据以 键/值 对存在, web网页的数据只允许该网页访问使用</li>
+                <li>localStorage 对象：用于长久保存整个网站的数据，保存的数据没有过期时间，直到手动去除</li>
+                <li>sessionStorage 对象：用于临时保存同一窗口(或标签页)的数据，在关闭窗口或标签页之后将会删除这些数据，刷新页面不会删除</li>
+                <li>使用这两个对象前：语句 if(typeof(Storage)!=="undefined") 判断是否支持以上两个对象，判断语句为 True 则支持</li>
+                <li>localStorage 和 sessionStorage 可使用的 API 相同，常用的 API 如下：</li>
+                <li>保存数据：localStorage.setItem(key,value) 或者 localStorage.key = name</li>
+                <li>读取数据：localStorage.getItem(key) 或 localStorage.key</li>
+                <li>删除单个数据：localStorage.removeItem(key)</li>
+                <li>删除所有数据：localStorage.clear()</li>
+                <li>得到某个索引的key：localStorage.key(index)</li>
+            </ul>
+            <p id="SQL">SQL(Structured Query Language)结构化查询语言：访问和处理数据库</p>
+            <ul>
+                <li>可以在最新版的 Safari, Chrome 和 Opera 浏览器中工作</li>
+                <li>openDatabase() 方法：使用现有的数据库或者新建的数据库创建一个数据库对象</li>
+                <li>var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024,CallBack)<br>
+                    mydb 是数据库名称；1.0 代表版本号；Test DB 为描述文本；2*1024*1024 代表数据库大小，CallBack 是回调函数<br>
+                </li>
+                <li>transaction() 方法：够控制一个事务，以及基于这种情况执行提交或者回滚</li>
+                <li>executeSql() 方法：用于执行实际的 SQL 查询</li>
+                <li>后续科深入学习<a href="https://www.runoob.com/html/html5-web-sql.html" style="text-decoration: none;color: rgb(243, 145, 145);" target="_blank"> SQL </a></li>
+            </ul>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
