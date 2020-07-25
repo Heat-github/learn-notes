@@ -3,6 +3,7 @@ onload = function(){
     draw();
 };
 
+
 function modeFunc(){
     var time = new Date().getHours();
     elet1 = document.getElementsByClassName("darkmode");

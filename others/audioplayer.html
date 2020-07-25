@@ -1,48 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="refresh" content="300">
     <title>Alex & Jenny‘s web</title>
-    <base href="../" target="_self">
-    <link rel="shortcut icon" href="piture/favicon.ico">
-    <!--CSS文件为index.css-->
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="shortcut icon" href="../picture/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="audioPlayer.css">
+    <script src="audioPlayer.js"></script>
+    <script src="../jquery-3.5.1.min.js"></script>
 </head>
-<body id="index-body">
-    <ul class="topmenu">
-        <li><a href="index.html" class="active">主页</a></li>
-        <li><a href="notes/alex-index.html" target="_blank">Alex的程序语言学习</a></li>
-        <li><a href="Alex&Jenny/aj-index.hml" target="_blank">我们的历程</a></li>
-        <li><a href="others/QR-code.html" target="_blank">祝福我们</a></li>
-    </ul>
-      
-    <div class="clearfix">
-        <div class="column content">
-            <div class="header">
-              <h1>Alex & Jenny's website</h1>
+<body>
+    <div class="nav">
+        <a href="../index.html" class="active">主页</a>
+        <a href="../notes/alex-index.html" target="_blank">Alex的程序语言学习</a>
+        <a href="../Alex&Jenny/aj-index.hml" target="_blank">我们的历程</a>
+        <a href="../others/QR-code.html" target="_blank">祝福我们</a>
+    </div>
+    <div class="container">
+        <div class="player">
+            <img class="picMid" src="../picture/打上花火1.jpg" alt="打上花火"/>
+            <div class="picCenter">
+                <img src="../picture/打上花火2.jpg" alt="打上花火2" />
             </div>
-                <h1>《洛神赋》</h1>
-                <p><b>【作者】曹植 &nbsp; &nbsp; &nbsp; &nbsp;【朝代】魏晋</b></p>
-                <p>黄初三年，余朝京师，还济洛川。古人有言，斯水之神，名曰宓妃。感宋玉对楚王神女之事，遂作斯赋。其辞曰：</p>
-                <p>余从京域，言归东藩。背伊阙，越轘辕，经通谷，陵景山。日既西倾，车殆马烦。尔乃税驾乎蘅皋，秣驷乎芝田，容与乎阳林，流眄乎洛川。于是精移神骇，忽焉思散。俯则未察，仰以殊观，睹一丽人，于岩之畔。乃援御者而告之曰：“尔有觌于彼者乎？彼何人斯？若此之艳也！”御者对曰：“臣闻河洛之神，名曰宓妃。然则君王所见，无乃是乎？其状若何？臣愿闻之。”</p>
-                <p style="color: rgb(247, 25, 36);">余告之曰：“其形也，翩若惊鸿，婉若游龙。荣曜秋菊，华茂春松。髣髴兮若轻云之蔽月，飘飖兮若流风之回雪。远而望之，皎若太阳升朝霞；迫而察之，灼若芙蕖出渌波。秾纤得衷，修短合度。肩若削成，腰如约素。延颈秀项，皓质呈露。芳泽无加，铅华弗御。云髻峨峨，修眉联娟。丹唇外朗，皓齿内鲜，明眸善睐，靥辅承权。瑰姿艳逸，仪静体闲。柔情绰态，媚于语言。奇服旷世，骨像应图。披罗衣之璀粲兮，珥瑶碧之华琚。戴金翠之首饰，缀明珠以耀躯。践远游之文履，曳雾绡之轻裾。微幽兰之芳蔼兮，步踟蹰于山隅。</p>
-                <p>于是忽焉纵体，以遨以嬉。左倚采旄，右荫桂旗。壤皓腕于神浒兮，采湍濑之玄芝。余情悦其淑美兮，心振荡而不怡。无良媒以接欢兮，托微波而通辞。愿诚素之先达，解玉佩以要之。嗟佳人之信修，羌习礼而明诗。抗琼珶以和予兮，指潜渊而为期。执眷眷之款实兮，惧斯灵之我欺。感交甫之弃言兮，怅犹豫而狐疑。收和颜而静志兮，申礼防以自持。</p>
-                <p>于是洛灵感焉，徙倚彷徨，神光离合，乍阴乍阳。竦轻躯以鹤立，若将飞而未翔。践椒涂之郁烈，步蘅薄而流芳。超长吟以永慕兮，声哀厉而弥长。</p>
-                <p>......</p>
-                
+            
+            <audio  id="music" class="music" controls>
+                    <source src="../media/DAOKO-打上花火.flac" type="audio/mpeg">
+            </audio>
+           
         </div>
-        <div class="column sidemenu">
-            <ul>
-                <li><a href="index.html">今日份狗粮</a></li>
-                <li><a href="#city">天大地大,东哥最大</a></li>
-                <li><a href="#island">柔情绰态，媚于语言</a></li>
-                <li><a href="#food">窈窕Jenny</a></li>
-                <li><a href="#people">Alex好逑</a></li>
-                <li><a href="others/audioplayer.html" class="active">间关莺语花底滑,幽咽泉流冰下难</a></li>
-                <li><img src="picture/IMG_Alex&Jenny.jpg" alt="Alex&Jenny" style="width: 100%;"></li>
-            </ul>
+        <div class="lyrics">
+            <p>
+                打上花火bai<br />
+                DAOKO × 米津玄师<br /><br />
+                あの日见渡(ひみわた)した渚du(なぎさ)を<br />
+                今(いま)も思zhi(おも)い出dao(だ)すんだ<br />
+                砂(すな)の上(うえ)に刻(きざ)んだ言叶(ことば)<br />
+                君(きみ)の後(うし)ろ姿(すがた)<br />
+                寄(よ)りだす波(なみ)が足元(あしもと)を<br />
+                过(よぎ)り何(なに)かを浚(さら)う<br />
+                夕凪(ゆうなぎ)の中(なか)<br />
+                日暮(ひぐ)れだけが通(とお)り过(す)ぎていく<br />
+                パッと光(ひか)って咲(さ)いた<br />
+                花火(はなび)を见(み)ていた<br />
+                きっとまだ终(お)わらない夏(なつ)だ<br />
+                暧昧(あいまい)な心(こころ)を透过(とうか)して繋(つな)いだ<br />
+                この夜(よる)が続(つづ)いて欲(ほ)しかった<br />
+                あと何度君(なんどきみ)と同(おな)じ<br />
+                花火(はなび)を见(み)られるかなって<br />
+                笑(わら)う颜(かお)に何(なに)が出来(でき)るだろうか<br />
+                伤(きず)つくこと喜(よろこ)ぶこと<br />
+                缲(く)り返(かえ)す波(なみ)と情动(じょうどう)焦燥(しょうそう)<br />
+                最终列车(さいしゅうれっしゃ)の音(おと)<br />
+                何度(なんど)でも言叶(ことば)にして君(きみ)を呼(よ)ぶよ<br />
+                波(なみ)の选(えら)び<br />
+                もう一度(いちど)どうどうどうどう<br />
+                もう二度(にど)と悲(かな)しまずに　済(す)むように<br />
+                ハッと息(いき)を饮(の)めば<br />
+                消(き)えちゃいそうな光(ひかり)が<br />
+                きっとまだ　胸(むね)に住(す)んでいた<br />
+                手(て)を伸(の)ばせば触(ふ)れた<br />
+                暖(あった)かい未来(みらい)は<br />
+                密(ひそ)かに二人(ふたり)を见(み)ていた<br />
+                パッと花火(はなび)が　「パッと花火(はなび)が」<br />
+                夜(よる)に咲(さ)いた 　「夜(よる)に咲(さ)いた」<br />
+                夜(よる)に咲(さ)いて 「夜(よる)に咲(さ)いて」<br />
+                静(しず)かに消(き)えた　「静(しず)かに消(き)えた」<br />
+                离(はな)さないで 「离(はな)れないで」<br />
+                もう少(すこ)しだけ 「もう少(すこ)しだけ」<br />
+                もう少(すこ)しだけ このままで<br />
+                あの日见渡(ひみわた)した渚(なぎさ)を<br />
+                今(いま)も思(おも)い出(だ)すんだ<br />
+                砂(すな)の上(うえ)に刻(きざ)んだ言叶(ことば)<br />
+                君(きみ)の後(うし)ろ姿(すがた)<br />
+                パッと光(ひか)って咲(さ)いた<br />
+                花火(はなび)を见(み)ていた<br />
+                きっとまだ终(お)わらない夏(なつ)が<br />
+                暧昧(あいまい)な心(こころ)を透过(とうか)して繋(つな)いだ<br />
+                この夜(よる)が続(つづ)いてほしかった<br />
+            </p>
         </div>
     </div>
+    
     
     <div class="footer">
         <p>Copyright © Alex-alading.dong @ 2020</p>

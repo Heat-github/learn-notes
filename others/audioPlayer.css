@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: arial,'microsoft yahei',\5b8b\4f53,sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(30, 26, 76);
+    color: #fff;
+}
+/* 导航栏*/
+.nav{
+    width: 100%;
+    min-height: 5vh;
+    background-color: gray;
+}
+.nav a{
+    display: inline-block;
+    height: 100%;
+    padding:16px 15px;
+    color:white;
+    text-decoration: none;
+}
+.nav a:hover{
+    background-color: rgb(187, 187, 187);
+}
+
+.container{
+    margin: 0 auto;
+    height: 90vh;
+    padding:5px 0;
+    text-align: center;
+}
+.player{
+    float: left;
+    margin-left: 10vw;
+    width: 50vw;
+    height: 100%;
+    background-image: url(../picture/打上花火.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lyrics{
+    float: left;
+    width: 30vw;
+    height: 100%;
+    padding-left: 30px;
+    overflow: auto;
+}
+.lyrics::-webkit-scrollbar {display:none}
+
+.picMid{
+    margin: 0 auto;
+    width: 333px;
+    height: 333px;
+    position: relative;
+    background-color: lightseagreen;
+    border-radius: 50%;
+    transform: translateY(50%);
+    z-index: 1;
+}
+.picCenter{
+    margin: 0 auto;
+    width: 180px;
+    height: 180px;
+    position: relative;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    z-index: 2;
+}
+.picCenter img{
+    margin: 0 auto;
+    width: 180px;
+    border-radius: 50%;
+    animation: turn 10s linear infinite;
+}
+    @keyframes turn{
+        0%   {-webkit-transform:rotate(0deg);}
+        100% {-webkit-transform:rotate(360deg);}
+    }
+.music{
+    width: 30vw;
+    margin: 0 auto;
+    display: block;
+    height: 40px;
+    transform: translateY(500%);
+}
+
+.footer{
+    clear: both;
+    width: 100%;
+    min-height: 4vh;
+    background-color:rgba(187,187,187,0.3);
+    padding:10px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    display: none;
+}
