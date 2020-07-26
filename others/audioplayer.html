@@ -2,33 +2,48 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="300">
     <title>Alex & Jenny‘s web</title>
     <link rel="shortcut icon" href="../picture/favicon.ico">
     <link rel="stylesheet" type="text/css" href="audioPlayer.css">
     <script src="audioPlayer.js"></script>
     <script src="../jquery-3.5.1.min.js"></script>
+    <script src="audioPlayerjQ.js"></script>
 </head>
 <body>
-    <div class="nav">
+    <div id="nav">
         <a href="../index.html" class="active">主页</a>
         <a href="../notes/alex-index.html" target="_blank">Alex的程序语言学习</a>
         <a href="../Alex&Jenny/aj-index.hml" target="_blank">我们的历程</a>
         <a href="../others/QR-code.html" target="_blank">祝福我们</a>
     </div>
-    <div class="container">
-        <div class="player">
-            <img class="picMid" src="../picture/打上花火1.jpg" alt="打上花火"/>
-            <div class="picCenter">
-                <img src="../picture/打上花火2.jpg" alt="打上花火2" />
+    <div id="container">
+        <div id="player">
+            <img id="picMid" src="../picture/打上花火loop.jpg" alt="loop"/>
+            <div id="picCenter">
+                <img id="center" src="../picture/打上花火center.jpg" alt="center" />
             </div>
+
+            <div id="bar">
+                <p id="circle1"></p>
+                <p id="bar1"></p>
+                <p id="bar2"></p><br>
+                <p>/ 04:49</p>
+            </div>
+            <ul id="ctrlBtn">
+                <li id="last"></li>
+                <li id="pause"></li>
+                <li id="play"></li>
+                <li id="next"></li>
+            </ul>
+
+            <div ></div>
             
-            <audio  id="music" class="music" controls>
+            <audio  id="music">
                     <source src="../media/DAOKO-打上花火.flac" type="audio/mpeg">
             </audio>
            
         </div>
-        <div class="lyrics">
+        <div id="lyrics">
             <p>
                 打上花火bai<br />
                 DAOKO × 米津玄师<br /><br />
@@ -82,7 +97,7 @@
     </div>
     
     
-    <div class="footer">
+    <div id="footer">
         <p>Copyright © Alex-alading.dong @ 2020</p>
     </div>  
 </body>

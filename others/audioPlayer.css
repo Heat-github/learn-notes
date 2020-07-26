@@ -12,48 +12,52 @@ body{
     color: #fff;
 }
 /* 导航栏*/
-.nav{
-    width: 100%;
-    min-height: 5vh;
-    background-color: gray;
-}
-.nav a{
-    display: inline-block;
-    height: 100%;
-    padding:16px 15px;
-    color:white;
-    text-decoration: none;
-}
-.nav a:hover{
-    background-color: rgb(187, 187, 187);
-}
+    #nav{
+        width: 100%;
+        min-width: 360px;
+        height: 5vh;
+        background-color: gray;
+        overflow: hidden;
+    }
+    #nav a{
+        display: inline-block;
+        height: 100%;
+        padding:16px 15px;
+        color:white;
+        text-decoration: none;
+    }
+    #nav a:hover{
+        background-color: rgb(187, 187, 187);
+    }
 
-.container{
+#container{
     margin: 0 auto;
     height: 90vh;
     padding:5px 0;
     text-align: center;
 }
-.player{
+/*左侧播放器*/
+#player{
     float: left;
     margin-left: 10vw;
     width: 50vw;
     height: 100%;
-    background-image: url(../picture/打上花火.jpg);
+    background-image: url(../picture/打上花火bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+/*右侧歌词*/
+    #lyrics{
+        float: left;
+        width: 30vw;
+        height: 100%;
+        padding-left: 30px;
+        overflow: auto;
+    }
+    #lyrics::-webkit-scrollbar {display:none}
 
-.lyrics{
-    float: left;
-    width: 30vw;
-    height: 100%;
-    padding-left: 30px;
-    overflow: auto;
-}
-.lyrics::-webkit-scrollbar {display:none}
-
-.picMid{
+/*中间图片*/
+#picMid{
     margin: 0 auto;
     width: 333px;
     height: 333px;
@@ -62,35 +66,98 @@ body{
     border-radius: 50%;
     transform: translateY(50%);
     z-index: 1;
+    opacity: 0.7;
 }
-.picCenter{
-    margin: 0 auto;
-    width: 180px;
-    height: 180px;
-    position: relative;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    z-index: 2;
-}
-.picCenter img{
-    margin: 0 auto;
-    width: 180px;
-    border-radius: 50%;
-    animation: turn 10s linear infinite;
-}
-    @keyframes turn{
-        0%   {-webkit-transform:rotate(0deg);}
-        100% {-webkit-transform:rotate(360deg);}
+/*中心转动图片盒子*/
+    #picCenter{
+        margin: 0 auto;
+        width: 180px;
+        height: 180px;
+        position: relative;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        z-index: 2;
     }
-.music{
-    width: 30vw;
-    margin: 0 auto;
-    display: block;
-    height: 40px;
-    transform: translateY(500%);
-}
+    #picCenter img{
+        margin: 0 auto;
+        width: 180px;
+        border-radius: 50%;
+        animation: turn 10s linear infinite;
+        animation-play-state: paused;
+        -webkit-animation-play-state: paused;
+    }
+        @keyframes turn{
+            0%   {-webkit-transform:rotate(0deg);}
+            100% {-webkit-transform:rotate(360deg);}
+        }
+/*进度条设置*/
+    #bar{
+        margin: 0 auto;
+        width: 700px;
+    }
+    #circle1{
+        width: 12px;
+        height: 12px;
+        background-color: white;
+        border-radius: 50%;
+        transform: translateX(94px) translateY(175%);
+    }
+    #bar1{
+        width: 100px;
+        height: 10px;
+        background-color: lightsalmon;
+        border-radius: 10px;
+        transform: translateY(100%);
+    }
+    #bar2{
+        width: 100%;
+        height: 10px;
+        background-color: rgb(182, 182, 182);
+        border-radius: 10px;
+    }
+/*控制按钮设置*/
+    #ctrlBtn{
+        width: 300px;
+        margin: 0 auto;
+        padding: 15px;
+        margin: 50px auto;
+        list-style-type: none;
+    }
+    #ctrlBtn li{
+        margin: 0 20px;
+        cursor: pointer;
+    }
+    #last{
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        border-radius: 50%;
+        background: url(../picture/musicButton1.jpg) -15px -16px;
+    }
+    #pause{
+        width: 35px;
+        height: 35px;
+        display: none;
+        border-radius: 50%;
+        background: url(../picture/musicButton1.jpg) -76px -77.5px;
+    }
+    #next{
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        border-radius: 50%;
+        background: url(../picture/musicButton1.jpg) -76px -16px;
+    }
+    #play{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: url(../picture/musicButton1.jpg) -15px -77.5px;
+        display: inline-block;
+    }
 
-.footer{
+/*底部*/
+#footer{
     clear: both;
     width: 100%;
     min-height: 4vh;
@@ -100,4 +167,15 @@ body{
     text-align: center;
     font-size: 18px;
     display: none;
+}
+
+@media screen and (max-width: 800px){
+    #player{
+        float: left;
+        margin-left: 0;
+        width: 100vw;
+    }
+        #lyrics{
+            display: none;
+        }
 }

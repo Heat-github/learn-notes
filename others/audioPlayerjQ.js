@@ -1,0 +1,12 @@
+$.noConflict();
+jQuery(document).ready(function($){
+    $("#play").click(function(){
+        playMusic();
+    });
+    $("#pause").click(function(){
+        playMusic();
+    });
+    $(window).resize(function(){
+        setSize();
+    });
+});
