@@ -1,8 +1,7 @@
 
 onload = function(){
-    window.setInterval(f,5000);
-    function f(){
-        console.log(g("player").offsetWidth);}
+    [cw,aw] = getSize();
+    console.log(cw,aw);
     setSize();
     window.setInterval(progressBar,50);
 }
@@ -12,28 +11,28 @@ function setCss(obj,css){
     obj.style[attr] = css[attr];
     }
 }
-//获取浏览器宽高
+//获取浏览器宽度和屏幕宽度
 function getSize(){
-    return [document.documentElement.clientWidth,document.documentElement.clientHeight]; 
+    return [document.documentElement.clientWidth,screen.availWidth]; 
 }
 //设置宽度适应
 function setSize(){
-    [w,h] = getSize();
-    if(w >= 800){
-        g("player").style.width = 0.5*w + "px";
-        g("player").style.marginLeft = 0.1*w + "px";
+    [cw,aw] = getSize();
+    if((cw >= 800) && (aw > 450)){
+        g("player").style.width = 0.5*cw + "px";
+        g("player").style.marginLeft = 0.1*cw + "px";
         g("lyrics").style.display = "block";
-        g("lyrics").style.width = 0.3*w + "px";
-        g("bar").style.width = 0.4*w + "px";
+        g("lyrics").style.idth = 0.3*cw + "px";
+        g("bar").style.width = 0.4*cw + "px";
     }
     else{
         setCss(g("player"),{
-            "width" : w + "px",
+            "width" : cw + "px",
             "minWidth" : "360px",
             "marginLeft" : 0,
         });
         g("lyrics").style.display = "none";
-        g("bar").style.width = 0.8*w + "px";
+        g("bar").style.width = 0.8*cw + "px";
     }
     
 }
@@ -105,8 +104,8 @@ function progressBar(){
     var ctd = calTime(ct);
     var pl = g("player").offsetWidth;
     g("curt").innerHTML=ctd[1]+" : "+ctd[2]+" / "+tld[1]+" : "+tld[2];
-    [w,h] = getSize();
-    if(w >= 360){
+    [cw,aw] = getSize();
+    if((cw >= 800) && (aw > 450)){
         var crl = (pl*0.8*per)-6;//进度条圆点的位移距离
         g("bar1").style.width = pl*per*0.8 + "px";
         g("circle1").style.transform = "translateX(" + crl +"px) translateY(175%)";
@@ -116,9 +115,15 @@ function progressBar(){
         g("bar1").style.width = 288*per + "px";
         g("circle1").style.transform = "translateX(" + crl +"px) translateY(175%)";
     }
-    if((ct == tl) && msc.paused){
+    if((ct == tl) && msc.paused ){
         g("play").style.display = "inline-block";
         g("pause").style.display = "none";
     }
+    /*
+    if(lastTime == ct){
+        g("player").style.animationPlayState = "paused";
+        g("player").style.WebkitAnimationPlayState = "paused";
+    }
+    return ct;*/
 }
 

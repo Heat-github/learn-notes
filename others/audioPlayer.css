@@ -162,7 +162,7 @@ body{
 
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     #player{
         float: left;
         margin-left: 0;
@@ -172,7 +172,8 @@ body{
             display: none;
         }
 }
-@media screen and (max-height: 700px){
+
+@media screen  and (max-height: 850px){
     #picMid{
         width: 300px;
         height: 300px;
