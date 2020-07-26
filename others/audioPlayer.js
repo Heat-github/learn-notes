@@ -1,10 +1,12 @@
 
 onload = function(){
-    console.log(g("lyrics").style.display);
+    window.setInterval(f,5000);
+    function f(){
+        console.log(g("player").offsetWidth);}
     setSize();
-
+    window.setInterval(progressBar,50);
 }
-//js设置CSS
+//js设置多个CSS
 function setCss(obj,css){
     for(var attr in css){
     obj.style[attr] = css[attr];
@@ -59,26 +61,27 @@ function g(name,type){
 //计算时分秒，秒数取整
 function calTime(t){
     var td = [0,0,0];
-    t =  Math.round(t);
+    t = Math.floor(t);
+    td[2] = t%60;
     if(t >= 60){
         td[1] = Math.floor(t/60);
-        td[2] = t % 60;
         if(td[1] >= 60){
             td[0] = Math.floor(td[1]/60);
             td[1] = td[1] % 60;
         }
     }
+    for(var i in td){
+        td[i] = td[i]>9 ? td[i] : "0"+td[i];
+    }
     return td;
 }
-
+//播放或暂停
 function playMusic(){
     var msc = g("music");
     var picCenter = g("center");
     var picPlay = g("play");
     var picPause = g("pause");
     if(msc.paused){
-        //progressBar();
-        //playTimes();
         picCenter.style.animationPlayState = "running";
         picCenter.style.WebkitAnimationPlayState = "running";
         picPlay.style.display = "none";
@@ -93,8 +96,29 @@ function playMusic(){
         msc.pause();
     }
 }
-
 function progressBar(){
     var msc = g("music");
-
+    var tl = msc.duration;
+    var ct = msc.currentTime;
+    var per = ct/tl;
+    var tld = calTime(tl);
+    var ctd = calTime(ct);
+    var pl = g("player").offsetWidth;
+    g("curt").innerHTML=ctd[1]+" : "+ctd[2]+" / "+tld[1]+" : "+tld[2];
+    [w,h] = getSize();
+    if(w >= 360){
+        var crl = (pl*0.8*per)-6;//进度条圆点的位移距离
+        g("bar1").style.width = pl*per*0.8 + "px";
+        g("circle1").style.transform = "translateX(" + crl +"px) translateY(175%)";
+    }
+    else{
+        var crl = 288*per-6;//进度条圆点的位移距离
+        g("bar1").style.width = 288*per + "px";
+        g("circle1").style.transform = "translateX(" + crl +"px) translateY(175%)";
+    }
+    if((ct == tl) && msc.paused){
+        g("play").style.display = "inline-block";
+        g("pause").style.display = "none";
+    }
 }
+

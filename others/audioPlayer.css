@@ -11,28 +11,22 @@ body{
     background-color: rgb(30, 26, 76);
     color: #fff;
 }
-/* 导航栏*/
-    #nav{
-        width: 100%;
-        min-width: 360px;
-        height: 5vh;
-        background-color: gray;
-        overflow: hidden;
-    }
-    #nav a{
-        display: inline-block;
-        height: 100%;
-        padding:16px 15px;
-        color:white;
-        text-decoration: none;
-    }
-    #nav a:hover{
-        background-color: rgb(187, 187, 187);
-    }
-
+#back{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+#back a{
+    text-decoration: none;
+    font-size: 40px;
+    color: white;}
+    #back a:hover{color: rgb(255, 0, 0);}
 #container{
     margin: 0 auto;
-    height: 90vh;
+    height: 100vh;
+    min-height: 600px;
     padding:5px 0;
     text-align: center;
 }
@@ -51,10 +45,20 @@ body{
         float: left;
         width: 30vw;
         height: 100%;
-        padding-left: 30px;
+        margin-left: 30px;
         overflow: auto;
     }
     #lyrics::-webkit-scrollbar {display:none}
+    #ffocus{
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        height: 1em;
+        background-color: limegreen;
+        opacity: 0.3;
+        transform: translateX(-50vh);
+        -webkit-transform: translateX(50vh);
+    }
 
 /*中间图片*/
 #picMid{
@@ -71,8 +75,8 @@ body{
 /*中心转动图片盒子*/
     #picCenter{
         margin: 0 auto;
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
         position: relative;
         transform: translateY(-50%);
         border-radius: 50%;
@@ -80,7 +84,7 @@ body{
     }
     #picCenter img{
         margin: 0 auto;
-        width: 180px;
+        width: 100%;
         border-radius: 50%;
         animation: turn 10s linear infinite;
         animation-play-state: paused;
@@ -93,17 +97,17 @@ body{
 /*进度条设置*/
     #bar{
         margin: 0 auto;
-        width: 700px;
+        width: 40vw;
     }
     #circle1{
         width: 12px;
         height: 12px;
         background-color: white;
         border-radius: 50%;
-        transform: translateX(94px) translateY(175%);
+        transform: translateX(0px) translateY(175%);
     }
     #bar1{
-        width: 100px;
+        width: 0px;
         height: 10px;
         background-color: lightsalmon;
         border-radius: 10px;
@@ -156,18 +160,7 @@ body{
         display: inline-block;
     }
 
-/*底部*/
-#footer{
-    clear: both;
-    width: 100%;
-    min-height: 4vh;
-    background-color:rgba(187,187,187,0.3);
-    padding:10px;
-    color: #fff;
-    text-align: center;
-    font-size: 18px;
-    display: none;
-}
+
 
 @media screen and (max-width: 800px){
     #player{
@@ -177,5 +170,23 @@ body{
     }
         #lyrics{
             display: none;
+        }
+}
+@media screen and (max-height: 700px){
+    #picMid{
+        width: 300px;
+        height: 300px;
+        transform: translateY(30%);
+        -webkit-transform: translateY(30%);
+    }
+    /*中心转动图片盒子*/
+        #picCenter{
+            width: 120px;
+            height: 120px;
+            transform: translateY(-100%);
+            -webkit-transform: translateY(-100%);
+        }
+        #ctrlBtn{
+            margin: 30px auto;
         }
 }
