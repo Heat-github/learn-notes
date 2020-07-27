@@ -108,12 +108,12 @@ function progressBar(){
     if((cw >= 800) && (aw > 450)){
         var crl = (pl*0.8*per)-6;//进度条圆点的位移距离
         g("bar1").style.width = pl*per*0.8 + "px";
-        g("circle1").style.transform = "translateX(" + crl +"px) translateY(175%)";
+        g("circle1").style.transform = "translateX(" + crl +"px";
     }
     else{
         var crl = 288*per-6;//进度条圆点的位移距离
         g("bar1").style.width = 288*per + "px";
-        g("circle1").style.transform = "translateX(" + crl +"px) translateY(175%)";
+        g("circle1").style.transform = "translateX(" + crl +"px";
     }
     if((ct == tl) && msc.paused ){
         g("play").style.display = "inline-block";
