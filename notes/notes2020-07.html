@@ -54,6 +54,7 @@
             <li><a href="#C19">19号笔记</a></li>
             <li><a href="#C23">23号笔记</a></li>
             <li><a href="#C24">24号笔记</a></li>
+            <li><a href="#C28">28号笔记</a></li>
             <li><a href="#Cfinal">总结</a></li>
             <li><a href="#Chref">链接伪类</a></li>
             <li><a href="#Clist">列表样式</a></li>
@@ -114,6 +115,11 @@
             <li><a href="#Storage">HTML Web存储</a></li>
             <li><a href="#SQL">HTML Web SQL</a></li>
             <li><a href="#Timing">定时跳转与刷新</a></li>
+            <li><a href="#jstime">js 定时函数</a></li>
+            <li><a href="#jsarray">js 数组对象</a></li>
+            <li><a href="#jQeach">jQ each遍历</a></li>
+            <li><a href="#jQcls">jQ 增加与删除类</a></li>
+            <li><a href="#jQon">jQ 事件绑定on</a></li>
         </ul>
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -886,10 +892,20 @@
             <p id="CAudio">HTML5音频Audio</p>
             <ul>
                 <li>HTML5 规定了在网页上嵌入音频元素的标准，即使用 &lt;audio&gt; 元素，双标签；</li>
-                <li>语法结构：&lt;audio controls&gt;&lt;source src="url" type="MIME类型"&gt;&lt;/audio&gt;，controls属性定义播放控件；</li>
+                <li>语法结构：&lt;audio controls&gt;&lt;source src="url" type="MIME类型"&gt;&lt;/audio&gt;，controls属性定义显示播放控件；</li>
                 <li>&lt;source&gt;定义媒体资源，但标签，可在 audio 标签内定义多个 source 标签；</li>
                 <li>&lt;audio&gt; 元素支持三种音频格式文件: MP3, Wav, 和 Ogg:;</li>
                 <li>音频格式的MIME类型:MP3--audio/mpeg，Ogg--audio/ogg，Wav--audio/wav；</li>
+                <li>defaultPlaybackRate 属性：设置或返回音频的默认播放速度；</li>
+                <li>playbackRate 属性：设置或返回音频的播放速度；</li>
+                <li>buffered 属性：返回表示音频已缓冲部分的 TimeRanges 对象。</li>
+                <li>paused 属性：设置或返回获取音频播放状态，返回 True 则为暂停状态；</li>
+                <li>duration 属性：设置或返回音频的总时长，单位为 s；</li>
+                <li>currentTime 属性：设置或返回正在播放的时长，单位为 s；</li>
+                <li>ended 属性：设置或返回音频播放是否结束；</li>
+                <li>muted 属性：设置或返回是否关闭声音；</li>
+                <li>volume 属性：设置或返回音频的音量</li>
+                <li>play() 和 pause() 方法分别控制音频的播放与暂停；</li>
             </ul>
         </div><hr />
 
@@ -1104,6 +1120,69 @@
                 <li>语法：&lt;meta http-equiv="refresh" content="time[;URL=url]"&gt;</li>
                 <li>time 是一个数值，表示刷新时间，单位为s</li>
                 <li>URL 可选，指定跳转页面的 URL 地址，不指定则本页面定时刷新</li>
+            </ul>
+        </div><hr>
+
+        <!-- 7月28号！！！ -->
+        <!-- 7月28号！！！ -->
+        <h3 id="C28">7月28号 周二</h3>
+        <p>今日关键词：这几天在做一个小 demo,
+            <a href="../others/audioPlayer.html" style="text-decoration: none;color: rgb(243, 80, 40);">网页端的播放器</a>,
+            过程艰难滴很，因为掌握的东西真正运用起来，感觉会无从下手，中途遇到无数的 bug，苦煞我也。不过，debug 的过程中也学到了不少实际应用中用到的一些的知识，稍微整理了一下，有些内容补充到了之前对应的笔记中。</p>
+        <div class="note_tag">
+            <p id="jstime">关于时间的一些时间函数</p>
+            <ul>
+                <li>定时函数 a = setTiomeout(func,nms) ：func时函数名（不包含括号），nms时数值，以毫秒计；</li>
+                <li>定时循环 a = window.setInterval(func,nms) ：func时函数名（不包含括号），nms时数值，以毫秒计；</li>
+                <li>clearTimeout(a) 和 clearINterval(a) 方法分别清除定时功能，a 为定时器名称；</li>
+            </ul>
+
+            <p id="jsarray">Array 对象的属性与方法</p>
+            <ul>
+                <li>length 属性：设置或返回数组元素的数目</li>
+                <li>prototype 属性：向数组添加属性，例：element.prototype.attr = value; 这样就给element 添加了attr 属性，属性值为 value</li>
+                <li>concat() 方法：连接两个数组，a1.concat(a2); a2 被连接到 a1 之后，连接多个需要嵌套使用</li>
+                <li>join() 方法：把数组的所有元素放入一个字符串（转化为字符串），例：a1.join(separator)，separator 可选参数，指定数组元素转化为字符串时的分隔符号，默认为逗号，如改为点作为指定 separator 为"."(变量要包含引号)。</li>
+                <li>pop() 和 shift() 方法：删除并返回数组的最后（第一）个元素；</li>
+                <li>push() 和 unshift() 方法：向数组的末尾（开头）添加一个或多个元素，并返回新的长度；</li>
+                <li>slice(start,end)：返回数组中指定范围的元素（项目），不改变原数组，不包含 end 位置的元素</li>
+                <li>splice(index,num,addItems)：删除元素，并向数组添加新元素；index 指定删除元素的起始索引，num 指定索引位置后被删除的元素个数，这些元素将被返回；addItems 指定在起始位置插入新的元素；</li>
+                <li>sport(sortby)：对数组进行排序，sortby 可选参数指定顺序，必须是函数名，默认按照字符编码的顺序进行（不是数值大小排序）。</li>
+                <li>toString() 和 toLacalString() 方法：均返回字符串，前者用半角逗号隔开，后者用本地符号隔开，如在中国地区则返回全角逗号隔开的字符串</li>
+                <li>toSource() 和 valueOf() 方法：分别返回数组对象的源代码和原始值。</li>
+            </ul>
+
+            <p id="jQeach">jQ 遍历函数</p>
+            <ul>
+                <li>jQ 的 each 方法：each(function(index,element){...})，遍历所选的所有元素并处理；回调函数时必选的；</li>
+                <li>index 是必需参数，向函数中传递遍历到的元素的索引，从 0 开始</li>
+                <li>element 是必需参数，表示遍历过程中正在处理的元素；</li>
+            </ul>
+
+            <p id="jQcls">jQ 增加或删除类</p>
+            <ul>
+                <li>jQ removeClass("cls1 cls2",function(index,curCls){...}) 方法：删除增加选定元素的一个或多个类，function 可选参数；</li>
+                <li>如果第一个参数为空则删除该元素的所有类；</li>
+                <li>使用 function 时 index是必选的，该参数指向被选定元素的索引值，传递到函数中；</li>
+                <li> function 中 curCls 是可选参数，指向被选元素的当前类名；</li>
+                <li>function 要返回类名（可返回多个）；个人见解：相当于 cls3 = function(index,curCls){...}，一般用于筛选符合特定条件的 cls3 或者筛选特定的元素进行删除类操作</li>
+                <li>jQ addClass("cls1 cls2") 方法：向选定元素添加一个或多个类；addClass() 方法也有 function 参数，用法一样；</li>
+            </ul>
+
+            <p id="jQon">jQ on、one、off函数</p>
+            <ul>
+                <li>$(selector).on(event,childSelector,data,function)：在被选元素及子元素上添加一个或多个事件处理程序</li>
+                <li>event：必需参数，向被选元素绑定一个或多个事件或命名空间，多个事件用空格分开</li>
+                <li>childSelector：可选参数，规定在指定的子元素上进行事件处理程序，没有这个参数则在被选元素自身上进行事件处理</li>
+                <li>data：可选参数，规定传递到函数的额外数据</li>
+                <li>function：可选参数，规定当事件发生时运行的函数</li>
+                <li>off() 方法：$("selector").off(event) 移除事件处理程序</li>
+                <li>one() 方法：如需添加只运行一次的事件然后移除，可使用 one() 方法替换 on() 方法</li>
+            </ul>
+
+            <p>其他知识点：</p>
+            <ul>
+                <li>eq() 方法：$("selector").eq(index)，返回带有被选元素的指定索引号(index)的元素；</li>
             </ul>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->

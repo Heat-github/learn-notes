@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="audioPlayer.css">
     <script src="audioPlayer.js"></script>
     <script src="../jquery-3.5.1.min.js"></script>
-    <script src="audioPlayerjQ.js"></script>
 </head>
 <body>
     <p id="back">
@@ -96,5 +95,20 @@
             </div>
         </div>
     </div>
+    <!-- jQuery -->
+    <script>
+        $.noConflict();
+        jQuery(document).ready(function($){
+            $("#play").click(function(){
+                playMusic();
+            });
+            $("#pause").click(function(){
+                playMusic();
+            });
+            $(window).resize(function(){
+                setSize();
+            });
+        });
+     </script>
 </body>
 </html>
