@@ -2,7 +2,34 @@ onload = function(){
     modeFunc();
     draw();
 };
+function addEvent(obj,event,fun){
+    if(obj.addEventListener){
+        obj.addEventListener(event,fun,false);
+    }else if(obj.attachEvent){
+        obj.attachEvent("on"+event,fun);
+    }
+}
 
+function g(name,type){
+    var x;
+    type = arguments[1] ? arguments[1] : "id";
+    if(type == "id"){
+        x = document.getElementById(name);
+        return x;
+    }
+    else if(type == "cls"){
+        x = document.getElementsByClassName(name);
+        return x;
+    }
+    else if(type == "tag"){
+        x = document.getElementsByTagName(name);
+        return x;
+    }
+    else if(type == "name"){
+        x = document.getElementsByName(name);
+        return x;
+    }
+}
 
 function modeFunc(){
     var time = new Date().getHours();
@@ -65,23 +92,23 @@ function darkMode(){
 }
 
 //元素拖动, 添加到目标元素的末尾
-/////////////////////////////////////////////////////////////////////|
-/////////////////////////////////////////////////////////////////////|
-function allowDrop(ev)                                      /////////|
-{                                                           /////////|
-	ev.preventDefault();                                    /////////|
-}                                                           /////////|
-                                                            /////////|
-function drag(ev)                                           /////////|
-{                                                           /////////|
-	ev.dataTransfer.setData("Text",ev.target.id);           /////////|
-}                                                           /////////|
-                                                            /////////|
-function drop(ev)                                           /////////|
-{                                                           /////////|
-	ev.preventDefault();                                    /////////|
-	var data = ev.dataTransfer.getData("Text");             /////////|
-	ev.target.appendChild(document.getElementById(data));   /////////|
-}                                                           /////////|
-/////////////////////////////////////////////////////////////////////|
-/////////////////////////////////////////////////////////////////////|
+/////////////////////////////////////////////////////////////////////////|
+/////////////////////////////////////////////////////////////////////////|
+    function allowDrop(ev)                                      /////////|
+    {                                                           /////////|
+        ev.preventDefault();                                    /////////|
+    }                                                           /////////|
+                                                                /////////|
+    function drag(ev)                                           /////////|
+    {                                                           /////////|
+        ev.dataTransfer.setData("Text",ev.target.id);           /////////|
+    }                                                           /////////|
+                                                                /////////|
+    function drop(ev)                                           /////////|
+    {                                                           /////////|
+        ev.preventDefault();                                    /////////|
+        var data = ev.dataTransfer.getData("Text");             /////////|
+        ev.target.appendChild(document.getElementById(data));   /////////|
+    }                                                           /////////|
+/////////////////////////////////////////////////////////////////////////|
+/////////////////////////////////////////////////////////////////////////|

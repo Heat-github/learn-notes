@@ -32,7 +32,7 @@
     </div><hr>
 
     <!--catalog开始标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
-    <div class="body_tag catalog">
+    <div id="catalog" class="body_tag catalog">
         <button type="button" class="catabutton">目录</button>
         <ul id="acatalog">
             <li><a href="#C02">2号笔记</a></li>
@@ -124,7 +124,7 @@
     </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
     <!--content开始标签！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
-    <div class="body_tag content">
+    <div id="content" class="body_tag content">
         <h3 id="Cintro">前言</h3>
         <p class="indent">经过一个月的学习，制作简单的网页以及网页之间的互转已经不是问题，同时也做了一个可以实时更新的
             <a href="http://www.alexjenny.cn">个人网站</a>，将自己制作的学习笔记html上传，随时随地可以温习。</p>
@@ -1183,6 +1183,8 @@
             <p>其他知识点：</p>
             <ul>
                 <li>eq() 方法：$("selector").eq(index)，返回带有被选元素的指定索引号(index)的元素；</li>
+                <li>height() 方法：获取被选元素的高度；</li>
+                <li>$(window).scrollTop() 方法：返回滚动高度即滚动到位置距离浏览器顶部的高度；</li>
             </ul>
         </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->

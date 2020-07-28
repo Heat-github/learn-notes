@@ -14,5 +14,19 @@ $.noConflict();    //避免与其他语言的 $ 快捷方式冲突
         $("#acatalog").slideDown(200);
         }
         else {$("#acatalog").slideToggle(200);}
-    });s
+    });
+    // $(window).scroll(function(){
+    //     var scrollHeight = $(window).scrollTop();
+    //     var winsowHeight = $(window).height();
+    //     console.log(scrollHeight);
+    //     var cataHeight = $("#catalog").height();
+    //     var cententHeight = $("#content").height();
+    //     console.log(cataHeight,cententHeight);
+    //     var value = scrollHeight-cataHeight+winsowHeight;
+    //     if(scrollHeight > cataHeight-winsowHeight+52 && scrollHeight < cententHeight + 52 -cataHeight){
+    //         $("#catalog").css("transform","translateY(" + value + "px");
+    //     }else if(scrollHeight <= cataHeight-winsowHeight){
+    //         $("#catalog").css("transform","0px");
+    //     }
+    // });
     });
