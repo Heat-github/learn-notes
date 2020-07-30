@@ -21,7 +21,7 @@ body{
     
     h3{
         font-size: 18px;
-        color: seagreen;
+        color: rgb(150, 245, 191);
         font-weight: 600;}
     h3+p{text-align: justify;}
 .body_tag{
@@ -255,23 +255,71 @@ img.gobottom{
     color: rgb(255, 255, 255);
     text-align: center;}
 
-/*------------------------2字符缩减----------------------*/
-/*------------------------2字符缩减----------------------*/
-
-
+/*--------------------------Grid-------------------------*/
+/*--------------------------Grid-------------------------*/
+.grid{
+    width: 60%;
+    display: grid;
+    gap:5px;
+    grid-template-areas:/*设定区域名*/
+                        "a b c d"
+                        "e f g h"
+                        "i j k l";
+    grid-template-columns: 100px 1fr 3fr 100px;
+    translate: 2;}
+    .grid p{
+        margin: 0;
+        padding: 0;
+        display:block;
+        line-height: 30px;
+        opacity: 0.6;
+        text-align: center;
+        cursor: pointer;
+        color:white;
+    }
+    .grid p:hover{opacity: 1;}
+    .grid p:nth-child(1){
+        background-color: rgb(255, 154, 188);
+    }
+    .grid p:nth-child(2){
+        background-color: rgb(195, 148, 255);
+        grid-area: b;
+    }
+    .grid p:nth-child(3){
+        background-color: rgb(156, 149, 255);
+    }
+    .grid p:nth-child(4){
+        background-color: rgb(90, 153, 255);
+    }
+    .grid p:nth-child(5){
+        background-color: rgb(57, 62, 150);
+    }
+    .grid p:nth-child(6){
+        background-color: rgb(44, 224, 101);
+    }
+    .grid p:nth-child(7){
+        background-color: rgb(218, 213, 79);
+    }
+    .grid p:nth-child(8){
+        background-color: rgb(172, 186, 123);
+    }
+    .grid p:nth-child(9){
+        background-color: rgb(233, 159, 62);
+    }
+    .grid p:nth-child(10){
+        background-color: rgb(9, 145, 165);
+    }
+    .grid p:nth-child(11){
+        background-color: rgb(46, 28, 34);
+    }
+    .grid p:nth-child(12){
+        background-color: rgb(46, 201, 43);
+    }
+    
 
 
 
 /*！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！ */
 /*----------------------手机显示样式-----------------------*/
@@ -365,6 +413,9 @@ img.gobottom{
         width: 100%;
         border:2px solid #EE872A;
     }
-
+.grid{
+    grid-gap:1px;
+    grid-template-columns: 60px 60px 70px 100px;
+}
 
 }

@@ -15,6 +15,8 @@ $.noConflict();    //避免与其他语言的 $ 快捷方式冲突
         }
         else {$("#acatalog").slideToggle(200);}
     });
+    $(".grid p:nth-child(1)").click(function(){$(".grid").css("grid-auto-flow","column");});
+    $(".grid p:nth-child(2)").click(function(){$(".grid").css("grid-auto-flow","row");});
     // $(window).scroll(function(){
     //     var scrollHeight = $(window).scrollTop();
     //     var winsowHeight = $(window).height();

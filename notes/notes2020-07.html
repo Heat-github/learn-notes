@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="utf-8">
     <title>HTML | 学习笔记2020-07</title>
     <meta name="作者" content="Alex Wong">
-
     <meta name="描述" content="用于记笔记，免费分享">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="notes.css">
@@ -17,10 +17,10 @@
 <body id="Cbody">
     <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
     <a href="#Cfooter"><img class="gobottom" src="../picture/back-to-top.jpg" alt="去到底部" /></a>
-    <img class="darkmode" onclick="darkMode()" src="../picture/夜间模式.jpg" alt="夜间模式"/>
-    
+    <img class="darkmode" onclick="darkMode()" src="../picture/夜间模式.jpg" alt="夜间模式" />
+
     <div class="topmenu">
-        <a href="alex-index.html"  target="_self">首页</a>
+        <a href="alex-index.html" target="_self">首页</a>
         <a href="notes2020-06.html">6月</a>
         <a href="notes2020-07.html" target="_self" class="active">2020年7月</a>
         <a href="notes2020-08.html">8月</a>
@@ -28,8 +28,9 @@
         <a href="notes2020-10.html">10月</a>
         <a href="notes2020-11.html">11月</a>
         <a href="notes2020-12.html">12月</a>
-        <a href="notes2021-01.html">2021年</a> 
-    </div><hr>
+        <a href="notes2021-01.html">2021年</a>
+    </div>
+    <hr>
 
     <!--catalog开始标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     <div id="catalog" class="body_tag catalog">
@@ -55,6 +56,7 @@
             <li><a href="#C23">23号笔记</a></li>
             <li><a href="#C24">24号笔记</a></li>
             <li><a href="#C28">28号笔记</a></li>
+            <li><a href="#C30">30号笔记</a></li>
             <li><a href="#Cfinal">总结</a></li>
             <li><a href="#Chref">链接伪类</a></li>
             <li><a href="#Clist">列表样式</a></li>
@@ -120,15 +122,20 @@
             <li><a href="#jQeach">jQ each遍历</a></li>
             <li><a href="#jQcls">jQ 增加与删除类</a></li>
             <li><a href="#jQon">jQ 事件绑定on</a></li>
+            <li><a href="#vscode">VS Code扩展插件</a></li>
+            <li><a href="#grid">Grid布局</a></li>
         </ul>
-    </div>  <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
+    </div>
+    <!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
     <!--content开始标签！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
     <div id="content" class="body_tag content">
         <h3 id="Cintro">前言</h3>
         <p class="indent">经过一个月的学习，制作简单的网页以及网页之间的互转已经不是问题，同时也做了一个可以实时更新的
             <a href="http://www.alexjenny.cn">个人网站</a>，将自己制作的学习笔记html上传，随时随地可以温习。</p>
-        <p class="indent">接下来我主要投入到CSS的样式学习中，将网页设计成自己想要看到的样子，其实之前刚申请域名建立网页时就已经迫不及待提前学习了一部分样式去修饰自己的网页了，所以html结构的学习才会这么拖拉，当然也是如此，我对CSS的学习才会更有兴趣，类似动态交互和音频处理等CSS样式还未设计分毫呢。</p>
+        <p class="indent">
+            接下来我主要投入到CSS的样式学习中，将网页设计成自己想要看到的样子，其实之前刚申请域名建立网页时就已经迫不及待提前学习了一部分样式去修饰自己的网页了，所以html结构的学习才会这么拖拉，当然也是如此，我对CSS的学习才会更有兴趣，类似动态交互和音频处理等CSS样式还未设计分毫呢。
+        </p>
         <hr>
 
         <!--7月2号！！！-->
@@ -137,20 +144,21 @@
         <p>今日关键词：链接状态、列表样式、元素定位-</p>
         <div class="note_tag">
             <p id="Chref">链接有四种状态（伪类）：</p>
-                <ul>
-                    <li>a:link------正常状态，没有访问过</li>
-                    <li>a:visited---已访问过的链接</li>
-                    <li>a:hover-----鼠标停留在链接上时</li>
-                    <li>a:active----点击链接的那一刻</li>
-                    <li><strong>注意：</strong>在CSS定义中，a:hover 必须被置于 a:link 和 a:visited 之后，a:active 必须被置于 a:hover之后，才是有效的</li>
-                </ul>
+            <ul>
+                <li>a:link------正常状态，没有访问过</li>
+                <li>a:visited---已访问过的链接</li>
+                <li>a:hover-----鼠标停留在链接上时</li>
+                <li>a:active----点击链接的那一刻</li>
+                <li><strong>注意：</strong>在CSS定义中，a:hover 必须被置于 a:link 和 a:visited 之后，a:active 必须被置于 a:hover之后，才是有效的</li>
+            </ul>
             <p id="Clist">列表样式(ul、ol、li)：</p>
-                <ul>
-                    <li>list-style-type：指定列表标记类型<br>
+            <ul>
+                <li>list-style-type：指定列表标记类型<br>
                     ul：circle空心圆、disc实心圆点、square正方形、none不设定格式；<br>
-                    ol：roman罗马数字、lapha字母，前缀lower时小写、upper时大写；Cjk-ideographic中文大写；decimal阿拉伯数字；decimal-leading-zero带零的数字；lower-greek希腊字母；</li>
-                    <li>list-style-position：inside和outside属性设置标记类型在border的内外。</li>
-                    <li>list-style-image：自定义标记图像<br>
+                    ol：roman罗马数字、lapha字母，前缀lower时小写、upper时大写；Cjk-ideographic中文大写；decimal阿拉伯数字；decimal-leading-zero带零的数字；lower-greek希腊字母；
+                </li>
+                <li>list-style-position：inside和outside属性设置标记类型在border的内外。</li>
+                <li>list-style-image：自定义标记图像<br>
                     list-style-image:url("URL")，兼容性问题可以使用no-repeat的background-image代替：
                     <p style="display: block;">
                         li.class<br />
@@ -159,29 +167,32 @@
                         background-repeat:no-repeat;<br />
                         background-position:0px 5px; <br />
                         padding-left:14px;<br />
-                        }</p></li>
-                </ul>
+                        }</p>
+                </li>
+            </ul>
             <p id="Cpstn">Position定位：</p>
-                <ul>
-                    <li>static：HTML 元素的默认值，即没有定位，遵循正常的文档流对象。</li>
-                    <li>absolute：元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于&lt;html&gt;（而不像fixed相对窗口定位），使元素的位置与文档流无关，因此不占据空间；</li>
-                    <li>fixed：元素的位置相对于浏览器窗口是固定位置，如右下角的回顶部；</li>
-                    <li>relative：移动相对定位元素，但它原本所占的空间不会改变，常被用来作为绝对定位元素的容器块；</li>
-                    <li>sticky：元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位，如顶部目录；</li>
-                    <li>z-index：重叠元素用图层属性设置哪部分内容在上层显示，数值大图层在上；</li>
-                    <li>cursor：设定鼠标停在其定义的内容上时鼠标光标的变化；</li><br />
-                    <img class="imggroup" src="../picture/cursor属性.jpg" alt="光标">
-                    <li>overflow：定义元素溢出时显示的方式：<br>
-                        <ul style="list-style-type: none;">
-                            <li>auto：如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容；</li>
-                            <li>hidde：内容会被修剪；</li>
-                            <li>visib：默认值，溢出仍然显示；</li>
-                            <li>scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容；</li>
-                            <li>inherit：继承父属性。</li>
-                        </ul>
-                    </li>
-                </ul>
-        </div><hr />
+            <ul>
+                <li>static：HTML 元素的默认值，即没有定位，遵循正常的文档流对象。</li>
+                <li>absolute：元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于&lt;html&gt;（而不像fixed相对窗口定位），使元素的位置与文档流无关，因此不占据空间；
+                </li>
+                <li>fixed：元素的位置相对于浏览器窗口是固定位置，如右下角的回顶部；</li>
+                <li>relative：移动相对定位元素，但它原本所占的空间不会改变，常被用来作为绝对定位元素的容器块；</li>
+                <li>sticky：元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位，如顶部目录；</li>
+                <li>z-index：重叠元素用图层属性设置哪部分内容在上层显示，数值大图层在上；</li>
+                <li>cursor：设定鼠标停在其定义的内容上时鼠标光标的变化；</li><br />
+                <img class="imggroup" src="../picture/cursor属性.jpg" alt="光标">
+                <li>overflow：定义元素溢出时显示的方式：<br>
+                    <ul style="list-style-type: none;">
+                        <li>auto：如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容；</li>
+                        <li>hidde：内容会被修剪；</li>
+                        <li>visib：默认值，溢出仍然显示；</li>
+                        <li>scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容；</li>
+                        <li>inherit：继承父属性。</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <hr />
 
         <!--7月3号！！！-->
         <!--7月3号！！！-->
@@ -210,8 +221,11 @@
             </ul>
             <p id="Cdis">display显示和visibility可见性：</p>
             <ul>
-                <li>display：inline内联元素，block-块元素，inline-block-内联块元素，表现为同行显示并可修改宽高内外边距等属性一般用于&lt;li&gt;元素，none-隐藏元素且不占用空间</li>
-                <li>visibility：hidden-隐藏元素但占用空间，collapse-平时元素的表现与 visibility: hidden 一样，也即其会占用空间。但如果该元素是与 table 相关的元素，例如 table row、table column、table column group、table column group 等，其表现却跟 display: none 一样，也即其占用的空间会释放。</li>
+                <li>display：inline内联元素，block-块元素，inline-block-内联块元素，表现为同行显示并可修改宽高内外边距等属性一般用于&lt;li&gt;元素，none-隐藏元素且不占用空间
+                </li>
+                <li>visibility：hidden-隐藏元素但占用空间，collapse-平时元素的表现与 visibility: hidden 一样，也即其会占用空间。但如果该元素是与 table 相关的元素，例如
+                    table row、table column、table column group、table column group 等，其表现却跟 display: none 一样，也即其占用的空间会释放。
+                </li>
             </ul>
             <p id="Csele">组合选择符：在 CSS3 中包含了四种组合方式----</p>
             <ul>
@@ -220,7 +234,8 @@
                 <li>相邻兄弟选择器：用 + 分隔，选择<strong style="color: red;">紧接</strong>在指定元素后的元素，且二者父元素相同。</li>
                 <li>普通兄弟选择器：用 ~ 分隔，选取所有指定元素之后的相邻兄弟元素。</li>
             </ul>
-        </div><hr />
+        </div>
+        <hr />
 
         <!-- 7月4号！！！ -->
         <!-- 7月4号！！！ -->
@@ -249,33 +264,33 @@
                         <div class="droptiptext">
                             <fieldset>
                                 <p><br />
-                                /*----------1----------*/<br />
-                                .dropdown {<br />
+                                    /*----------1----------*/<br />
+                                    .dropdown {<br />
                                     position:relative;<br />
                                     dispaly:inline-block;<br />
                                     ......;<br />
-                                }<br />
-                                /*----------2----------*/<br />
-                                .dropbutton {<br />
+                                    }<br />
+                                    /*----------2----------*/<br />
+                                    .dropbutton {<br />
                                     background:......;<br />
                                     color:.....;<br />
                                     ......;<br />
-                                }<br />
-                                /*----------3----------*/<br />
-                                .dropcontent {<br />
+                                    }<br />
+                                    /*----------3----------*/<br />
+                                    .dropcontent {<br />
                                     dispaly:none;<br />
                                     position:absolute;<br />
                                     ......;<br />
-                                }<br />
-                                /*----------4----------*/<br />
-                                .dropdown:hover .dropcontent{<br />
+                                    }<br />
+                                    /*----------4----------*/<br />
+                                    .dropdown:hover .dropcontent{<br />
                                     display: block;<br />
-                                }<br />
-                                /*----------5----------*/<br />
-                                .dropdown:hover .dropbutton{<br />
+                                    }<br />
+                                    /*----------5----------*/<br />
+                                    .dropdown:hover .dropbutton{<br />
                                     ......;}<br />
-                                .dropcontent a {......;}<br />
-                                .dropcontent a:hover{<br />
+                                    .dropcontent a {......;}<br />
+                                    .dropcontent a:hover{<br />
                                     ......;}<br />
 
                                 </p>
@@ -310,7 +325,8 @@
         <!-- 7月5号！！！ -->
         <h3 id="C05">7月5号 周日</h3>
         <p>今日关键词：计数器、JavaScript初始认识、JS输出函数。<br />
-        今天最大收获时写了第一个JS脚本，实现了目录在点击时的展开与隐藏，主要方法时在用if语句判断是否是手机端的情况下，通过使用element=getElementById("demo")方法对指定元素的事件进行响应，再用element.style.display.match("none")方法来判断当前目录是否隐藏，如果隐藏通过赋值方式(element.style.display = "block")来设置展开，否则赋值为none可实现隐藏。</p>
+            今天最大收获时写了第一个JS脚本，实现了目录在点击时的展开与隐藏，主要方法时在用if语句判断是否是手机端的情况下，通过使用element=getElementById("demo")方法对指定元素的事件进行响应，再用element.style.display.match("none")方法来判断当前目录是否隐藏，如果隐藏通过赋值方式(element.style.display
+            = "block")来设置展开，否则赋值为none可实现隐藏。</p>
         <div class="note_tag">
             <p id="Ccounter">计数器--对某一属性值设置变量增量计数：</p>
             <ul>
@@ -318,7 +334,8 @@
                 <li>counter-increment:section--为section变量计数递增（+1）；</li>
                 <li>content:"x""y""..."--插入生成或指定的内容；指定内容需要引号包围，函数生成内容则不需要；</li>
                 <li>counter(section)--将section变量的数值添加到元素中；</li>
-                <li>counters(section,"string"[,list-style-type])--嵌套计数，遇到同名父子标签则自动嵌套计数，string是项目符之间的分隔符，list-style-type是计数后显示的符号类型，默认是阿拉伯数字；</li>
+                <li>counters(section,"string"[,list-style-type])--嵌套计数，遇到同名父子标签则自动嵌套计数，string是项目符之间的分隔符，list-style-type是计数后显示的符号类型，默认是阿拉伯数字；
+                </li>
             </ul>
             <p id="Cjs">JavaScript是脚本语言，是插入HTML的轻量级编程语言，基本介绍与功能有：</p>
             <ul>
@@ -368,7 +385,8 @@
                 <li>onload事件：浏览器已经完成页面的加载时。</li>
                 <li>事件触发时的处理：&lt;element event="js program"&gt;，即针对某一元素发生某种事件时执行js程序；</li>
             </ul>
-        </div><hr />
+        </div>
+        <hr />
 
         <!-- 7月6号！！！ -->
         <!-- 7月6号！！！ -->
@@ -412,7 +430,8 @@
                 <li>元字符：\d查找数字，\s查找空白字符，\b匹配单词边界，\uxxxx查找十六进制数xxxx规定的Unicode字符；</li>
                 <li>量词：n+ 匹配任何包含至少一个 n 的字符串，n* 匹配任何包含零个或多个 n 的字符串，n? 匹配任何包含零个或一个 n 的字符串；</li>
                 <li>search方法：str1.search(str2)，查找str2子字符串在str1字符串中是否存在并返回子字符串的起始位置，若不存在则返回-1；str2可以是正则表达式</li>
-                <li>replace方法：str1.replace(str2,str3)，查找str2子字符串在str1字符串中是否存在并将str2替换为str3（str1中存在str2才替换），str2可以是正则表达式；</li>
+                <li>replace方法：str1.replace(str2,str3)，查找str2子字符串在str1字符串中是否存在并将str2替换为str3（str1中存在str2才替换），str2可以是正则表达式；
+                </li>
                 <li>test方法：str1.test(str2)，检测str2字符串是否包含str1，如果字符串中含有匹配的文本，则返回 true，否则返回 false，str1可以是正则表达式；</li>
                 <li>exec方法：str1.exec(str2)，用于检索str2字符串是否包含str1，如果有则返回存放匹配结果的数组，否则返回null，str1可以是正则表达式；</li>
             </ul>
@@ -423,25 +442,26 @@
                 <li>try语句：对程序进行测试，可用于调试或者对用户的输入进行判断，后者一般会有自定义错误信息，需要用到throw语句，其程序骨架如下：<br />
                     <fieldset>
                         <legend>try语句程序骨架</legend>
-                            <div>
-                                try{<br />
-                                //异常抛出与错误信息定义<br />
-                                //自定义错误信息用throw<br />
-                                if() throw "err1";<br />
-                                if() throw "errr2";<br />
-                                else() throw "err3";<br />
-                                }<br />
-                                catch(err){<br />
-                                    ...;     //异常处理<br />
-                                }<br />
-                                finally{<br />
-                                ...;     //结束处理<br />
-                                }<br />
-                            </div>
+                        <div>
+                            try{<br />
+                            //异常抛出与错误信息定义<br />
+                            //自定义错误信息用throw<br />
+                            if() throw "err1";<br />
+                            if() throw "errr2";<br />
+                            else() throw "err3";<br />
+                            }<br />
+                            catch(err){<br />
+                            ...; //异常处理<br />
+                            }<br />
+                            finally{<br />
+                            ...; //结束处理<br />
+                            }<br />
+                        </div>
                     </fieldset>
                 </li>
             </ul>
-        </div><hr />
+        </div>
+        <hr />
 
         <!-- 7月7号!!! -->
         <!-- 7月7号!!! -->
@@ -451,18 +471,24 @@
             <p id="Cnote">JavaScript中需要注意的点：</p>
             <ul>
                 <li>变量提升：函数声明和变量声明总是会被解释器"提升"到方法体的最顶部，而初始化不会被提升；</li>
-                <li>严格模式：使用字面里"use strict"，使用严格模式后，不能使用未声明的变量，不允许删除变量或对象，不允许删除函数，不允许变量重名，不允许使用八进制，不允许使用转义字符，不允许对只读属性赋值，不允许对一个使用getter方法读取的属性进行赋值，不允许删除一个不允许删除的属性，变量名不能使用"eval"和"arguments"字符串，新增一些保留关键字。</li>
+                <li>严格模式：使用字面里"use
+                    strict"，使用严格模式后，不能使用未声明的变量，不允许删除变量或对象，不允许删除函数，不允许变量重名，不允许使用八进制，不允许使用转义字符，不允许对只读属性赋值，不允许对一个使用getter方法读取的属性进行赋值，不允许删除一个不允许删除的属性，变量名不能使用"eval"和"arguments"字符串，新增一些保留关键字。
+                </li>
                 <li>常见的使用误区：浮点型数据精确度很难确定，如0.1+0.2=0.30000000000000004，因此在JavaScript中0.1+0.2!=0.3；可用整数乘除法解决大部分问题；</li>
             </ul>
             <p id="Cjsform">JavaScript表单：</p>
             <ul>
                 <li>常见验证内容：表单数据是否为空发？email地址是否正确？日期是否正确？输入内容是否为数字类型</li>
-                <li>获取表单内容的方法：document.forms["myForm"]["fname"].value，myForm和fname分别是form标签和表单字段标签(如input)name属性的值，对获取的值判断即可作验证；</li>
+                <li>获取表单内容的方法：document.forms["myForm"]["fname"].value，myForm和fname分别是form标签和表单字段标签(如input)name属性的值，对获取的值判断即可作验证；
+                </li>
                 <li>表单自动验证：在表单字段中使用required属性定义该字段必需获取有效信息（直接在开始标签中声明required或者required="required"，在严格模式中只能使用后者定义）；</li>
-                <li>表单字段的其他属性：<br />disabled定义输入的元素不可用；<br />max和min分别定义输入元素的最大最小值；<br />pattern定义输入值的模式；type规定输入元素的类型；</li>
-                <li>选择特定属性的伪类选择器：<br />:disabled选取属性为"disabled"属性的input元素；<br />:valid和:invalid分别选择有效和无效的input元素；<br />:required和:optional分别选取有和没有required属性的input元素；<br /></li>
+                <li>表单字段的其他属性：<br />disabled定义输入的元素不可用；<br />max和min分别定义输入元素的最大最小值；<br />pattern定义输入值的模式；type规定输入元素的类型；
+                </li>
+                <li>选择特定属性的伪类选择器：<br />:disabled选取属性为"disabled"属性的input元素；<br />:valid和:invalid分别选择有效和无效的input元素；<br />:required和:optional分别选取有和没有required属性的input元素；<br />
+                </li>
             </ul>
-        </div><hr />
+        </div>
+        <hr />
 
         <!-- 7月8号！！！ -->
         <!-- 7月8号！！！ -->
@@ -473,7 +499,10 @@
             <ul>
                 <li>约束验证DOM（Document Object Model）方法：<br />
                     checkValidity()：如果 input 元素中的数据是合法的返回 true，否则返回 false；<br />
-                    setCustomValidity()：设置 input 元素的 validationMessage 属性，用于自定义错误提示信息的方法。使用 setCustomValidity 设置了自定义提示后，validity.customError 就会变成true，则 checkValidity 总是会返回false。如果要重新判断需要取消自定义提示，方式有：setCustomValidity('') 、setCustomValidity(null)、 setCustomValidity(undefined)；
+                    setCustomValidity()：设置 input 元素的 validationMessage 属性，用于自定义错误提示信息的方法。使用 setCustomValidity
+                    设置了自定义提示后，validity.customError 就会变成true，则 checkValidity
+                    总是会返回false。如果要重新判断需要取消自定义提示，方式有：setCustomValidity('') 、setCustomValidity(null)、
+                    setCustomValidity(undefined)；
                 </li>
                 <li>约束验证DOM属性：<br />
                     validity：布尔值属性，返回input输入值是否合法；<br />
@@ -492,7 +521,8 @@
                     valid：如果元素的值是合法的，则返回true；
                 </li>
             </ul>
-        </div><hr />
+        </div>
+        <hr />
 
         <!-- 7月9号！！！ -->
         <!-- 7月9号！！！ -->
@@ -500,31 +530,35 @@
         <p>今日关键词：var、let、const，void关键字：</p>
         <div class="note_tag">
             <p id="Cvar">var关键字：用于定义变量：</p>
-                <ul>
-                    <li>var关键字声明的变量不具备块级作用域的特性（如函数内定义的变量），在{}外仍能被访问到；</li>
-                    <li>var关键字声明的变量在任何地方均可修改；</li>
-                </ul>
+            <ul>
+                <li>var关键字声明的变量不具备块级作用域的特性（如函数内定义的变量），在{}外仍能被访问到；</li>
+                <li>var关键字声明的变量在任何地方均可修改；</li>
+            </ul>
             <p id="Clet">let关键字：声明变的量仅在let命令所在的代码块有效：</p>
-                <ul>
-                    <li>在{}内let定义的变量，是局部作用域，在{}外不会能访问；</li>
-                    <li>在函数体或代码块外使用let命令，其作用域是全局的；</li>
-                    <li>在相同作用域或块级作用域中，let关键字不能修改let、var关键字声明的变量，var关键字也不能重置let关键字声明的变量；</li>
-                    <li>let命令声明的变量也具有变量提升的特性；</li>
-                </ul>
+            <ul>
+                <li>在{}内let定义的变量，是局部作用域，在{}外不会能访问；</li>
+                <li>在函数体或代码块外使用let命令，其作用域是全局的；</li>
+                <li>在相同作用域或块级作用域中，let关键字不能修改let、var关键字声明的变量，var关键字也不能重置let关键字声明的变量；</li>
+                <li>let命令声明的变量也具有变量提升的特性；</li>
+            </ul>
             <p id="Cconst">const关键字：定义一个或多个常量：</p>
-                <ul>
-                    <li>声明时必须初始化，且初始化之后不能修改；</li>
-                    <li>const 定义常量的值不能通过再赋值修改，也不能再次声明；</li>
-                    <li>使用 const 定义的对象或者数组，其实是可变的；<br />在常量对象中，仅能修改属性的值或者添加属性，而不能对整个常量对象重新赋值；<br />在常量数组中，可以用索引修改元素或者添加元素，不能对常量数组重新赋值。</li>
-                </ul>
+            <ul>
+                <li>声明时必须初始化，且初始化之后不能修改；</li>
+                <li>const 定义常量的值不能通过再赋值修改，也不能再次声明；</li>
+                <li>使用 const
+                    定义的对象或者数组，其实是可变的；<br />在常量对象中，仅能修改属性的值或者添加属性，而不能对整个常量对象重新赋值；<br />在常量数组中，可以用索引修改元素或者添加元素，不能对常量数组重新赋值。
+                </li>
+            </ul>
             <p id="Cvoid">void关键字：计算表达式但是不返回值</p>
             <ul>
-                <li>语法结构：<br />void func()<br />javascript:void func()<br />或者：<br />void(func())<br />javascript:void(func())</li>
+                <li>语法结构：<br />void func()<br />javascript:void
+                    func()<br />或者：<br />void(func())<br />javascript:void(func())</li>
                 <li>&lt;a href="javascript:void(0)"&gt;&lt;/a&gt;：定义死链接，点击不会有任何反应；</li>
                 <li>&lt;a href="javascript:void(alert())"&gt;&lt;/a&gt;：弹出警告框；</li>
                 <li>a = void ( b = 5, c = 7 )：a返回undefined，但b,c正常赋值；</li>
             </ul>
-        </div><hr />
+        </div>
+        <hr />
 
         <!-- 7月10号！！！ -->
         <!-- 7月10号！！！ -->
@@ -551,16 +585,17 @@
             <p id="CJSFunc">JavaScript函数的知识点：</p>
             <ul>
                 <li>ES5函数中参数会默认设置为undefined；ES6函数可以自带参数；</li>
-                <li>arguments对象：包含了函数调用的参数数组；arguments是对象类型，属性为0到n以及callee，n为实参的个属，0到n的值是顺序所对应的实参，而callee的值是函数本身，如arguments.callee(n-1)即为函数内调用本身，常用于迭代；</li>
+                <li>arguments对象：包含了函数调用的参数数组；arguments是对象类型，属性为0到n以及callee，n为实参的个属，0到n的值是顺序所对应的实参，而callee的值是函数本身，如arguments.callee(n-1)即为函数内调用本身，常用于迭代；
+                </li>
                 <li>this关键字：指向调用函数的当前对象；函数没有被自身的对象调用时 this 的值就会变成全局对象[Object Window]；</li>
                 <li>闭包：能够读取其他函数内部变量的函数；（！！！！！！！！！没搞懂！！！！！！！！！）</li>
                 <li>prototype属性：允许向函数添加属性和方法；存在指向关系，创建实例时不会重新复制一遍，节省空间；</li>
                 <li>在一个函数内创建多个方法或属性的方式：<br />
                     function myFunction(var1,var2){...};<br />
                     myFunction.prototype={<br />
-                        &nbsp;&nbsp;proType1:function(){...}<br />
-                        &nbsp;&nbsp;proType2:function(){...}<br />
-                        &nbsp;&nbsp;......<br />
+                    &nbsp;&nbsp;proType1:function(){...}<br />
+                    &nbsp;&nbsp;proType2:function(){...}<br />
+                    &nbsp;&nbsp;......<br />
                     }<br />
                     var cls1 = new myFunction(var1,var2);<br />
                     //此时可直接引用proType1或proType2属性<br />
@@ -573,9 +608,9 @@
             <p id="CDOM">文档对象模型：当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。</p>
             <ul>
                 <li>查找 HTML 元素：<br />
-                通过ID名查找元素：document. getElementById("idname")；<br />
-                通过标签名查找对象：document. getElementsByTagName("tagname")；<br />
-                通过类名查找元素：document. getElementsByClassName("classname")。</li>
+                    通过ID名查找元素：document. getElementById("idname")；<br />
+                    通过标签名查找对象：document. getElementsByTagName("tagname")；<br />
+                    通过类名查找元素：document. getElementsByClassName("classname")。</li>
             </ul>
             <p>HTML DOM 的作用：</p>
             <ul>
@@ -584,14 +619,15 @@
                 <li>改变CSS样式：document.getElementById(id).style. property="新样式"；</li>
                 <li><a href="#Cevent" style="text-decoration: none;">事件响应与处理</a></li>
                 <li>事件监听，创建事件句柄：addEventListener() 方法<br />
-                语法结构：element.addEventListener(event, function, useCapture);<br />
-                event：事件类型，不要加on前缀；<br />
-                function：函数名，不能加后缀()；<br />
-                useCapture：参数是个布尔值用于描述事件是冒泡还是捕获，该参数是可选的。<br /></li>
+                    语法结构：element.addEventListener(event, function, useCapture);<br />
+                    event：事件类型，不要加on前缀；<br />
+                    function：函数名，不能加后缀()；<br />
+                    useCapture：参数是个布尔值用于描述事件是冒泡还是捕获，该参数是可选的。<br /></li>
                 <li>移除事件句柄：removeEventListener() 方法，用于移除由 addEventListener() 方法添加的事件句柄。</li>
                 <li>IE 8 及更早版本的addEventListener() 方法需要用attachEvent()方法代替，此时事件类型中on前缀是必须的。</li>
             </ul>
-        </div><hr />
+        </div>
+        <hr />
 
         <!-- 7月12号！！！ -->
         <!-- 7月12号！！！ -->
@@ -629,7 +665,8 @@
                 <li>NodeList 与 HTMLCollection 都有 length 属性；</li>
                 <li>NodeList 与 HTMLCollection 都无法使用数组的方法： valueOf(), pop(), push(), 或 join() 。</li>
             </ul>
-        </div><hr />
+        </div>
+        <hr />
 
         <!-- 7月13号！！！ -->
         <!-- 7月13号！！！ -->
@@ -638,10 +675,12 @@
         <div class="note_tag">
             <p id="CjQbrief">jQuery简介--轻量级的"写的少，做的多"的JavaScript函数库:</p>
             <ul>
-                <li>功能：HTML 元素选取、HTML 元素操作、CSS 操作、HTML 事件函数、JavaScript 特效和动画、HTML DOM 遍历和修改、AJAX、Utilities、jQuery还提供了大量的插件；</li>
+                <li>功能：HTML 元素选取、HTML 元素操作、CSS 操作、HTML 事件函数、JavaScript 特效和动画、HTML DOM
+                    遍历和修改、AJAX、Utilities、jQuery还提供了大量的插件；</li>
                 <li>优势：jQuery 是目前最流行的 JS 框架，而且提供了大量的扩展，兼容于所有主流浏览器；</li>
                 <li>jQuery安装：<br>
-                    下载：从 <a href="https://jquery.com/download" style="text-decoration: none;"> jquery.com </a>下载 jQuery 库，将下载的文件放在网页的同一目录下，就可以使用jQuery；<br />
+                    下载：从 <a href="https://jquery.com/download" style="text-decoration: none;"> jquery.com </a>下载 jQuery
+                    库，将下载的文件放在网页的同一目录下，就可以使用jQuery；<br />
                     网页添加：从 CDN（内容分发网络）中载入 jQuery, 如从 Google、Staticfile CDN、百度、又拍云、新浪、谷歌和微软的服务器 中加载 jQuery；</li>
                 <li>引用：通过&lt;script src="jquery-3.5.1.min.js"&gt;&lt;/script&gt;引用；</li>
             </ul>
@@ -666,7 +705,7 @@
                 <li>#id选择器：$("#idName")，如$("#test")，选择id="test"的元素；</li>
                 <li>.class选择器：$(".className")，如$(".test")，选择class="test"的元素；</li>
                 <li>更多选择器语法：<br /><br />
-                <img class="imggroup" src="../picture/jQuery选择器.jpg" alt="选择器语法"></li>
+                    <img class="imggroup" src="../picture/jQuery选择器.jpg" alt="选择器语法"></li>
             </ul>
             <p id="CjQparent">jQuery遍历-DOM树-祖先</p>
             <ul>
@@ -679,7 +718,8 @@
                     若有tag，则返回所有名为&lt;tag&gt;标签元素；</li>
                 <li>parentsUntil("tag")方法：返回介于两个给定元素之间的所有祖先元素。</li>
             </ul>
-        </div><hr />
+        </div>
+        <hr />
 
         <!-- 7月14号！！！ -->
         <!-- 7月14号！！！ -->
@@ -721,60 +761,77 @@
                     <table class="alex">
                         <tr>
                             <td rowspan="5">鼠标事件</td>
-                            <td>click事件</td>       <td>鼠标单击被选元素时触发</td>
-                        </tr>
-                        <tr> 
-                            <td>dbclick事件</td>     <td>鼠标双击被选元素时触发</td> 
-                        </tr>
-                        <tr> 
-                            <td>mouseenter事件</td>  <td>鼠标指针穿过（进入）被选元素时触发</td> 
-                        </tr>
-                        <tr> 
-                            <td>mouseleave事件</td>  <td>当鼠标指针离开被选元素时触发</td> 
-                        </tr>
-                        <tr> 
-                            <td>hover事件</td>       <td>鼠标指针悬停在被选元素上时触发</td> 
+                            <td>click事件</td>
+                            <td>鼠标单击被选元素时触发</td>
                         </tr>
                         <tr>
-                            <td rowspan="3" >键盘事件</td>
-                            <td>keypress事件</td>    <td>键盘被按下的过程触发，只能触发字母数字以及符号键</td>
+                            <td>dbclick事件</td>
+                            <td>鼠标双击被选元素时触发</td>
                         </tr>
-                        <tr > 
-                            <td>keydown事件</td>     <td>键盘被按下的过程触发，可触发ALT、CTRL、SHIFT、ESC、BACKSPACE等按键</td> 
+                        <tr>
+                            <td>mouseenter事件</td>
+                            <td>鼠标指针穿过（进入）被选元素时触发</td>
                         </tr>
-                        <tr> 
-                            <td>keyup事件</td>       <td>键盘被松开时触发</td> 
+                        <tr>
+                            <td>mouseleave事件</td>
+                            <td>当鼠标指针离开被选元素时触发</td>
+                        </tr>
+                        <tr>
+                            <td>hover事件</td>
+                            <td>鼠标指针悬停在被选元素上时触发</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">键盘事件</td>
+                            <td>keypress事件</td>
+                            <td>键盘被按下的过程触发，只能触发字母数字以及符号键</td>
+                        </tr>
+                        <tr>
+                            <td>keydown事件</td>
+                            <td>键盘被按下的过程触发，可触发ALT、CTRL、SHIFT、ESC、BACKSPACE等按键</td>
+                        </tr>
+                        <tr>
+                            <td>keyup事件</td>
+                            <td>键盘被松开时触发</td>
                         </tr>
                         <tr>
                             <td rowspan="4">表单事件</td>
-                            <td>submit事件</td>      <td>提交表单时触发</td>
+                            <td>submit事件</td>
+                            <td>提交表单时触发</td>
                         </tr>
-                        <tr> 
-                            <td>change事件</td>      <td>当元素的值改变时触发（仅适用于表单字段）</td> 
+                        <tr>
+                            <td>change事件</td>
+                            <td>当元素的值改变时触发（仅适用于表单字段）</td>
                         </tr>
-                        <tr> 
-                            <td>focus事件</td>       <td>当元素获得焦点时（当通过鼠标点击选中元素或通过 tab 键定位到元素时）触发</td> 
+                        <tr>
+                            <td>focus事件</td>
+                            <td>当元素获得焦点时（当通过鼠标点击选中元素或通过 tab 键定位到元素时）触发</td>
                         </tr>
-                        <tr> 
-                            <td>blur事件</td>        <td>元素失去焦点时触发</td> 
+                        <tr>
+                            <td>blur事件</td>
+                            <td>元素失去焦点时触发</td>
                         </tr>
                         <tr>
                             <td rowspan="4">文档/窗口事件</td>
-                            <td>load事件</td>        <td>当指定的元素已加载时触发</td>
+                            <td>load事件</td>
+                            <td>当指定的元素已加载时触发</td>
                         </tr>
                         <tr>
-                            <td>unload事件</td>      <td>当用户离开页面时触发，如点击某个离开页面的链接、在地址栏中键入了新的 URL、使用前进或后退按钮、关闭浏览器窗口、重新加载页面；只应用于 window 对象</td>
+                            <td>unload事件</td>
+                            <td>当用户离开页面时触发，如点击某个离开页面的链接、在地址栏中键入了新的 URL、使用前进或后退按钮、关闭浏览器窗口、重新加载页面；只应用于 window 对象</td>
                         </tr>
-                        <tr> 
-                            <td>resize事件</td>      <td>当调整浏览器窗口大小时触发</td> 
+                        <tr>
+                            <td>resize事件</td>
+                            <td>当调整浏览器窗口大小时触发</td>
                         </tr>
-                        <tr> 
-                            <td>scroll事件</td>      <td>当用户滚动指定的元素时触发</td> 
+                        <tr>
+                            <td>scroll事件</td>
+                            <td>当用户滚动指定的元素时触发</td>
                         </tr>
                     </table>
                 </li>
             </ul>
-        </div><hr />
+        </div>
+        <hr />
 
         <!-- 7月15号！！！ -->
         <!-- 7月15号！！！ -->
@@ -801,7 +858,8 @@
                     ③ Canvas只是二维画布，三维效果的实现需要第三方类库，如three.js，Papervision3D等。
                 </li>
                 <li>Canvas的学习记录会另外建立一个HTML文件，传送门在此：
-                    <a href="../Canvas/Canvas开发.html" style="text-decoration: double;"><strong>Canvas 开发</strong> &gt;&gt;&gt;</a>
+                    <a href="../Canvas/Canvas开发.html" style="text-decoration: double;"><strong>Canvas 开发</strong>
+                        &gt;&gt;&gt;</a>
                 </li>
             </ul>
             <p id="CjQefect">jQuery的效果</p>
@@ -810,59 +868,102 @@
                 <li style="list-style: none;">
                     <table class="alex">
                         <tr>
-                            <th>效果类型</th>   <th>操作方法/属性</th>   <th>动画效果</th>   <th>参数与取值</th>
+                            <th>效果类型</th>
+                            <th>操作方法/属性</th>
+                            <th>动画效果</th>
+                            <th>参数与取值</th>
                         </tr>
                         <tr>
-                            <td rowspan="3">显示与隐藏</td> 
-                            <td>show(speed, method, callback)</td> <td>将隐藏的元素显示出来</td>
+                            <td rowspan="3">显示与隐藏</td>
+                            <td>show(speed, method, callback)</td>
+                            <td>将隐藏的元素显示出来</td>
                             <td rowspan="3">speed[可选]设置显示或隐藏的速度，可以取值slow、fast或者填入数值，单位为毫秒；<br>
                                 method[可选]设置过渡缓冲函数，jQuery自身有linear(匀速)和swing(慢-快-慢)两种；<br>
-                                callback[可选]设置显示或隐藏完成后所执行的函数名称；</td> 
+                                callback[可选]设置显示或隐藏完成后所执行的函数名称；</td>
                         </tr>
-                        <tr> <td>hide(speed, method, callback)</td> <td>将显示的元素隐藏起来</td> </tr>
-                        <tr> <td>toggle(speed, method, callback)</td> <td>切换显示与隐藏效果</td> </tr>
+                        <tr>
+                            <td>hide(speed, method, callback)</td>
+                            <td>将显示的元素隐藏起来</td>
+                        </tr>
+                        <tr>
+                            <td>toggle(speed, method, callback)</td>
+                            <td>切换显示与隐藏效果</td>
+                        </tr>
 
                         <tr>
-                            <td rowspan="4">淡入与淡出</td> 
-                            <td>fadeIn(speed, callback)</td> <td>用于淡入已隐藏的元素</td>
+                            <td rowspan="4">淡入与淡出</td>
+                            <td>fadeIn(speed, callback)</td>
+                            <td>用于淡入已隐藏的元素</td>
                             <td rowspan="4">speed[可选]设置显示或隐藏的速度，可以取值slow、fast或者填入数值，单位为毫秒；<br>
                                 callback[可选]设置显示或隐藏完成后所执行的函数名称；<br>
                                 fadeTo() 方法中opacity时必选属性，指定渐变后的透明度；
-                            </td> 
+                            </td>
                         </tr>
-                        <tr> <td>fadeOut(speed, callback)</td> <td>用于淡出可见元素</td> </tr>
-                        <tr> <td>fadeToggle(speed, callback)</td> <td>切换淡入淡出效果</td> </tr>
-                        <tr> <td>fadeTo(speed, opacity, callback)</td> <td>渐变为给定的不透明度</td> </tr>
-                        
                         <tr>
-                            <td rowspan="3">滑动效果</td> 
-                            <td>slideDown(speed, method, callback)</td> <td>用于向下滑动元素</td>
+                            <td>fadeOut(speed, callback)</td>
+                            <td>用于淡出可见元素</td>
+                        </tr>
+                        <tr>
+                            <td>fadeToggle(speed, callback)</td>
+                            <td>切换淡入淡出效果</td>
+                        </tr>
+                        <tr>
+                            <td>fadeTo(speed, opacity, callback)</td>
+                            <td>渐变为给定的不透明度</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="3">滑动效果</td>
+                            <td>slideDown(speed, method, callback)</td>
+                            <td>用于向下滑动元素</td>
                             <td rowspan="3">speed[可选]设置显示或隐藏的速度，可以取值slow、fast或者填入数值，单位为毫秒；<br>
-                                method  [可选]设置过渡缓冲函数，jQuery自身有linear和swing两种；<br>
-                                callback[可选]设置显示或隐藏完成后所执行的函数名称；</td> 
+                                method [可选]设置过渡缓冲函数，jQuery自身有linear和swing两种；<br>
+                                callback[可选]设置显示或隐藏完成后所执行的函数名称；</td>
                         </tr>
-                        <tr> <td>slideUp(speed, method, callback)</td> <td>用于向上滑动元素</td> </tr>
-                        <tr> <td>slideToggle(speed, method, callback)</td> <td>切换向下与向上滑动的效果</td> </tr>
+                        <tr>
+                            <td>slideUp(speed, method, callback)</td>
+                            <td>用于向上滑动元素</td>
+                        </tr>
+                        <tr>
+                            <td>slideToggle(speed, method, callback)</td>
+                            <td>切换向下与向上滑动的效果</td>
+                        </tr>
 
                         <tr>
-                            <td rowspan="4">自定义动画animate()</td> 
-                            <td>操作多个属性</td> <td colspan="2">生成动画的过程中可同时使用多个属性，几乎可以操作所有 CSS 属性，必须使用 Camel 标记法书写所有的属性名，如带"-"的属性需要第二个单词首字母大写并去掉"-"，色彩动画需要另外下载插件</td> 
+                            <td rowspan="4">自定义动画animate()</td>
+                            <td>操作多个属性</td>
+                            <td colspan="2">生成动画的过程中可同时使用多个属性，几乎可以操作所有 CSS 属性，必须使用 Camel
+                                标记法书写所有的属性名，如带"-"的属性需要第二个单词首字母大写并去掉"-"，色彩动画需要另外下载插件</td>
                         </tr>
-                        <tr> <td>使用相对值</td> <td colspan="2">在属性值的前面加上 += 或 -= 可给动画对象设定相对变化的值</td> </tr>
-                        <tr> <td>使用预定义的值</td> <td colspan="2">把属性的动画值设置为 "show"、"hide" 或 "toggle"</td> </tr>
-                        <tr> <td>使用队列功能</td> <td colspan="2">同一animate内的效果同时变化，若要多个动画分开运行可使用队列功能，对同一对象编写多个animate()方法，jQuery 会创建包含这些方法调用的"内部"队列，然后逐一运行</td> </tr>
+                        <tr>
+                            <td>使用相对值</td>
+                            <td colspan="2">在属性值的前面加上 += 或 -= 可给动画对象设定相对变化的值</td>
+                        </tr>
+                        <tr>
+                            <td>使用预定义的值</td>
+                            <td colspan="2">把属性的动画值设置为 "show"、"hide" 或 "toggle"</td>
+                        </tr>
+                        <tr>
+                            <td>使用队列功能</td>
+                            <td colspan="2">同一animate内的效果同时变化，若要多个动画分开运行可使用队列功能，对同一对象编写多个animate()方法，jQuery
+                                会创建包含这些方法调用的"内部"队列，然后逐一运行</td>
+                        </tr>
 
                         <tr>
-                            <td>停止动画</td> 
-                            <td>stop(stopAll, goToEnd)</td> 
-                            <td colspan="2">在动画和效果完成前将他们停止；[stopAll]可选参数，规定是否应该清除动画队列，默认是false，即仅停止当前效果，但队列的后续效果依然继续；[goToEnd]可选参数，规定是否立即完成当前动画，默认是 false</td> 
+                            <td>停止动画</td>
+                            <td>stop(stopAll, goToEnd)</td>
+                            <td colspan="2">
+                                在动画和效果完成前将他们停止；[stopAll]可选参数，规定是否应该清除动画队列，默认是false，即仅停止当前效果，但队列的后续效果依然继续；[goToEnd]可选参数，规定是否立即完成当前动画，默认是
+                                false</td>
                         </tr>
                     </table>
                 </li>
                 <li>callBack回调函数：<br />在当前动画 100% 完成之后执行，如果没有回调函数，后面紧接着的函数可能会在隐藏效果完成前弹出；</li>
-                <li>链(Chaining)：<br />对同一对象编写多条动画效果命令需要浏览器多次查找元素，使用 Chaining 则只需要查找一次元素对象，Chaining 允许我们在一条语句中运行多个 jQuery 方法，中间使用 "." 连接，且 "." 可在换行后书写，避免代码过长。</li>
+                <li>链(Chaining)：<br />对同一对象编写多条动画效果命令需要浏览器多次查找元素，使用 Chaining 则只需要查找一次元素对象，Chaining 允许我们在一条语句中运行多个 jQuery
+                    方法，中间使用 "." 连接，且 "." 可在换行后书写，避免代码过长。</li>
             </ul>
-        </div> <hr />
+        </div>
+        <hr />
 
         <!-- 7月16号！！！ -->
         <!-- 7月16号！！！ -->
@@ -876,7 +977,8 @@
                 <li>val()方法：设置或返回表单字段的值（value属性的值）;</li>
                 <li>attr()方法：设置或返回被选元素的属性；</li>
                 <li>前三种方法参数可选，如果没有则返回被选元素的内容，如果有则设置被选元素的内容；该可选参数也可以是回调函数，直接用function定义；</li>
-                <li>attr()方法第一个参数必须给定，指定需要返回或设置的属性类型，如href、title、width等等，第二个参数可选，如果没有则返回指定属性值，如果有则给第一个参数指定的属性设定值；第二个参数也可以是回调函数，直接用function定义；</li>
+                <li>attr()方法第一个参数必须给定，指定需要返回或设置的属性类型，如href、title、width等等，第二个参数可选，如果没有则返回指定属性值，如果有则给第一个参数指定的属性设定值；第二个参数也可以是回调函数，直接用function定义；
+                </li>
                 <li>四种方法均有回调函数(callback)，回调函数有两个默认参数：被选元素的下标，以及原始的值；如$().attr("href", function(i,orgVal){...});</li>
             </ul>
             <p id="Cadd">jQuery添加与删除元素</p>
@@ -892,7 +994,8 @@
             <p id="CAudio">HTML5音频Audio</p>
             <ul>
                 <li>HTML5 规定了在网页上嵌入音频元素的标准，即使用 &lt;audio&gt; 元素，双标签；</li>
-                <li>语法结构：&lt;audio controls&gt;&lt;source src="url" type="MIME类型"&gt;&lt;/audio&gt;，controls属性定义显示播放控件；</li>
+                <li>语法结构：&lt;audio controls&gt;&lt;source src="url" type="MIME类型"&gt;&lt;/audio&gt;，controls属性定义显示播放控件；
+                </li>
                 <li>&lt;source&gt;定义媒体资源，但标签，可在 audio 标签内定义多个 source 标签；</li>
                 <li>&lt;audio&gt; 元素支持三种音频格式文件: MP3, Wav, 和 Ogg:;</li>
                 <li>音频格式的MIME类型:MP3--audio/mpeg，Ogg--audio/ogg，Wav--audio/wav；</li>
@@ -907,7 +1010,8 @@
                 <li>volume 属性：设置或返回音频的音量</li>
                 <li>play() 和 pause() 方法分别控制音频的播放与暂停；</li>
             </ul>
-        </div><hr />
+        </div>
+        <hr />
 
         <!-- 7月17号！！！ -->
         <!-- 7月17号！！！ -->
@@ -940,20 +1044,22 @@
                     $(selector). load(URL, data, callback);<br />
                     <table class="alex">
                         <tr>
-                            <th>参数</th> <th>注释</th>
+                            <th>参数</th>
+                            <th>注释</th>
                         </tr>
                         <tr>
-                            <td>URL</td> 
+                            <td>URL</td>
                             <td>必需参数，规定希望加载的URL地址<br />
-                                $("#div1").load("demo_test.txt #p1"); 把 "demo_test.txt" 文件中 id="p1" 的元素的内容，加载到指定的 div 元素中：
+                                $("#div1").load("demo_test.txt #p1"); 把 "demo_test.txt" 文件中 id="p1" 的元素的内容，加载到指定的 div
+                                元素中：
                             </td>
                         </tr>
                         <tr>
-                            <td>data</td> 
+                            <td>data</td>
                             <td>可选参数，规定与请求一同发送的查询字符串键/值对集合。</td>
                         </tr>
                         <tr>
-                            <td>callback</td> 
+                            <td>callback</td>
                             <td>可选参数，load() 方法完成后所执行的函数名称。
                                 回调函数可以设置不同的参数：<br />
                                 responseTxt - 包含调用成功时的结果内容<br />
@@ -966,14 +1072,15 @@
                 <li> get() 方法：从指定的资源请求数据；语法：$.get(URL, callback);<br />
                     <table class="alex">
                         <tr>
-                            <th>参数</th> <th>注释</th>
+                            <th>参数</th>
+                            <th>注释</th>
                         </tr>
                         <tr>
-                            <td>URL</td> 
+                            <td>URL</td>
                             <td>必需参数，规定希望请求的URL地址</td>
                         </tr>
                         <tr>
-                            <td>callback</td> 
+                            <td>callback</td>
                             <td>可选参数，get() 方法完成后所执行的函数名称。第一个回调参数存有被请求页面的内容，第二个回调参数存有请求的状态
                             </td>
                         </tr>
@@ -982,24 +1089,26 @@
                 <li> post() 方法：向指定的资源提交要处理的数据；语法：$.post(URL, data, callback);<br />
                     <table class="alex">
                         <tr>
-                            <th>参数</th> <th>注释</th>
+                            <th>参数</th>
+                            <th>注释</th>
                         </tr>
                         <tr>
-                            <td>URL</td> 
+                            <td>URL</td>
                             <td>必需参数，规定希望请求的URL地址</td>
                         </tr>
                         <tr>
-                            <td>data</td> 
+                            <td>data</td>
                             <td>可选参数，规定连同请求发送的数据。</td>
                         </tr>
                         <tr>
-                            <td>callback</td> 
+                            <td>callback</td>
                             <td>可选参数，post() 方法完成后所执行的函数名称，第一个回调参数存有被请求页面的内容，而第二个参数存有请求的状态</td>
                         </tr>
                     </table>
                 </li>
             </ul>
-        </div><hr />
+        </div>
+        <hr />
 
         <!-- 7月18号！！！ -->
         <!-- 7月18号！！！-->
@@ -1018,13 +1127,15 @@
                     <ol style="margin:5px 0 5px -1.5em;">
                         <li>【被拖动元素】设置为可拖放： draggable = "true"</li>
                         <li>
-                            【被拖动元素】使用 ondragstart 属性（事件）调用函数，dataTransfer.setData() 方法设置被拖元素放到新位置时的数据类型，以及被拖放元素的值(id)；<br><br>
+                            【被拖动元素】使用 ondragstart 属性（事件）调用函数，dataTransfer.setData()
+                            方法设置被拖元素放到新位置时的数据类型，以及被拖放元素的值(id)；<br><br>
                             function drag(ev){<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;ev.dataTransfer.setData("Text", ev.target.id);<br>
                             }<br><br>
                         </li>
                         <li>
-                            【新位置元素】使用 ondragover 属性（事件）调用函数，浏览器对任意元素的默认设定是不允许放置被拖动的元素，preventDefault() 阻止对元素的默认处理方式；<br><br>
+                            【新位置元素】使用 ondragover 属性（事件）调用函数，浏览器对任意元素的默认设定是不允许放置被拖动的元素，preventDefault()
+                            阻止对元素的默认处理方式；<br><br>
                             function allowDrop(ev){<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br>
                             }<br><br>
@@ -1043,7 +1154,8 @@
                     </ol>
                 </li>
             </ul>
-        </div><hr>
+        </div>
+        <hr>
 
         <!-- 7月19号！！！ -->
         <!-- 7月19号！！！ -->
@@ -1055,8 +1167,10 @@
                 <li>用于获得用户的地理位置，需征求用户同意；</li>
                 <li>语法：navigator.geolocation 判断用户是否同意获取地理位置，同意则该属性返回True</li>
                 <li>如果同意获取，则通过 navigator.geolocation.getCurrentPosition(fun1,fun2,option)</li>
-                <li>getCurrentPosition() 方法运行成功后会向 fun1 函数的第一个参数返回 coords 和 timestamp 属性，失败则向 fun2 函数的第一个参数返回 message 和 code 属性</li>
-                <li>如 fun1 定义 showPosition(position) 函数，成功获取地位位置后，position 参数获得 coords 和 timestamp 属性，通过 position.coords.longitude 和 position.coords.latitude 分别获得经度和维度</li>
+                <li>getCurrentPosition() 方法运行成功后会向 fun1 函数的第一个参数返回 coords 和 timestamp 属性，失败则向 fun2 函数的第一个参数返回 message 和
+                    code 属性</li>
+                <li>如 fun1 定义 showPosition(position) 函数，成功获取地位位置后，position 参数获得 coords 和 timestamp 属性，通过
+                    position.coords.longitude 和 position.coords.latitude 分别获得经度和维度</li>
                 <li>而 fun2 定义 showError(error) 函数，地理位置获取失败后，error 参数获得 message 和 code 属性，code 表示错误代码：<br>
                     PERMISSION_DENIED：表示用户拒绝浏览器获取位置信息的请求<br>
                     POSITION_UNAVALIABLE：表示网络不可用或者连接不到卫星<br>
@@ -1066,7 +1180,8 @@
                 <li>watchPosition() 方法：实时获取位置信息</li>
                 <li>clearWatch() 方法：停止 watchPosition() 方法</li>
             </ul>
-        </div><hr>
+        </div>
+        <hr>
 
         <!-- 7月23号！！！ -->
         <!-- 7月23号！！！ -->
@@ -1083,7 +1198,8 @@
                 <li>&lt;video&gt; 元素可以用 DOM 控制，其中 pause() 方法控制暂停，play() 方法控制播放</li>
                 <li>&lt;track&gt; 元素，为媒体元素（比如 audio 或 video）规定外部文本轨道</li>
             </ul>
-        </div><hr>
+        </div>
+        <hr>
 
         <!-- 7月24号！！！ -->
         <!-- 7月24号！！！ -->
@@ -1113,7 +1229,8 @@
                 </li>
                 <li>transaction() 方法：够控制一个事务，以及基于这种情况执行提交或者回滚</li>
                 <li>executeSql() 方法：用于执行实际的 SQL 查询</li>
-                <li>后续科深入学习<a href="https://www.runoob.com/html/html5-web-sql.html" style="text-decoration: none;color: rgb(243, 145, 145);" target="_blank"> SQL </a></li>
+                <li>后续科深入学习<a href="https://www.runoob.com/html/html5-web-sql.html"
+                        style="text-decoration: none;color: rgb(243, 145, 145);" target="_blank"> SQL </a></li>
             </ul>
             <p id="Timing">定时刷新与跳转</p>
             <ul>
@@ -1121,7 +1238,8 @@
                 <li>time 是一个数值，表示刷新时间，单位为s</li>
                 <li>URL 可选，指定跳转页面的 URL 地址，不指定则本页面定时刷新</li>
             </ul>
-        </div><hr>
+        </div>
+        <hr>
 
         <!-- 7月28号！！！ -->
         <!-- 7月28号！！！ -->
@@ -1142,11 +1260,13 @@
                 <li>length 属性：设置或返回数组元素的数目</li>
                 <li>prototype 属性：向数组添加属性，例：element.prototype.attr = value; 这样就给element 添加了attr 属性，属性值为 value</li>
                 <li>concat() 方法：连接两个数组，a1.concat(a2); a2 被连接到 a1 之后，连接多个需要嵌套使用</li>
-                <li>join() 方法：把数组的所有元素放入一个字符串（转化为字符串），例：a1.join(separator)，separator 可选参数，指定数组元素转化为字符串时的分隔符号，默认为逗号，如改为点作为指定 separator 为"."(变量要包含引号)。</li>
+                <li>join() 方法：把数组的所有元素放入一个字符串（转化为字符串），例：a1.join(separator)，separator
+                    可选参数，指定数组元素转化为字符串时的分隔符号，默认为逗号，如改为点作为指定 separator 为"."(变量要包含引号)。</li>
                 <li>pop() 和 shift() 方法：删除并返回数组的最后（第一）个元素；</li>
                 <li>push() 和 unshift() 方法：向数组的末尾（开头）添加一个或多个元素，并返回新的长度；</li>
                 <li>slice(start,end)：返回数组中指定范围的元素（项目），不改变原数组，不包含 end 位置的元素</li>
-                <li>splice(index,num,addItems)：删除元素，并向数组添加新元素；index 指定删除元素的起始索引，num 指定索引位置后被删除的元素个数，这些元素将被返回；addItems 指定在起始位置插入新的元素；</li>
+                <li>splice(index,num,addItems)：删除元素，并向数组添加新元素；index 指定删除元素的起始索引，num 指定索引位置后被删除的元素个数，这些元素将被返回；addItems
+                    指定在起始位置插入新的元素；</li>
                 <li>sport(sortby)：对数组进行排序，sortby 可选参数指定顺序，必须是函数名，默认按照字符编码的顺序进行（不是数值大小排序）。</li>
                 <li>toString() 和 toLacalString() 方法：均返回字符串，前者用半角逗号隔开，后者用本地符号隔开，如在中国地区则返回全角逗号隔开的字符串</li>
                 <li>toSource() 和 valueOf() 方法：分别返回数组对象的源代码和原始值。</li>
@@ -1165,7 +1285,8 @@
                 <li>如果第一个参数为空则删除该元素的所有类；</li>
                 <li>使用 function 时 index是必选的，该参数指向被选定元素的索引值，传递到函数中；</li>
                 <li> function 中 curCls 是可选参数，指向被选元素的当前类名；</li>
-                <li>function 要返回类名（可返回多个）；个人见解：相当于 cls3 = function(index,curCls){...}，一般用于筛选符合特定条件的 cls3 或者筛选特定的元素进行删除类操作</li>
+                <li>function 要返回类名（可返回多个）；个人见解：相当于 cls3 = function(index,curCls){...}，一般用于筛选符合特定条件的 cls3
+                    或者筛选特定的元素进行删除类操作</li>
                 <li>jQ addClass("cls1 cls2") 方法：向选定元素添加一个或多个类；addClass() 方法也有 function 参数，用法一样；</li>
             </ul>
 
@@ -1187,10 +1308,123 @@
                 <li>$(window).scrollTop() 方法：返回滚动高度即滚动到位置距离浏览器顶部的高度；</li>
             </ul>
         </div>
-    </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
-    
+
+        <!-- 7月30号！！！ -->
+        <!-- 7月30号！！！ -->
+        <h3 id="#C30">7月30号 周四</h3>
+        <p>今日关键词：VS Code扩展</p>
+        <div class="note_tag">
+            <p id="vscode">VS Code扩展插件</p>
+            <ul>
+                <li>Auto Rename Tag：自动修改标签，秩序修改开始或者结束标签，另一个对应标签就会自动修改；</li>
+                <li>Prettier：自动格式化命令行，达到美化效果；</li>
+                <li>Bracket Pair Colorizer：括号美化工具；</li>
+                <li>Live Server：自动刷新显示保存后的效果；</li>
+                <li>indent-rainbow：缩进用颜色显示；</li>
+                <li>Material Icon Theme：设置主题与图片样式；</li>
+            </ul>
+            <p id="grid">CSS Grid布局</p>
+            <ul>
+                <li>display: grid; 可以设置网格布局样式，inline-grid可以设置布局元素为行内网格布局元素；</li>
+                <li>被设置网格布局的子元素的float、inline-block、table-cell、vertical-align 和 column-*等设置都将失效；</li>
+                <li>
+                    grid-template-columns 属性定义列宽；grid-template-row 定义行高，以列宽为例设置如下：<br><br>
+                    1. repeat()函数： <br>
+                    repeat(3，33.33%) 指定3行网格，每一列宽度为33.33%;<br>
+                    repeat(2, 10px 20px 30px)表示重复两次(10px 20px 30px)模式，即产生6列，列宽(px)分别为 10 20 30 10 20 30；<br>
+                    repeat(auto-fill,100px) 表示没列宽度为100px，自动填充容器，直到容器放不下就换行；<br><br>
+                    2. fr 关键字：<br>
+                    grid-template-columns: 1fr 1fr; 表示设置两列，比例为1:1；<br>
+                    grid-template-columns: 150px 1fr 2fr; 表示设置三列，第一列宽150px，剩下宽度分给第二第三列，且二三列的列宽比为1:2；<br><br>
+                    3. minmax() 函数：<br>
+                    grid-template-columns: 1fr 1fr minmax(100px, 1fr); 表示前两列列宽为1:1，第三列列宽最小为100px，最大与前两列列宽一致；<br><br>
+                    4. auto 关键词：<br>
+                    grid-template-columns: 100px auto 100px; 表示1、3列宽度100px，第2列自动设置宽度，一般等于该列单元格的最大宽度，除非单元格内容设置了min-width，且这个值大于最大宽度；<br><br>
+                    5. 百分比：<br>
+                    grid-template-columns: 70% 30%; 表示左栏宽度为 70%，右栏宽度为 30%；
+                </li>
+                <li>
+                    网格线名称：grid-template-columns属性和grid-template-rows属性里面，还可以使用方括号，指定每一根网格线的名字，方便以后的引用。<br>
+                    grid-template-columns: [c1] 100px [c2] 100px [c3];<br>
+                    grid-template-rows: [r1] 100px [r2] auto [r3];<br>
+                    以上定义2 x 2网格，所以有三条水平线和三条垂直线；<br>
+                    网格布局允许同一根网格线有多个名字，如[c1 col1 first-line] 就可以对第一条列线定义为三个不同的名字；
+                </li>
+                <li>
+                    gap:20px 20px; 设置行间距和列间距，先设置行在设置列；如果只设置一个值则默认第二个值等于第一个值（有些移动设备依旧使用grid-gap）<br>
+                    row-gap 属性：设置网格布局行间距；<br>
+                    column-gap 属性：设置网格布局列间距
+                </li>
+                <li>grid-template-areas:<br>'a b c' <br>'d e f' <br>'g h i'; <br>
+                    可定义每个区域的名称，区域名可以同名；区域命名方便后续使用或者修改样式以及事件处理；<br>
+                    如果某些区域不需要利用，则使用"点"（.）表示;<br>
+                    区域的命名会影响到网格线。每个区域的起始网格线，会自动命名为 [区域名-start]，终止网格线自动命名为 [区域名-end]，如a-start，c-end。
+                </li>
+                <li>grid-auto-flow 属性：<br>
+                    默认设定值为 row，表示先行后列排序；<br>
+                    若设定值为 column 时表示定义先列后行排序；<br>
+                    row dense 和 column dense 设定紧密填满；
+                </li>
+                <li>
+                    单元格内容的位置属性，作用于整行或整列项目元素，属性值有start、center、end<br>
+                    justify-item：设置水平位置（左中右）；<br>
+                    align-item：设置垂直位置（上中下）；<br>
+                    place-item：同时设置水平位置和垂直位置，第一个值为垂直位置，第二个值为水平位置；
+                </li>
+                <li>
+                    整个 Grid 容器的位置属性：justify-content、align-content、place-content 属性，即如果网格内容宽高没有填满整个 Grid 盒子时，设置整个网格内容相对于盒子的位置；<br>
+                    start：对齐容器的起始边框<br>
+                    end：对齐容器的结束边框<br>
+                    center：容器内部居中<br>
+                    stretch：项目大小没有指定时，拉伸占据整个网格容器<br>
+                    space-around：每个项目两侧的间隔相等，项目之间的间隔比项目与容器边框的间隔大一倍<br>
+                    space-between：项目与项目的间隔相等，项目与容器边框之间没有间隔<br>
+                    space-evenly：项目与项目的间隔相等，项目与容器边框之间也是同样长度的间隔<br>
+                </li>
+                <li>grid-auto-columns 和 grid-auto-rows 属性：为浏览器自动创建的多余网格时设定列宽和行高；</li>
+                <li>
+                    设定起始和结束网格线对个别项目设定属性：<br>
+                    grid-column-start属性：左边框所在的垂直网格线<br>
+                    grid-column-end属性：右边框所在的垂直网格线<br>
+                    grid-row-start属性：上边框所在的水平网格线<br>
+                    grid-row-end属性：下边框所在的水平网格线<br>
+                    属性值为数值 n 时，表示第 n 条网格线(1 为起始网格线)；属性值也可以设定为网格线的名称；</li>
+                <li>span 设定网格项目囊括多个单元：<br>
+                    grid-column: 1 / span 2; 表示起始位置为第 1 根网格线，横向包含两个单元；<br>
+                    grid-column: 1 / 3; 表示起始位置为第 1 根网格线，结束位置为第 3 根网格线；<br>
+                    grid-row 属性的设置与 grid-column 属性一致；
+                </li>
+                <li>grid-area 属性：指定项目放在哪一个区域，属性值为区域名；还可用作grid-row-start、grid-column-start、grid-row-end、grid-column-end的合并简写形式，直接指定项目的位置，如：grid-area: 1 / 1 / 3 / 3;</li>
+                <li>
+                    justify-self、align-self、place-self 属性设置单元格内容的水平位置（左中右），跟 justify-items、align-items、place-item 属性的用法完全一致，但只作用于单个项目。
+                </li>
+                <li>Grid 布局效果：
+                    <div class="grid">
+                        <p>先列后行👇</p>
+                        <p>先行后列👉</p>
+                        <p>1.2已被固定</p>
+                        <p>1.4-3.1</p>
+                        <p>2.1-2.2</p>
+                        <p>2.2-2.3</p>
+                        <p>2.3-1.3</p>
+                        <p>2.4-2.3</p>
+                        <p>3.1-3.3</p>
+                        <p>3.2-1.4</p>
+                        <p>3.3-2.4</p>
+                        <p>3.4-3.4</p>
+                    </div>
+
+                </li>
+                
+            </ul>
+        </div>
+
+    </div>
+    <!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
+
     <div id="Cfooter" class="footer">
-    Copyright © Alex-alading.dong @ 2020
+        Copyright &copy; Alex-alading.dong @ 2020
     </div>
 </body>
+
 </html>
