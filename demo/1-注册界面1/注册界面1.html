@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo1 | 注册界面</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-image: linear-gradient(45deg,rgb(55, 115, 211),rgb(186, 51, 220));
+            color: white;
+        }
+        /* 表单区域 */
+        .container{
+            margin:0 auto;
+            width: 370px;
+            height: 460px;
+            position: relative;
+            top: 50%;
+            border: 1px solid rgba(28, 110, 182,0.3);
+            border-radius: 20px;
+            background-color: rgba(0, 35, 66, 0.3);
+            transform: translateY(-50%);
+            overflow: hidden;
+        }
+        h1{
+            margin: 20px 12px 5px;
+            display: block;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 28px;
+        }
+        /* 信息收集区 */
+        .msg{
+            margin: 20px auto 5px;
+            padding: 10px;
+            display: block;
+            width: 325px;
+            border:1px solid rgb(66, 179, 162);
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .msg:focus{
+            border: 1px solid red;
+            background-color: rgb(196, 196, 196);
+        }
+        p{
+            padding: 0 15px;
+            display: none;
+        }
+        .container div{
+            margin: 40px auto 10px;
+            padding: 0 15px;
+            display: block;
+            color: linen;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        #submit{
+            margin: 10px auto;
+            padding: 10px 5px;
+            display: block;
+            width: 350px;
+            background-color: lightseagreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            color: white;
+            border: none;
+            opacity: 0.7;
+        }
+        .container #submit:hover{
+            opacity: 1;
+        }
+        /* 预设样式 */
+        .container .in{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background-color: rgb(63, 132, 193);
+            transform: translate(-50%,-50%);
+            animation: IN 0.3s ease-out forwards;
+            z-index: -1;
+        }
+        @keyframes IN{
+            0%{
+                width: 0;
+                height: 0;
+            }
+            100%{
+                width: 1200px;
+                height: 1200px;
+            }
+        }
+        .container .out{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 1200px;
+            height: 1200px;
+            border-radius: 50%;
+            background-color: rgb(63, 132, 193);
+            transform: translate(-50%,-50%);
+            animation: OUT 0.3s ease-out forwards;
+            z-index: -1;
+        }
+        @keyframes OUT{
+            0%{
+                width: 1200px;
+                height: 1200px;
+            }
+            100%{
+                width: 0;
+                height: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="../../index.html">
+        <h1>欢迎注册 AlexBox</h1>
+        <input type="text" class="msg" id="usename" placeholder="用户名">
+        <input type="email" class="msg" id="email" placeholder="邮箱">
+        <input type="password" class="msg" id="psw1" placeholder="密码">
+        <p>6-16个字符，至少包括字母和数字</p>
+        <input type="password" class="msg" id="psw2" placeholder="确认密码">
+        <div>
+            <input type="checkbox" id="check" name="checked">
+            <span>同意 <a href="#">《服务条款》</a> 和 <a href="#">《隐私政策》</a> </span>
+        </div>
+        <input type="submit" id="submit" class="msg" value="立即注册/回到主页">
+        </form>
+    </div>
+    <script>
+        const con = document.querySelector(".container");
+        let isIn = true;
+        let isOut = false;
+
+        con.addEventListener("mouseenter",(e)=>{
+            if(isIn){
+                let inx = e.clientX - e.target.offsetLeft;
+                let iny = e.clientY - e.target.offsetTop+230;
+
+                let elt = document.createElement('span');
+                elt.style.left = inx + 'px';
+                elt.style.top = iny + 'px';
+                con.appendChild(elt);
+                $(".container>span").removeClass("out");
+                $(".container>span").addClass("in");
+                span = document.querySelector(".container span");
+
+                isIn = false;
+                isOut = true;
+            }
+        });
+        
+        con.addEventListener("mouseleave",(e)=>{
+                if(isOut){
+                let inx = e.clientX - e.target.offsetLeft;
+                let iny = e.clientY - e.target.offsetTop+230;
+
+                $(".container>span").removeClass("in");
+                $(".container>span").addClass("out");
+                $('.out').css('left',inx +'px');
+                $('.out').css('top',iny +'px');
+
+                isIn = true;
+                isOut = false;
+            }
+        });
+    </script>
+</body>
+</html>
