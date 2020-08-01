@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>demo1 | 注册界面</title>
+    <link rel="shortcut icon" href="../..//picture/favicon.ico">
     <script src="jquery-3.5.1.min.js"></script>
     <style>
         *{
@@ -148,6 +149,14 @@
         </form>
     </div>
     <script>
+        window.addEventListener("mouseenter",(e)=>{
+                let elt = document.createElement('span');
+                elt.style.left = e.clientX + 'px';
+                elt.style.top = e.clientY + 'px';
+                con.appendChild(elt);
+                $(".container>span").removeClass("out");
+                $(".container>span").addClass("in");
+        });
         const con = document.querySelector(".container");
         let isIn = true;
         let isOut = false;
@@ -163,7 +172,6 @@
                 con.appendChild(elt);
                 $(".container>span").removeClass("out");
                 $(".container>span").addClass("in");
-                span = document.querySelector(".container span");
 
                 isIn = false;
                 isOut = true;
