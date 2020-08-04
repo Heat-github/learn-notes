@@ -149,6 +149,10 @@ body{
         font-size: smaller;
         word-break: normal;
     }
+    .alex tr .left{
+        text-align: left;
+        padding:5px 2px;
+    }
     .alex tr.oringe{
         color:rgb(0,0,0);
         background-color: rgb(255, 192, 176);}

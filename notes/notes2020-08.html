@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="utf-8">
     <title>HTML | 学习笔记2020-08</title>
@@ -10,10 +11,10 @@
     <link rel="shortcut icon" href="../picture/favicon.ico">
     <script src="notes_js.js"></script>
     <script src="../jquery-3.5.1.min.js"></script>
+    <script src="notes_jQ.js"></script>
 </head>
 
-<body id="Cbody"  onload="modeFunc()">
-<code style="font-size: 18px;">
+<body id="Cbody">
     <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
     <a href="#Cfooter"><img class="gobottom" src="../picture/back-to-top.jpg" alt="去到底部" /></a>
     <img class="darkmode" onclick="darkMode()" src="../picture/夜间模式.jpg" alt="夜间模式"/>
@@ -26,27 +27,182 @@
         <a href="notes2020-10.html">10月</a>
         <a href="notes2020-11.html">11月</a>
         <a href="notes2020-12.html">12月</a>
-        <a href="#">2021年</a> 
+        <a href="javascript:;">2021年</a> 
     </div><hr>
     
     <!--catalog开始标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     <div class="body_tag catalog">
-        <button type="button" onclick="cataTrans()">目录</button>
+        <button type="button" class="catabutton">目录</button>
         <ul id="acatalog">
-            <li><a href="#C">x号笔记</a></li>
-            <li><a href="#C">x号笔记</a></li>
-            <li><a href="#C">x号笔记</a></li>
+            <li><a href="#C04">4号笔记</a></li>
+            <li><a href="#history">History 历史记录</a></li>
+            <li><a href="#RegExp">正则表达式</a></li>
+            <li><a href="#C05">5号笔记</a></li>
         </ul>
     </div><!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
     <!--content开始标签！！！！！！！！！！！！！！！！！！！！！！！！！！！！！-->
     <div class="body_tag content">
-        
+        <!-- 8.4 -->
+        <h3 id="C04">8月4号 周二</h3>
+        <p>今日关键词：History 对象</p>
+        <div class="note_tag">
+            <p id="history">History 对象的属性与方法</p>
+            <ul>
+                <li>History 对象包含用户（在浏览器窗口中）访问过的 URL</li>
+                <li>History 对象是 window 对象的一部分，可通过 window.history 属性对其进行访问</li>
+                <li>length 属性：返回历史列表中的网址数</li>
+                <li>back() 方法：加载 history 列表中的前一个URL</li>
+                <li>forward() 方法：加载 history 列表中的后一个URL</li>
+                <li>go(num) 方法：加载 history 列表中的某个具体页面，num 是整数，正(负)数表示访问往前(后)第 num 个页面</li>
+            </ul>
+            <p id="RegExp">正则表达式</p>
+            <ul>
+                <li>正则表达式(Regular Expression)：使用单个字符串来描述、匹配一系列符合某个句法规则的字符串搜索模式</li>
+                <li>搜索模式可用于文本搜索和文本替换</li>
+                <li>语法：/正则表达式主体/修饰符(可选)，例：/^[a-zA-Z0-9]$/g</li>
+                <li>正则表达式修饰符<br>
+                    <table class="alex">
+                        <tr>
+                            <th>修饰符</th>
+                            <th>描述</th>
+                        </tr>
+                        <tr>
+                            <td>g</td>
+                            <td>执行对大小写不敏感的匹配</td>
+                        </tr>
+                        <tr>
+                            <td>i</td>
+                            <td>执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）</td>
+                        </tr>
+                        <tr>
+                            <td>m</td>
+                            <td>执行多行匹配</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>正则表达式模式：<br>
+                    <table class="alex">
+                        <tr><td colspan="2" class="left"><strong>方括号 "[ ]" 用于查找某个范围内的字符</strong></td></tr>
+                        <tr>
+                            <td>表达式</td>
+                            <td>描述</td>
+                        </tr>
+                        <tr>
+                            <td>[abc]</td>
+                            <td>查找方括号之间的任何字符</td>
+                        </tr>
+                        <tr>
+                            <td>[0-9]</td>
+                            <td>查找任何从 0 至 9 的数字</td>
+                        </tr>
+                        <tr>
+                            <td>(x|y)</td>
+                            <td>查找任何以 | 分隔的选项</td>
+                        </tr>
+                        <!-- ///////////////////////////////////////////////////////// -->
+                        <tr><td colspan="2" class="left"><strong>圆括号 "( )" 可以提取匹配的字符串</strong></td></tr>
+                        <tr>
+                            <td>表达式</td>
+                            <td>描述</td>
+                        </tr>
+                        <tr>
+                            <td>(abc)</td>
+                            <td>匹配字符串 abc，并返回到 $ 变量中(最多9个)，后面可以通过 $n 来访问第 n 个圆括号匹配到的内容</td>
+                        </tr>
+                        <tr>
+                            <td>(?:abc)</td>
+                            <td>匹配字符串 abc，但不获取匹配结果，常与或字符(|)组合使用，如：(?:a|b) 匹配字符串 a 或者字符串 b</td>
+                        </tr>
+                        <tr>
+                            <td>abc(?=def)、abc(?!def)</td>
+                            <td>正向肯定和否定预查，在任何匹配（不匹配）def 字符串开始处匹配查找字符串 abc，例如：a(?=b) 和 a(?!b) 分别匹配 ab 和 ac 中的a；</td>
+                        </tr>
+                        <tr>
+                            <td>(?&lt;=def)abc、(?&lt;!def)abc</td>
+                            <td>反向肯定和否定预查，在任何匹配（不匹配）def 字符串开始处反向匹配查找字符串 abc，例如：(?&lt;=b)a 和 (?&lt;!b)a 分别匹配 ba 和 ca 中的a</td>
+                        </tr>
+                        <!-- ///////////////////////////////////////////////////////// -->
+                        <tr><td colspan="2" class="left"><strong>元字符是拥有特殊含义的字符</strong></td></tr>
+                        <tr>
+                            <td>元字符</td>
+                            <td>描述</td>
+                        </tr>
+                        <tr>
+                            <td>\d,\D</td>
+                            <td>匹配数字和非数字字符</td>
+                        </tr>
+                        <tr>
+                            <td>\s,\S</td>
+                            <td>匹配不可见字符和可见字符，不可见字符有 \f,\n,\r,\t,\v</td>
+                        </tr>
+                        <tr>
+                            <td>\b,\D</td>
+                            <td>匹配单词边界和非单词边界，“er\b” 和 "er\B" 分别可以匹配 never、verd 中的 er</td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td>\w,\W</td>
+                            <td>\w 匹配包括下划线的单词字符，类似但不等价于[A-Za-z0-9_]；\W 匹配任何非单词字符，等价于[^A-Za-z0-9_]</td>
+                        </tr>
+                        <tr>
+                            <td>\num</td>
+                            <td>num 为一个正整数，，对所获取的匹配引用，如：(.)\1 匹配两个连续的相同字符</td>
+                        </tr>
+                        <tr>
+                            <td>\&lt;,\&gt;</td>
+                            <td>匹配字符的开始与结束，如：\&lt;is\&gt; 匹配 it is a... 中的 is，但不匹配 this 中的 is</td>
+                        </tr>
+                        <tr>
+                            <td>\uxxxx</td>
+                            <td>查找以十六进制数 xxxx 规定的 Unicode 字符</td>
+                        </tr>
+                        <tr>
+                            <td>\f,\n,\r,\t,\v</td>
+                            <td>空字符，分别匹配换页符、换行符、回车符、制表符和垂直制表符</td>
+                        <!-- /////////////////////////////////////////////////////////// -->
+                        <tr><td colspan="2" class="left"><strong>量词：匹配字符串的个数</strong></td></tr>
+                        <tr>
+                            <td>量词</td>
+                            <td>描述</td>
+                        </tr>
+                        <tr>
+                            <td>a+</td>
+                            <td>匹配至少一个 a 的字符串（>=1）</td>
+                        </tr>
+                        <tr>
+                            <td>a*</td>
+                            <td>匹配零个或多个 a 的字符串（>=0）</td>
+                        </tr>
+                        <tr>
+                            <td>a?</td>
+                            <td>匹配任零个或一个 a 的字符串（0 or 1）</td>
+                        </tr>
+                        <tr>
+                            <td>a{n}</td>
+                            <td>匹配 n 个 a 的字符串（n）</td>
+                        </tr>
+                        <tr>
+                            <td>a{n,}</td>
+                            <td>匹配大于等于 n 个 a 的字符串（>=n）</td>
+                        </tr>
+                        <tr>
+                            <td>a{n,m}</td>
+                            <td>匹配 n 到 m 个 a 的字符串（[n,m]）</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>str.search(RE)：查找正则表达式的匹配内容（字串），并返回子串的起始位置</li>
+                <li>str.replace(RE,newStr)：用新的字符串 newStr 替换 str 中正则表达式 RE 匹配的内容</li>
+                <li>RE.test(str)：检测 str 中是否匹配到正则表达式 RE，返回布尔值</li>
+                <li>RE.exec(str)：检索字符串 str 中的正则表达式 RE 的匹配，并返回存放匹配结果的数组，如果没有匹配内容则返回 null</li>
+            </ul>
+        </div>
+        <!-- 8.5 -->
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
     <div class="footer">
     Copyright © Alex-alading.dong @ 2020
     </div>
-</code>
 </body>
 </html>
