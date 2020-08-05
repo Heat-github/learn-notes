@@ -14,9 +14,9 @@
     <script src="notes_jQ.js"></script>
 </head>
 
-<body id="Cbody">
-    <a href="#Cbody"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
-    <a href="#Cfooter"><img class="gobottom" src="../picture/back-to-top.jpg" alt="去到底部" /></a>
+<body id="body">
+    <a href="#body"><img class="backtop" src="../picture/back-to-top.jpg" alt="回到顶部" /></a>
+    <a href="#footer"><img class="gobottom" src="../picture/back-to-top.jpg" alt="去到底部" /></a>
     <img class="darkmode" onclick="darkMode()" src="../picture/夜间模式.jpg" alt="夜间模式"/>
     <div class="topmenu">
         <a href="alex-index.html"  target="_self">首页</a>
@@ -38,6 +38,8 @@
             <li><a href="#history">History 历史记录</a></li>
             <li><a href="#RegExp">正则表达式</a></li>
             <li><a href="#C05">5号笔记</a></li>
+            <li><a href="#model">javaScript 模块化</a></li>
+            <li><a href="#priority">元素显示优先级</a></li>
         </ul>
     </div><!--catalog结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
 
@@ -199,10 +201,58 @@
             </ul>
         </div>
         <!-- 8.5 -->
+        <h3 id="C05">8月5号 周三</h3>
+        <p>今日关键词：</p>
+        <div class="note_tag">
+            <p id="model">javaScript 模块化</p>
+            <ul>
+                <li>模块化的原因：项目很大时会有命名冲突、文件依赖等问题；</li>
+                <li>模块化开发演变：<br>
+                    1. 函数块：全局函数将代码包括在函数体内。缺点：全局变量污染和命名冲突；<br>
+                    2. 命名空间：把函数和变量封装在对象里避免命名冲突。缺点：多层级嵌套，命名空间越来越长，暴露模块成员；<br>
+                    3. 私有共有成员分离：将函数包裹在立即执行函数内，由于函数外部无法访问内部变量，可选择性对外暴露内部成员。<br>
+                </li>
+                <li>创建模块原则：高内聚低耦合，模块内相关性高，模块间关联低</li>
+                <li>模块使用场景：业务复杂、重复逻辑多、可拓展性要求高</li>
+                <li>
+                    CommonJS规范：<br>
+                    1. 通过 require 方法来同步加载所要依赖的其他模块，再通过 exports 或者 module.exports 来导出需要暴露的接口；<br>
+                    2. 其内部定义的变量是属于这个模块的，不会对外暴露，也就是说不会污染全局变量；<br>
+                    3. CommonJS规范是同步加载模块的，因此适合服务器端但不适用于浏览器端。
+                </li>
+                <li>
+                    AMD 规范：<br>
+                    是非同步加载模块，允许函数回调，如Require.js，需提前加载所有模块； <br>
+                    AMD 对于依赖的模块提前执行，提倡依赖前置。
+                </li>
+                <li>
+                    CMD 规范：<br>
+                    按需加载，不需要再模块开始就加载所有依赖；<br>
+                    CMD 对于依赖的模块延迟执行，提倡依赖就近，只需要在用到某个模块时再require。<br>
+                </li>
+                <li>
+                    ES6 模块化规范：<br>
+                    使用 import 关键字引入模块，通过 export 关键字导出模块；<br>
+                    ES6目前无法在浏览器中执行，但较之前面的模块化规范更规范、更强大，会逐渐代替第三方模块化规范。<br>
+                </li>
+            </ul>
+            <p id="priority">元素显示优先级</p>
+            <ul>
+                <li>由 HTML 页面中出现的次序确定，但 select 元素除外</li>
+                <li>由 CSS 的 z-index 属性设置，值越大显示次序越大</li>
+                <li>帧元素&gt;表单元素&gt;非表单元素</li>
+                <li>有窗口元素&gt;无窗口元素，z-index 只能在同类元素之间起作用</li>
+                <li>帧元素：frameset</li>
+                <li>常见表单元素：textarea、select、input等</li>
+                <li>常见非表单元素：a、div、p、span、table等</li>
+                <li>有窗口元素：select、object、frames等</li>
+                <li>无窗口元素：大部分 html 普通元素</li>
+            </ul>
+        </div>
     </div><!--content结束标签！！！！！！！！！！！！！！！！！！！！！！！！！-->
     
-    <div class="footer">
-    Copyright © Alex-alading.dong @ 2020
+    <div id="footer" class="footer">
+    Copyright &copy; Alex-alading.dong @ 2020
     </div>
 </body>
 </html>
